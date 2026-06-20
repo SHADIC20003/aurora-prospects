@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pass-by-Reference vs Pass-by-Name — Interactive Guide</title>
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: #1a1a28;
+  --bg-card-hover: #222235;
+  --text-primary: #e8e8f0;
+  --text-secondary: #a0a0b0;
+  --text-muted: #666680;
+  --accent-ref: #60a5fa;
+  --accent-ref-glow: rgba(96,165,250,0.15);
+  --accent-name: #f472b6;
+  --accent-name-glow: rgba(244,114,182,0.15);
+  --gold: #E8B840;
+  --gold-dim: rgba(232,184,64,0.12);
+  --green: #34d399;
+  --red: #f87171;
+  --orange: #fb923c;
+  --border: rgba(255,255,255,0.08);
+  --border-active: rgba(255,255,255,0.15);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ===== Reset & Base ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg-primary);color:var(--text-primary);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;
+  line-height:1.6;overflow-x:hidden;
+}
+a{color:var(--accent-ref);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ===== Layout ===== */
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:60px 0;border-bottom:1px solid var(--border)}
+section:last-child{border-bottom:none}
+
+h2{
+  font-size:28px;font-weight:700;margin-bottom:8px;
+  background:linear-gradient(135deg,var(--text-primary),var(--text-secondary));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.section-sub{color:var(--text-muted);font-size:15px;margin-bottom:32px;max-width:600px}
+
+/* ===== Hero ===== */
+.hero{
+  min-height:80vh;display:flex;align-items:center;
+  background:radial-gradient(ellipse at 20% 50%,rgba(96,165,250,0.08),transparent 60%),
+             radial-gradient(ellipse at 80% 50%,rgba(244,114,182,0.08),transparent 60%),
+             var(--bg-primary);
+  padding:80px 0 40px;
+}
+.hero-content{text-align:center}
+.hero h1{
+  font-size:clamp(32px,6vw,56px);font-weight:800;line-height:1.15;margin-bottom:16px;
+  background:linear-gradient(135deg,#e8e8f0 30%,var(--accent-ref),var(--accent-name));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-sub{
+  font-size:clamp(16px,2vw,20px);color:var(--text-secondary);margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto;
+}
+/* Hero side-by-side visual */
+.hero-visual{
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:700px;margin:0 auto;
+}
+.hero-card{
+  background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:24px;text-align:center;transition:var(--transition);
+}
+.hero-card:hover{border-color:var(--border-active);transform:translateY(-2px)}
+.hero-card.ref{border-color:rgba(96,165,250,0.2);background:linear-gradient(180deg,rgba(96,165,250,0.06),var(--bg-card))}
+.hero-card.name{border-color:rgba(244,114,182,0.2);background:linear-gradient(180deg,rgba(244,114,182,0.06),var(--bg-card))}
+.hero-card .icon{font-size:36px;margin-bottom:8px}
+.hero-card h3{font-size:16px;font-weight:600;margin-bottom:4px}
+.hero-card .label{font-size:12px;padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:8px}
+.hero-card .label.ref{background:var(--accent-ref-glow);color:var(--accent-ref)}
+.hero-card .label.name{background:var(--accent-name-glow);color:var(--accent-name)}
+.hero-card p{font-size:13px;color:var(--text-secondary);line-height:1.5}
+
+/* ===== Comparison Table ===== */
+.table-wrapper{
+  overflow-x:auto;border-radius:var(--radius);
+  border:1px solid var(--border);background:var(--bg-card);
+}
+table{width:100%;border-collapse:collapse;font-size:14px}
+thead{background:var(--bg-secondary)}
+th{padding:16px 20px;text-align:left;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-muted)}
+th:first-child{color:var(--text-primary)}
+td{padding:14px 20px;border-top:1px solid var(--border);color:var(--text-secondary)}
+td:first-child{color:var(--text-primary);font-weight:500}
+tr:hover td{background:rgba(255,255,255,0.02)}
+.ref-tag{color:var(--accent-ref);font-weight:500}
+.name-tag{color:var(--accent-name);font-weight:500}
+
+/* ===== Memory Binding Visualization ===== */
+.binding-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.binding-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.binding-card.ref{border-color:rgba(96,165,250,0.2)}
+.binding-card.name{border-color:rgba(244,114,182,0.2)}
+.binding-card h3{font-size:16px;font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.binding-card h3 .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.dot.ref{background:var(--accent-ref)}.dot.name{background:var(--accent-name)}
+.binding-card .sub{font-size:12px;color:var(--text-muted);margin-bottom:16px}
+.binding-card .label-text{font-size:12px;color:var(--text-secondary);background:var(--bg-secondary);padding:8px 12px;border-radius:var(--radius-sm);margin-top:12px;line-height:1.5}
+.binding-card .output{font-size:14px;color:var(--gold);font-weight:600;margin-top:8px}
+.binding-card .output span{display:inline-block;background:var(--gold-dim);padding:2px 10px;border-radius:4px;margin-right:4px}
+.binding-card .output .code{font-family:'SF Mono','Fira Code',monospace;font-size:13px;color:var(--accent-ref)}
+.binding-svg{width:100%;height:auto;max-height:180px}
+
+/* ===== Execution Timeline ===== */
+.timeline-section{background:var(--bg-secondary);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border)}
+.timeline-header{display:grid;grid-template-columns:1fr auto 1fr;border-bottom:1px solid var(--border)}
+.timeline-panel{padding:20px}
+.timeline-panel.left{border-right:1px solid var(--border)}
+.timeline-panel .title{font-size:14px;font-weight:600;margin-bottom:12px}
+.timeline-panel .code-block{background:var(--bg-primary);border-radius:var(--radius-sm);padding:12px 16px;font-family:'SF Mono','Fira Code',monospace;font-size:13px;line-height:1.8;margin-bottom:16px;overflow-x:auto;white-space:pre}
+.code-line{padding:2px 8px;border-radius:3px;transition:var(--transition);cursor:default}
+.code-line.active{background:var(--gold-dim);color:var(--gold)}
+.code-line.dim{opacity:0.5}
+.state-block{background:var(--bg-primary);border-radius:var(--radius-sm);padding:12px 16px;margin-bottom:12px}
+.state-row{display:flex;justify-content:space-between;padding:4px 0;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.04)}
+.state-row:last-child{border-bottom:none}
+.state-row .label{color:var(--text-muted)}
+.state-row .value{color:var(--text-primary);font-family:'SF Mono','Fira Code',monospace}
+.state-row .value.highlight{color:var(--gold);font-weight:600}
+.output-line{padding:6px 12px;margin:4px 0;border-radius:4px;font-size:13px;font-family:'SF Mono','Fira Code',monospace;background:var(--bg-primary);transition:var(--transition)}
+.output-line.new{background:var(--gold-dim);color:var(--gold)}
+.controls-bar{display:flex;align-items:center;justify-content:center;gap:12px;padding:16px 20px;border-top:1px solid var(--border)}
+.btn{background:var(--bg-card);color:var(--text-primary);border:1px solid var(--border);padding:8px 20px;border-radius:var(--radius-sm);font-size:14px;cursor:pointer;transition:var(--transition);font-family:inherit}
+.btn:hover{background:var(--bg-card-hover);border-color:var(--border-active)}
+.btn:disabled{opacity:0.4;cursor:not-allowed}
+.btn-primary{background:var(--gold);color:var(--bg-primary);border-color:var(--gold);font-weight:600}
+.btn-primary:hover{background:#d4a830}
+.step-counter{font-size:13px;color:var(--text-muted)}
+.step-counter strong{color:var(--text-primary)}
+
+/* ===== Expression Example ===== */
+.expression-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.expression-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.expression-card.ref{border-color:rgba(96,165,250,0.2)}
+.expression-card.name{border-color:rgba(244,114,182,0.2)}
+.expression-card h3{font-size:16px;font-weight:600;margin-bottom:12px}
+.expression-card .code-example{background:var(--bg-primary);border-radius:var(--radius-sm);padding:12px 16px;font-family:'SF Mono','Fira Code',monospace;font-size:13px;line-height:1.8;margin-bottom:12px}
+.error-card{background:rgba(248,113,113,0.1);border:1px solid rgba(248,113,113,0.2);border-radius:var(--radius-sm);padding:12px 16px;font-size:13px;color:var(--red)}
+.name-eval{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.eval-step{background:var(--bg-primary);border-radius:var(--radius-sm);padding:10px 14px;font-size:13px;transition:var(--transition)}
+.eval-step .eval-label{color:var(--text-muted);font-size:12px;display:block;margin-bottom:4px}
+.eval-step .eval-result{font-family:'SF Mono','Fira Code',monospace;color:var(--accent-name);font-weight:600}
+.eval-step.current{border-left:3px solid var(--gold);background:var(--gold-dim)}
+.eval-step .changed{color:var(--gold);font-weight:600}
+
+/* ===== Deep Explanation ===== */
+.deep-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px}
+.deep-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;position:relative;overflow:hidden}
+.deep-card.ref{border-color:rgba(96,165,250,0.2)}
+.deep-card.name{border-color:rgba(244,114,182,0.2)}
+.deep-card h3{font-size:16px;font-weight:600;margin-bottom:12px}
+.deep-card p{font-size:14px;color:var(--text-secondary);margin-bottom:12px;line-height:1.6}
+.deep-svg{width:100%;height:auto}
+.flow-box{background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 16px;font-size:13px;color:var(--text-primary);margin:6px 0;transition:var(--transition);position:relative}
+.flow-box.active{background:var(--gold-dim);border-color:rgba(232,184,64,0.3)}
+.flow-arrow{text-align:center;color:var(--text-muted);font-size:12px;padding:4px 0}
+.flow-group{display:flex;flex-direction:column;align-items:center}
+
+/* ===== Swap Problem ===== */
+.swap-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.swap-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.swap-card.ref{border-color:rgba(96,165,250,0.2)}
+.swap-card.name{border-color:rgba(244,114,182,0.2)}
+.swap-card h3{font-size:16px;font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.swap-card .sub{font-size:12px;color:var(--text-muted);margin-bottom:16px}
+.swap-initial{background:var(--bg-primary);border-radius:var(--radius-sm);padding:12px 16px;font-family:'SF Mono','Fira Code',monospace;font-size:13px;line-height:1.8;margin-bottom:12px}
+.swap-step{background:var(--bg-primary);border-radius:var(--radius-sm);padding:10px 14px;margin:6px 0;font-size:13px;line-height:1.6;transition:var(--transition)}
+.swap-step.current{border-left:3px solid var(--gold);background:var(--gold-dim)}
+.swap-step .step-label{color:var(--text-muted);font-size:12px;display:block;margin-bottom:2px}
+.swap-step .step-desc{color:var(--text-primary)}
+.highlight-ref{color:var(--accent-ref);font-weight:600}
+.highlight-name{color:var(--accent-name);font-weight:600}
+.highlight-change{color:var(--gold);font-weight:600}
+.swap-output{font-family:'SF Mono','Fira Code',monospace;font-size:14px;margin-top:12px;padding:10px 14px;background:var(--bg-primary);border-radius:var(--radius-sm)}
+.swap-output .label{color:var(--text-muted);font-size:12px;font-family:inherit}
+.swap-output .ref-out{color:var(--accent-ref);font-weight:600}
+.swap-output .name-out{color:var(--accent-name);font-weight:600}
+.swap-explain{font-size:13px;color:var(--text-secondary);padding:12px;background:rgba(248,113,113,0.06);border:1px solid rgba(248,113,113,0.12);border-radius:var(--radius-sm);margin-top:12px;line-height:1.6}
+
+/* ===== Summary ===== */
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.summary-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;text-align:center;transition:var(--transition)}
+.summary-card:hover{transform:translateY(-2px)}
+.summary-card.ref{border-color:rgba(96,165,250,0.25)}
+.summary-card.name{border-color:rgba(244,114,182,0.25)}
+.summary-card .big-icon{font-size:40px;margin-bottom:12px}
+.summary-card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.summary-card .tagline{font-size:14px;color:var(--text-secondary);font-style:italic;margin-bottom:16px;padding:6px 16px;border-radius:20px;display:inline-block}
+.summary-card .tagline.ref{background:var(--accent-ref-glow);color:var(--accent-ref)}
+.summary-card .tagline.name{background:var(--accent-name-glow);color:var(--accent-name)}
+.summary-card ul{list-style:none;text-align:left;font-size:14px;color:var(--text-secondary)}
+.summary-card ul li{padding:6px 0;border-bottom:1px solid var(--border)}
+.summary-card ul li:last-child{border-bottom:none}
+.summary-card ul li strong{color:var(--text-primary)}
+.summary-visual{margin:12px auto;max-width:200px;height:auto}
+
+/* ===== SVG animations ===== */
+@keyframes pulse-glow {
+  0%,100%{opacity:0.4}
+  50%{opacity:1}
+}
+@keyframes arrow-flow {
+  0%{stroke-dashoffset:20}
+  100%{stroke-dashoffset:0}
+}
+@keyframes fade-in {
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes highlight-pulse {
+  0%,100%{opacity:0.15}
+  50%{opacity:0.35}
+}
+.anim-pulse{animation:pulse-glow 2s ease-in-out infinite}
+.anim-fade{animation:fade-in 0.4s ease-out}
+.anim-arrow{stroke-dasharray:20;animation:arrow-flow 1s linear infinite}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+  .hero{min-height:auto;padding:60px 0 20px}
+  .binding-grid,.expression-grid,.deep-grid,.swap-grid,.summary-grid,.hero-visual{grid-template-columns:1fr}
+  .timeline-header{grid-template-columns:1fr}
+  .timeline-panel.left{border-right:none;border-bottom:1px solid var(--border)}
+  .timeline-panel .code-block{font-size:12px}
+  section{padding:40px 0}
+  h2{font-size:24px}
+  .controls-bar{flex-wrap:wrap}
+}
+
+/* ===== Utility ===== */
+.separator{background:var(--border);width:1px;height:100%;align-self:stretch}
+#audio-player{display:none;}
+</style>
+</head>
+<body>
+
+<!-- ===== Hero Section ===== -->
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+  <h1>Pass-by-Reference<br>vs Pass-by-Name</h1>
+  <p class="hero-sub">Understanding Fixed Memory Binding vs Re-Evaluated Expressions</p>
+  <div class="hero-visual">
+    <div class="hero-card ref">
+      <div class="icon">🔗</div>
+      <span class="label ref">Pass-by-Reference</span>
+      <h3>Fixed Binding</h3>
+      <p>Binds to a single memory address at call time. All subsequent accesses hit the same location, even if the index expression changes.</p>
+    </div>
+    <div class="hero-card name">
+      <div class="icon">🔄</div>
+      <span class="label name">Pass-by-Name</span>
+      <h3>Re-evaluated Each Use</h3>
+      <p>The expression is re-computed every time the parameter is accessed. Changes to variables inside the expression affect future evaluations.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- ===== Quick Comparison Table ===== -->
+<section>
+<div class="container">
+<h2>Quick Comparison</h2>
+<p class="section-sub">The fundamental differences at a glance</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th style="color:var(--accent-ref)">Pass-by-Reference</th><th style="color:var(--accent-name)">Pass-by-Name</th></tr>
+</thead>
+<tbody>
+<tr><td>What is passed?</td><td class="ref-tag">Memory Address</td><td class="name-tag">Expression + Caller Environment</td></tr>
+<tr><td>Binding Time</td><td class="ref-tag">At Call Time</td><td class="name-tag">At Every Use</td></tr>
+<tr><td>Re-evaluated?</td><td class="ref-tag">No</td><td class="name-tag">Yes</td></tr>
+<tr><td>Can expression be passed?</td><td class="ref-tag">No</td><td class="name-tag">Yes</td></tr>
+<tr><td>Typical Languages</td><td class="ref-tag">C++, C# ref</td><td class="name-tag">Algol 60</td></tr>
+<tr><td>Complexity</td><td class="ref-tag">Simple</td><td class="name-tag">Complex</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<!-- ===== Memory Binding Visualization ===== -->
+<section>
+<div class="container">
+<h2>Memory Binding Visualization</h2>
+<p class="section-sub">Watch how each strategy binds the parameter <code>x = A[i]</code> when <code>i</code> changes inside the procedure</p>
+
+<div class="binding-grid">
+
+  <!-- Pass-by-Reference -->
+  <div class="binding-card ref" id="binding-ref">
+    <h3><span class="dot ref"></span> Pass-by-Reference</h3>
+    <p class="sub">Parameter x receives the address of A[1] at call time</p>
+
+    <svg class="binding-svg" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" id="ref-svg">
+      <defs>
+        <marker id="arrow-ref" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#60a5fa"/></marker>
+        <marker id="arrow-ref-x" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#f87171"/></marker>
+        <filter id="glow-ref"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <!-- i variable box -->
+      <rect x="10" y="10" width="50" height="40" rx="6" fill="#1a1a28" stroke="#444" stroke-width="1.5"/>
+      <text x="35" y="36" text-anchor="middle" fill="#888" font-size="11" font-family="monospace">i = 1</text>
+
+      <!-- A array -->
+      <rect x="180" y="10" width="80" height="26" rx="4" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+      <text x="190" y="28" fill="#60a5fa" font-size="9" font-family="monospace">A[1]=10</text>
+      <rect x="180" y="38" width="80" height="26" rx="4" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+      <text x="190" y="56" fill="#60a5fa" font-size="9" font-family="monospace">A[2]=20</text>
+
+      <!-- x parameter box -->
+      <rect x="85" y="60" width="70" height="34" rx="6" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5" filter="url(#glow-ref)"/>
+      <text x="120" y="81" text-anchor="middle" fill="#60a5fa" font-size="12" font-family="monospace" font-weight="600">x</text>
+
+      <!-- Arrow from x to A[1] -->
+      <line x1="155" y1="77" x2="180" y2="23" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrow-ref)" class="anim-arrow"/>
+
+      <!-- Annotation: "Address of A[1]" -->
+      <text x="155" y="100" text-anchor="middle" fill="#888" font-size="10" font-family="sans-serif">x → address of A[1]</text>
+
+      <!-- After i changes -->
+      <rect x="10" y="115" width="50" height="40" rx="6" fill="#1a1a28" stroke="#f87171" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="35" y="141" text-anchor="middle" fill="#f87171" font-size="11" font-family="monospace">i = 2</text>
+
+      <!-- X mark showing x still points to A[1] -->
+      <line x1="85" y1="130" x2="110" y2="145" stroke="#f87171" stroke-width="2.5"/>
+      <line x1="110" y1="130" x2="85" y2="145" stroke="#f87171" stroke-width="2.5"/>
+      <text x="120" y="152" text-anchor="middle" fill="#f87171" font-size="10" font-family="sans-serif">Still points to A[1]</text>
+    </svg>
+
+    <div class="output">Output: <span>10</span> <span>10</span></div>
+    <div class="label-text">"Reference binds to a specific memory address once at call time. Changing i to 2 does not affect x — it still refers to A[1]."</div>
+  </div>
+
+  <!-- Pass-by-Name -->
+  <div class="binding-card name" id="binding-name">
+    <h3><span class="dot name"></span> Pass-by-Name</h3>
+    <p class="sub">Parameter x represents the expression A[i], re-evaluated each time</p>
+
+    <svg class="binding-svg" viewBox="0 0 280 180" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrow-name-1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#f472b6"/></marker>
+        <marker id="arrow-name-2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#34d399"/></marker>
+        <filter id="glow-name"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <!-- i variable -->
+      <rect x="10" y="5" width="50" height="34" rx="6" fill="#1a1a28" stroke="#444" stroke-width="1"/>
+      <text x="35" y="28" text-anchor="middle" fill="#888" font-size="11" font-family="monospace">i = 1</text>
+
+      <!-- A array -->
+      <rect x="185" y="5" width="75" height="24" rx="4" fill="rgba(244,114,182,0.08)" stroke="rgba(244,114,182,0.25)" stroke-width="1"/>
+      <text x="195" y="21" fill="#f472b6" font-size="9" font-family="monospace">A[1]=10</text>
+      <rect x="185" y="31" width="75" height="24" rx="4" fill="rgba(244,114,182,0.08)" stroke="rgba(244,114,182,0.25)" stroke-width="1"/>
+      <text x="195" y="47" fill="#f472b6" font-size="9" font-family="monospace">A[2]=20</text>
+
+      <!-- x represents A[i] -->
+      <rect x="65" y="60" width="90" height="34" rx="6" fill="rgba(244,114,182,0.12)" stroke="#f472b6" stroke-width="1.5" filter="url(#glow-name)"/>
+      <text x="110" y="81" text-anchor="middle" fill="#f472b6" font-size="12" font-family="monospace" font-weight="600">x → A[i]</text>
+
+      <!-- First evaluation arrow: i=1 → A[1] -->
+      <line x1="65" y1="77" x2="185" y2="17" stroke="#f472b6" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow-name-1)"/>
+      <text x="120" y="98" text-anchor="middle" fill="#f472b6" font-size="9" font-family="sans-serif">1st access: A[1] = 10</text>
+
+      <!-- i changes to 2 -->
+      <rect x="10" y="108" width="50" height="34" rx="6" fill="#1a1a28" stroke="#34d399" stroke-width="1.5"/>
+      <text x="35" y="131" text-anchor="middle" fill="#34d399" font-size="11" font-family="monospace">i = 2</text>
+
+      <!-- Second evaluation arrow: i=2 → A[2] -->
+      <rect x="65" y="140" width="90" height="34" rx="6" fill="rgba(52,211,153,0.1)" stroke="#34d399" stroke-width="1.5"/>
+      <text x="110" y="161" text-anchor="middle" fill="#34d399" font-size="12" font-family="monospace" font-weight="600">x → A[i]</text>
+
+      <line x1="65" y1="157" x2="185" y2="43" stroke="#34d399" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow-name-2)"/>
+      <text x="120" y="178" text-anchor="middle" fill="#34d399" font-size="9" font-family="sans-serif">2nd access: A[2] = 20</text>
+    </svg>
+
+    <div class="output">Output: <span>10</span> <span>20</span></div>
+    <div class="label-text">"Expression A[i] is re-evaluated every time x is used. When i changes to 2, the next access resolves to A[2] instead."</div>
+  </div>
+
+</div>
+</div>
+</section>
+
+<!-- ===== Side-by-Side Execution Timeline ===== -->
+<section>
+<div class="container">
+<h2>Execution Timeline</h2>
+<p class="section-sub">Step through the procedure call <code>P(A[i])</code> to see how each strategy behaves</p>
+
+<div class="timeline-section" id="timeline">
+  <div class="timeline-header">
+    <div class="timeline-panel left">
+      <div class="title" style="color:var(--accent-ref)">⚡ Pass-by-Reference</div>
+      <div class="code-block" id="ref-code">
+<span class="code-line" data-ref-line="0">procedure P(x)</span>
+<span class="code-line" data-ref-line="1">  begin</span>
+<span class="code-line" data-ref-line="2">    print(x)</span>
+<span class="code-line" data-ref-line="3">    i = 2</span>
+<span class="code-line" data-ref-line="4">    print(x)</span>
+<span class="code-line" data-ref-line="5">  end</span>
+      </div>
+      <div id="ref-state" class="state-block">
+        <div class="state-row"><span class="label">i</span><span class="value">1</span></div>
+        <div class="state-row"><span class="label">x points to</span><span class="value" style="color:var(--accent-ref)">A[1] (fixed)</span></div>
+      </div>
+      <div id="ref-output"></div>
+    </div>
+    <div class="separator" style="display:none"></div>
+    <div class="timeline-panel right">
+      <div class="title" style="color:var(--accent-name)">🔄 Pass-by-Name</div>
+      <div class="code-block" id="name-code">
+<span class="code-line" data-name-line="0">procedure P(x)</span>
+<span class="code-line" data-name-line="1">  begin</span>
+<span class="code-line" data-name-line="2">    print(x)</span>
+<span class="code-line" data-name-line="3">    i = 2</span>
+<span class="code-line" data-name-line="4">    print(x)</span>
+<span class="code-line" data-name-line="5">  end</span>
+      </div>
+      <div id="name-state" class="state-block">
+        <div class="state-row"><span class="label">i</span><span class="value">1</span></div>
+        <div class="state-row"><span class="label">x evaluates to</span><span class="value" style="color:var(--accent-name)">A[i] → A[1] = 10</span></div>
+      </div>
+      <div id="name-output"></div>
+    </div>
+  </div>
+  <div class="controls-bar">
+    <button class="btn" id="reset-btn" onclick="resetTimeline()">⟲ Reset</button>
+    <span class="step-counter" id="step-counter">Step <strong id="current-step">0</strong> of <strong id="total-steps">6</strong></span>
+    <button class="btn btn-primary" id="next-btn" onclick="nextStep()">Next Step →</button>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- ===== Expression Example ===== -->
+<section>
+<div class="container">
+<h2>Expression Parameter Passing</h2>
+<p class="section-sub">Why Pass-by-Name is unique — expressions without a memory address</p>
+
+<div class="expression-grid">
+
+  <div class="expression-card ref">
+    <h3 style="color:var(--accent-ref)">🔗 Pass-by-Reference</h3>
+    <div class="code-example">i = 1<br>P(i + 1)<br><br>procedure P(x)<br>  begin<br>    print(x)<br>    i = 5<br>    print(x)<br>  end</div>
+    <div class="error-card">
+      ❌ Cannot pass <code>i + 1</code> by reference — expressions have no memory address. A reference parameter requires a variable or l-value.
+    </div>
+  </div>
+
+  <div class="expression-card name">
+    <h3 style="color:var(--accent-name)">🔄 Pass-by-Name</h3>
+    <div class="code-example">i = 1<br>P(i + 1)<br><br>procedure P(x)<br>  begin<br>    print(x)<br>    i = 5<br>    print(x)<br>  end</div>
+    <div class="name-eval">
+      <div class="eval-step current">
+        <span class="eval-label">First evaluation</span>
+        <span class="eval-result">i + 1 = 1 + 1 = <span class="changed">2</span></span>
+      </div>
+      <div class="eval-step">
+        <span class="eval-label">Then: i = 5</span>
+        <span class="eval-result">Variable i <span class="changed">changes to 5</span></span>
+      </div>
+      <div class="eval-step">
+        <span class="eval-label">Second evaluation</span>
+        <span class="eval-result">i + 1 = 5 + 1 = <span class="changed">6</span></span>
+      </div>
+    </div>
+    <div class="output" style="margin-top:12px">Output: <span>2</span> <span>6</span></div>
+  </div>
+
+</div>
+</div>
+</section>
+
+<!-- ===== Deep Explanation ===== -->
+<section>
+<div class="container">
+<h2>What Does "Re-evaluated Each Use" Actually Mean?</h2>
+<p class="section-sub">The fundamental difference in how each strategy resolves parameter access</p>
+
+<div class="deep-grid">
+  <div class="deep-card ref">
+    <h3 style="color:var(--accent-ref)">🔗 Pass-by-Reference</h3>
+    <p>The binding is determined <strong>once</strong> at call time. The parameter becomes an alias for a specific memory location.</p>
+    <div class="flow-group">
+      <div class="flow-box">📞 Call Time: Address of A[1]</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-box" style="border-color:var(--accent-ref);color:var(--accent-ref)">🔒 Address Chosen Once</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-box" style="border-color:var(--accent-ref)">All Uses Access Same Address</div>
+    </div>
+  </div>
+
+  <div class="deep-card name">
+    <h3 style="color:var(--accent-name)">🔄 Pass-by-Name</h3>
+    <p>The expression is <strong>stored</strong> at call time and <strong>re-evaluated</strong> every time the parameter is accessed.</p>
+    <div class="flow-group">
+      <div class="flow-box">📞 Call Time: Expression "A[i]" Stored</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-box" style="border-color:var(--accent-name);color:var(--accent-name)">📋 Expression Saved</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-box">Every Access: Resolve i → Compute A[i]</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-box" style="border-color:var(--gold)">⬅️ If i changed → different result</div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- ===== The Famous Swap Problem ===== -->
+<section>
+<div class="container">
+<h2>The Swap Problem</h2>
+<p class="section-sub">The classic example that demonstrates why Pass-by-Name can be dangerous</p>
+
+<div class="swap-grid" id="swap-section">
+  <!-- Ref panel -->
+  <div class="swap-card ref">
+    <h3><span class="dot ref"></span> Pass-by-Reference</h3>
+    <p class="sub">Works as expected — addresses are fixed</p>
+    <div class="swap-initial">i = 1<br>A[1] = 10<br>A[2] = 20<br><br>swap(i, A[i])</div>
+    <div id="swap-ref-steps">
+      <div class="swap-step">
+        <span class="step-label">Call: swap(i, A[i])</span>
+        <span class="step-desc">x → <span class="highlight-ref">address of i</span> (fixed)</span>
+      </div>
+      <div class="swap-step">
+        <span class="step-label">Call: swap(i, A[i])</span>
+        <span class="step-desc">y → <span class="highlight-ref">address of A[1]</span> (fixed)</span>
+      </div>
+      <div class="swap-step">
+        <span class="step-label">Inside: temp = y; y = x; x = temp</span>
+        <span class="step-desc">A[1] gets i's value, i gets A[1]'s value</span>
+      </div>
+    </div>
+    <div class="swap-output">
+      <span class="label">Result:</span>
+      <span class="ref-out">i = 10, A[1] = 1, A[2] = 20</span>
+    </div>
+    <div class="swap-explain">✅ Works as expected. Both parameters refer to fixed memory addresses regardless of what happens inside the procedure.</div>
+  </div>
+
+  <!-- Name panel -->
+  <div class="swap-card name">
+    <h3><span class="dot name"></span> Pass-by-Name</h3>
+    <p class="sub">Surprising behavior — indices change mid-execution</p>
+    <div class="swap-initial">i = 1<br>A[1] = 10<br>A[2] = 20<br><br>swap(i, A[i])</div>
+    <div id="swap-name-steps">
+      <div class="swap-step" data-swap-step="0">
+        <span class="step-label">Call: swap(i, A[i])</span>
+        <span class="step-desc">x → <span class="highlight-name">i</span> (re-evaluates)</span>
+      </div>
+      <div class="swap-step" data-swap-step="1">
+        <span class="step-label">Call: swap(i, A[i])</span>
+        <span class="step-desc">y → <span class="highlight-name">A[i]</span> = <span class="highlight-name">A[1]</span> = 10</span>
+      </div>
+      <div class="swap-step" data-swap-step="2">
+        <span class="step-label">Step: temp = y</span>
+        <span class="step-desc">temp = <span class="highlight-name">A[1]</span> = 10</span>
+      </div>
+      <div class="swap-step" data-swap-step="3">
+        <span class="step-label">Step: y = x</span>
+        <span class="step-desc"><span class="highlight-name">A[i]</span> = i → <span class="highlight-name">A[1]</span> = 1</span>
+      </div>
+      <div class="swap-step" data-swap-step="4" class="current">
+        <span class="step-label">Step: x = temp</span>
+        <span class="step-desc">i = temp = 10</span>
+      </div>
+      <div class="swap-step" data-swap-step="5">
+        <span class="step-label">But wait — i is now 10!</span>
+        <span class="step-desc">y = x was <span class="highlight-change">A[1] = 1</span> (correct)<br>But x = temp means <span class="highlight-change">i = 10</span></span>
+      </div>
+      <div class="swap-step" data-swap-step="6">
+        <span class="step-label">Final state</span>
+        <span class="step-desc"><span class="highlight-change">i = 10, A[1] = 1, A[2] = 20</span></span>
+      </div>
+    </div>
+    <div class="swap-output">
+      <span class="label">Result:</span>
+      <span class="name-out">i = 10, A[1] = 1, A[2] = 20</span>
+    </div>
+    <div class="swap-explain">⚠️ Actually works here — but because <span class="highlight-name">A[i]</span> is re-evaluated, if the array were larger and A[i] changed to point to a <em>different</em> element mid-swap, the result would be completely wrong. This unpredictability made Pass-by-Name notorious.</div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- ===== Final Summary ===== -->
+<section>
+<div class="container">
+<h2>Summary</h2>
+<p class="section-sub">The key takeaway — choose your binding strategy wisely</p>
+
+<div class="summary-grid">
+  <div class="summary-card ref">
+    <div class="big-icon">🔗</div>
+    <h3 style="color:var(--accent-ref)">Pass-by-Reference</h3>
+    <span class="tagline ref">"Choose Address Once"</span>
+    <svg class="summary-visual" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="15" width="60" height="30" rx="6" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="40" y="35" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="monospace" font-weight="600">x →</text>
+      <rect x="120" y="15" width="70" height="30" rx="4" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+      <text x="145" y="35" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="monospace">A[1]</text>
+      <line x1="70" y1="30" x2="120" y2="30" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow-ref)"/>
+    </svg>
+    <ul>
+      <li>✅ <strong>Fixed binding</strong> — predictable</li>
+      <li>✅ <strong>Memory address</strong> — efficient</li>
+      <li>✅ <strong>Fast</strong> — no re-evaluation</li>
+      <li>❌ Cannot accept expressions</li>
+      <li>❌ Less flexible</li>
+    </ul>
+  </div>
+
+  <div class="summary-card name">
+    <div class="big-icon">🔄</div>
+    <h3 style="color:var(--accent-name)">Pass-by-Name</h3>
+    <span class="tagline name">"Choose Meaning Every Time"</span>
+    <svg class="summary-visual" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="25" width="60" height="30" rx="6" fill="rgba(244,114,182,0.12)" stroke="#f472b6" stroke-width="1.5"/>
+      <text x="40" y="45" text-anchor="middle" fill="#f472b6" font-size="11" font-family="monospace" font-weight="600">x →</text>
+      <text x="40" y="60" text-anchor="middle" fill="#f472b6" font-size="9" font-family="monospace">A[i]</text>
+      <rect x="120" y="10" width="60" height="20" rx="4" fill="rgba(52,211,153,0.08)" stroke="rgba(52,211,153,0.3)" stroke-width="1"/>
+      <text x="140" y="24" text-anchor="middle" fill="#34d399" font-size="9" font-family="monospace">A[j]</text>
+      <rect x="120" y="34" width="60" height="20" rx="4" fill="rgba(244,114,182,0.08)" stroke="rgba(244,114,182,0.3)" stroke-width="1"/>
+      <text x="140" y="48" text-anchor="middle" fill="#f472b6" font-size="9" font-family="monospace">A[1]</text>
+      <rect x="120" y="58" width="60" height="20" rx="4" fill="rgba(251,146,60,0.08)" stroke="rgba(251,146,60,0.3)" stroke-width="1"/>
+      <text x="140" y="72" text-anchor="middle" fill="#fb923c" font-size="9" font-family="monospace">A[k]</text>
+      <line x1="70" y1="40" x2="120" y2="20" stroke="#34d399" stroke-width="1.5" stroke-dasharray="3,3"/>
+      <line x1="70" y1="40" x2="120" y2="44" stroke="#f472b6" stroke-width="1.5" stroke-dasharray="3,3"/>
+      <line x1="70" y1="40" x2="120" y2="68" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="3,3"/>
+    </svg>
+    <ul>
+      <li>✅ <strong>Dynamic binding</strong> — flexible</li>
+      <li>✅ <strong>Expression evaluation</strong> — can pass any calculation</li>
+      <li>✅ <strong>Flexible</strong> — adapts to context</li>
+      <li>❌ <strong>Complex</strong> — hard to reason about</li>
+      <li>❌ <strong>Unpredictable</strong> — surprising side effects</li>
+    </ul>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer style="text-align:center;padding:32px 0;font-size:13px;color:var(--text-muted);border-top:1px solid var(--border)">
+  Interactive Educational Guide — Computer Science · Programming Languages · Compiler Design
+</footer>
+
+<script>
+/* ===== Timeline Controller ===== */
+const timelineSteps = [
+  // Step 0: Start
+  { ref: { line: 0, i: 1, x: 'A[1]', xval: 'A[1] (fixed)', output: '' },
+    name: { line: 0, i: 1, x: 'A[i] → A[1]', xval: 'A[i] → A[1] = 10', output: '' } },
+  // Step 1: Call P(A[i])
+  { ref: { line: 1, i: 1, x: 'A[1]', xval: 'A[1] (fixed)', output: '' },
+    name: { line: 1, i: 1, x: 'A[i] → A[1]', xval: 'A[i] → A[1] = 10', output: '' } },
+  // Step 2: print(x) — first access
+  { ref: { line: 2, i: 1, x: 'A[1]', xval: 'A[1] (fixed)', output: '10' },
+    name: { line: 2, i: 1, x: 'A[i] → A[1]', xval: 'A[i] → A[1] = 10', output: '10' } },
+  // Step 3: i = 2
+  { ref: { line: 3, i: 2, x: 'A[1]', xval: 'A[1] (fixed) — i changed, but x unaffected', output: '10' },
+    name: { line: 3, i: 2, x: 'A[i] → A[2]', xval: 'A[i] → A[2] = 20 (i changed!)', output: '10' } },
+  // Step 4: print(x) — second access
+  { ref: { line: 4, i: 2, x: 'A[1]', xval: 'A[1] (still fixed)', output: '10\n10' },
+    name: { line: 4, i: 2, x: 'A[i] → A[2]', xval: 'A[i] → A[2] = 20', output: '10\n20' } },
+  // Step 5: end
+  { ref: { line: 5, i: 2, x: 'A[1]', xval: 'A[1] (fixed)', output: '10\n10' },
+    name: { line: 5, i: 2, x: 'A[i] → A[2]', xval: 'A[i] → A[2] = 20', output: '10\n20' } }
+];
+
+let currentTimelineStep = -1;
+
+function nextStep() {
+  currentTimelineStep++;
+  if (currentTimelineStep >= timelineSteps.length) {
+    currentTimelineStep = timelineSteps.length - 1;
+    return;
+  }
+  renderTimelineStep(currentTimelineStep);
+  updateStepCounter();
+}
+
+function resetTimeline() {
+  currentTimelineStep = -1;
+  renderTimelineStep(-1);
+  updateStepCounter();
+}
+
+function renderTimelineStep(step) {
+  const allRefLines = document.querySelectorAll('#ref-code .code-line');
+  const allNameLines = document.querySelectorAll('#name-code .code-line');
+
+  // Clear all active states
+  allRefLines.forEach(l => l.classList.remove('active'));
+  allNameLines.forEach(l => l.classList.remove('active'));
+
+  if (step < 0) {
+    document.getElementById('ref-state').querySelectorAll('.state-row .value')[0].textContent = '1';
+    document.getElementById('ref-state').querySelectorAll('.state-row .value')[1].textContent = '—';
+    document.getElementById('name-state').querySelectorAll('.state-row .value')[0].textContent = '1';
+    document.getElementById('name-state').querySelectorAll('.state-row .value')[1].textContent = '—';
+    document.getElementById('ref-output').innerHTML = '';
+    document.getElementById('name-output').innerHTML = '';
+    return;
+  }
+
+  const data = timelineSteps[step];
+
+  // Update code highlight
+  allRefLines.forEach(l => {
+    if (parseInt(l.dataset.refLine) === data.ref.line) l.classList.add('active');
+  });
+  allNameLines.forEach(l => {
+    if (parseInt(l.dataset.nameLine) === data.name.line) l.classList.add('active');
+  });
+
+  // Update state
+  document.getElementById('ref-state').querySelectorAll('.state-row .value')[0].textContent = data.ref.i;
+  document.getElementById('ref-state').querySelectorAll('.state-row .value')[1].textContent = data.ref.xval;
+  document.getElementById('name-state').querySelectorAll('.state-row .value')[0].textContent = data.name.i;
+  document.getElementById('name-state').querySelectorAll('.state-row .value')[1].textContent = data.name.xval;
+
+  // Format output with line breaks
+  const refOut = data.ref.output;
+  const nameOut = data.name.output;
+  document.getElementById('ref-output').innerHTML = refOut ? refOut.split('\n').map(l => `<div class="output-line new">▶ ${l}</div>`).join('') : '';
+  document.getElementById('name-output').innerHTML = nameOut ? nameOut.split('\n').map(l => `<div class="output-line new">▶ ${l}</div>`).join('') : '';
+}
+
+function updateStepCounter() {
+  document.getElementById('current-step').textContent = Math.max(0, currentTimelineStep + 1);
+  document.getElementById('total-steps').textContent = timelineSteps.length;
+  document.getElementById('next-btn').disabled = currentTimelineStep >= timelineSteps.length - 1;
+}
+
+/* ===== Expression Animation ===== */
+let exprStep = 0;
+function animateExpression() {
+  const steps = document.querySelectorAll('.name-eval .eval-step');
+  steps.forEach((s, i) => {
+    s.classList.toggle('current', i === exprStep);
+  });
+  exprStep = (exprStep + 1) % steps.length;
+}
+
+setInterval(animateExpression, 2500);
+</script>
+
+</body>
+</html>
