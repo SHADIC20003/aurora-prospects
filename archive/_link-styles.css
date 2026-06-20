@@ -1,0 +1,11 @@
+/* Card link overrides */
+.card-link{font-size:13px;color:#60a5fa;display:inline-block;margin-top:4px;padding:4px 0}
+.card-link:hover{color:#93c5fd}
+.card-email{font-size:13px;color:#888;line-height:1.5;margin-top:4px}
+.card-email strong{color:#aaa;font-weight:500}
+.card-email a{color:#60a5fa;text-decoration:none}
+.card-email a:hover{color:#93c5fd;text-decoration:underline}
+.card-linkedin{font-size:13px;color:#888;line-height:1.5;margin-top:4px}
+.card-linkedin strong{color:#aaa;font-weight:500}
+.card-linkedin a{color:#60a5fa;text-decoration:none}
+.card-linkedin a:hover{color:#93c5fd;text-decoration:underline}
