@@ -1,0 +1,726 @@
+{
+  "version": 1,
+  "last_updated": "2026-06-23",
+  "agencies": [
+    {
+      "name": "10FOLD",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "A Whole Agency",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Accenture",
+      "source_date": "2026-06-21",
+      "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "Agency Creative",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Agital",
+      "source_date": "2026-05-29",
+      "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Airtable",
+      "source_date": "2026-06-22",
+      "source_url": "archive/2026-06-22.html"
+    },
+    {
+      "name": "Anvil Media",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Bain & Company",
+      "source_date": "2026-06-20",
+      "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "BDO USA",
+      "source_date": "2026-06-21",
+      "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "Blend.",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Blue Compass",
+      "source_date": "2026-06-20",
+      "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "bohan",
+      "source_date": "2026-05-31",
+      "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Boomerang Agency",
+      "source_date": "2026-05-29",
+      "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Bop Design",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "Brogan & Partners",
+      "source_date": "2026-05-30",
+      "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Brolik",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Cal.com",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Clarity Digital",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Clay",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "ClickScale Digital",
+      "source_date": "2026-05-31",
+      "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Clipboard Health",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Close",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "Collins",
+      "source_date": "2026-06-20",
+      "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "Column Five Media",
+      "source_date": "2026-06-21",
+      "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "Compound Growth Marketing",
+      "source_date": "2026-05-29",
+      "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Contentworks",
+      "source_date": "2026-05-30",
+      "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Crosby Marketing",
+      "source_date": "2026-05-30",
+      "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "CTP Boston",
+      "source_date": "2026-05-29",
+      "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Cultivate Digital Media",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Dash Two",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Deep Fried Advertising",
+      "source_date": "2026-05-31",
+      "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Digital Silk",
+      "source_date": "2026-06-22",
+      "source_url": "archive/2026-06-22.html"
+    },
+    {
+      "name": "Digital Third Coast",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "DigitalHyre",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Directive Consulting",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Disruptive Advertising",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Disruptive Digital",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "DMi Partners",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Duckpin",
+      "source_date": "2026-05-31",
+      "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "EIGHT25MEDIA",
+      "source_date": "2026-06-19",
+      "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "Epic Notion",
+      "source_date": "2026-05-31",
+      "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Fin (formerly Intercom)",
+      "source_date": "2026-06-21",
+      "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "Firecracker Marketing",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Fitzco",
+      "source_date": "2026-05-27",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
+    },
+    {
+      "name": "Fresh Content Society",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "FreshySites",
+      "source_date": "2026-06-21",
+      "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "frog",
+      "source_date": "2026-06-22",
+      "source_url": "archive/2026-06-22.html"
+    },
+    {
+      "name": "FSC Interactive",
+      "source_date": "2026-05-31",
+      "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Futurety",
+      "source_date": "2026-05-31",
+      "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Geek Digital",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Green Schlaik",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Greenough Communications",
+      "source_date": "2026-05-29",
+      "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "GS&F",
+      "source_date": "2026-05-27",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
+    },
+    {
+      "name": "Hiebing",
+      "source_date": "2026-05-30",
+      "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Highwire",
+      "source_date": "2026-05-30",
+      "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "HubSpot",
+      "source_date": "2026-06-21",
+      "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "Huge",
+      "source_date": "2026-06-22",
+      "source_url": "archive/2026-06-22.html"
+    },
+    {
+      "name": "Hush",
+      "source_date": "2026-06-19",
+      "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "ICS Creative",
+      "source_date": "2026-05-30",
+      "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Ignite Visibility",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Impression Digital",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "Intero Digital",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Intuitive Digital",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Jumpgrowth",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Kuno Creative",
+      "source_date": "2026-05-29",
+      "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Landor",
+      "source_date": "2026-06-22",
+      "source_url": "archive/2026-06-22.html"
+    },
+    {
+      "name": "Leadfeeder (Dealfront)",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "LeadIQ",
+      "source_date": "2026-06-19",
+      "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "Leapfrog Interactive",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Lilo Social",
+      "source_date": "2026-05-29",
+      "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Logic Inbound",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Lounge Lizard",
+      "source_date": "2026-06-19",
+      "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "Mabbly",
+      "source_date": "2026-05-27",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
+    },
+    {
+      "name": "Mad Fish Digital",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "MARION",
+      "source_date": "2026-05-31",
+      "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Markerly",
+      "source_date": "2026-06-19",
+      "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "Marstudio",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Mighty Citizen",
+      "source_date": "2026-05-30",
+      "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Monday.com",
+      "source_date": "2026-06-20",
+      "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "Moxie Agency",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Moxie Communications",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Neil Patel Digital",
+      "source_date": "2026-06-22",
+      "source_url": "archive/2026-06-22.html"
+    },
+    {
+      "name": "North Highland",
+      "source_date": "2026-06-19",
+      "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "NP Digital",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "OAK Interactive",
+      "source_date": "2026-05-31",
+      "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Obility",
+      "source_date": "2026-05-29",
+      "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Olive & Company",
+      "source_date": "2026-05-29",
+      "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "ON Advertising",
+      "source_date": "2026-05-30",
+      "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "OnCuba Agency",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Oneupweb",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Overit Media",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Page One Power",
+      "source_date": "2026-05-30",
+      "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Pentagram",
+      "source_date": "2026-06-20",
+      "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "People.ai",
+      "source_date": "2026-06-19",
+      "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "Pizzazz Group",
+      "source_date": "2026-05-31",
+      "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Plane",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Point It Digital",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Portent Inc.",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Pravaah Consulting",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Proof Analytics",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Rain Agency",
+      "source_date": "2026-05-29",
+      "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Ready State",
+      "source_date": "2026-06-19",
+      "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "RedRover Sales & Marketing",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "RIESTER",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Rise Interactive",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "RSM US",
+      "source_date": "2026-06-21",
+      "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "S&G Marketing",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Satori",
+      "source_date": "2026-05-29",
+      "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Seer Interactive",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "SevenCube",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Sherpa Agency",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Silverback Strategies",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Single Grain",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Slalom",
+      "source_date": "2026-06-20",
+      "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "SmartBug Media",
+      "source_date": "2026-06-21",
+      "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "SmartSites",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Social Thrive",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "SociallyIn",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Solomon Group",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Sterling Communications",
+      "source_date": "2026-05-30",
+      "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Supabase",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Tank Design",
+      "source_date": "2026-05-30",
+      "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "The Daring Society",
+      "source_date": "2026-05-31",
+      "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "The Goat Agency",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "The Variable",
+      "source_date": "2026-05-29",
+      "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Thrive Agency",
+      "source_date": "2026-06-20",
+      "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "Thrive Digital",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Tier 11",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Titan Growth",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Trellis",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Trotter Digital",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "UpBuild",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Vercel",
+      "source_date": "2026-05-28",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Volume PR",
+      "source_date": "2026-05-30",
+      "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "VSA Partners",
+      "source_date": "2026-06-22",
+      "source_url": "archive/2026-06-22.html"
+    },
+    {
+      "name": "Warschawski",
+      "source_date": "2026-05-31",
+      "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Webfor",
+      "source_date": "2026-05-27",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
+    },
+    {
+      "name": "WebFX",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "West Monroe",
+      "source_date": "2026-06-19",
+      "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "Wolff Olins",
+      "source_date": "2026-06-21",
+      "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "Wpromote",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Wray Ward",
+      "source_date": "2026-05-27",
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
+    },
+    {
+      "name": "Xugar",
+      "source_date": "2026-05-28",
+      "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Zapier",
+      "source_date": "2026-06-20",
+      "source_url": "archive/2026-06-20.html"
+    }
+  ]
+}

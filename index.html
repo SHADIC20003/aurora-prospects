@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurora Tech — Prospect Archive</title>
+<title>Aurora Tech — Dashboard</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh}
@@ -11,126 +11,86 @@ body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFo
 .header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
 .header h1{font-size:24px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
 .header .sub{font-size:14px;color:#888;margin-bottom:2px}
-.header .tagline{font-size:13px;color:#666;margin-top:6px}
-.count{color:#E8B840;font-weight:600}
-.list{margin-top:20px}
+.section{margin-top:24px}
+.section h2{font-size:18px;font-weight:600;color:#f1f1f1;margin-bottom:12px}
+.nav-cards{display:flex;flex-direction:column;gap:12px}
+.nav-card{display:block;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:18px 20px;text-decoration:none;transition:border-color 0.2s,background 0.2s;min-height:44px}
+.nav-card:hover{border-color:rgba(232,184,64,0.4);background:rgba(232,184,64,0.04)}
+.nav-card .card-title{font-size:17px;font-weight:600;color:#f1f1f1;margin-bottom:4px}
+.nav-card:hover .card-title{color:#E8B840}
+.nav-card .card-desc{font-size:13px;color:#999;line-height:1.5}
 .entry{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px;transition:border-color 0.2s}
 .entry:hover{border-color:rgba(232,184,64,0.3)}
-.entry-date{font-size:17px;font-weight:600;color:#f1f1f1;text-decoration:none;display:block;margin-bottom:6px}
+.entry-date{font-size:17px;font-weight:600;color:#f1f1f1;text-decoration:none;display:block;margin-bottom:4px}
 .entry-date:hover{color:#E8B840}
 .entry-meta{font-size:13px;color:#999;line-height:1.6}
 .entry-meta span{margin-right:12px}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:16px;text-align:center}
+.stat-card .stat-number{font-size:28px;font-weight:700;color:#E8B840;margin-bottom:2px}
+.stat-card .stat-label{font-size:13px;color:#999}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
 .badge-hot{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840;margin-right:4px}
 .badge-warm{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(59,130,246,0.15);color:#60a5fa;margin-right:4px}
-.badge-cold{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.06);color:#888}
-.categories{font-size:12px;color:#666;margin-top:4px}
-.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
 </style>
 </head>
 <body>
 <div class="container">
+
 <div class="header">
-<h1>Aurora Tech — Prospect Archive</h1>
-<div class="sub">Daily B2B white-label dev partnership prospects</div>
-<div class="tagline">Updated every morning at <strong>8:00 AM EET</strong> · <span class="count" id="total-count">10</span> reports · <strong>148</strong> total prospects</div>
+<h1>Aurora Tech — Dashboard</h1>
+<div class="sub">Multi-feed intelligence dashboard</div>
 </div>
-<div class="list" id="archive-list">
 
+<div class="section">
+<h2>🔗 Navigation</h2>
+<div class="nav-cards">
+<a class="nav-card" href="prospects.html">
+<div class="card-title">🔎 Prospect Discovery</div>
+<div class="card-desc">B2B white-label dev partnership leads</div>
+</a>
+<a class="nav-card" href="security/">
+<div class="card-title">🛡️ Security Reports</div>
+<div class="card-desc">Daily vulnerability and CVE monitoring</div>
+</a>
+</div>
+</div>
+
+<div class="section">
+<h2>📡 Today's Latest — June 23, 2026</h2>
 <div class="entry">
-<a class="entry-date" href="archive/2026-06-23.html">June 23, 2026</a>
-<div class="entry-meta">
-<span>12 agencies</span>
-<span>5 categories</span>
-<span><span class="badge-hot">5 Hot</span> <span class="badge-warm">7 Warm</span> <span class="badge-cold">0 Cold</span></span>
+<a class="entry-date" href="archive/2026-06-23.html">Latest Prospect Report</a>
+<div class="entry-meta"><span>12 agencies</span> <span>5 categories</span> <span><span class="badge-hot">5 Hot</span> <span class="badge-warm">7 Warm</span> <span class="badge-cold">0 Cold</span></span></div>
 </div>
-<div class="categories">Digital Marketing · Web Design · Creative / Branding · Consulting · SaaS Startups</div>
-</div>
-
 <div class="entry">
-<a class="entry-date" href="archive/2026-06-22.html">June 22, 2026</a>
-<div class="entry-meta">
-<span>12 agencies</span>
-<span>5 categories</span>
-<span><span class="badge-hot">5 Hot</span> <span class="badge-warm">6 Warm</span> <span class="badge-cold">1 Cold</span></span>
+<a class="entry-date" href="security/2026-06-23.html">Latest Security Report</a>
+<div class="entry-meta"><span>1 critical</span> <span>13 high</span> <span>1 medium</span> <span>1 low</span></div>
 </div>
-<div class="categories">Digital Marketing · Web Design · Creative / Branding · Consulting · SaaS Startups</div>
 </div>
 
-<div class="entry">
-<a class="entry-date" href="archive/2026-06-21.html">June 21, 2026</a>
-<div class="entry-meta">
-<span>12 agencies</span>
-<span>5 categories</span>
-<span><span class="badge-hot">4 Hot</span> <span class="badge-warm">6 Warm</span> <span class="badge-cold">2 Cold</span></span>
+<div class="section">
+<h2>📊 Stats &amp; Info</h2>
+<div class="stat-grid">
+<div class="stat-card">
+<div class="stat-number" id="total-prospects">9</div>
+<div class="stat-label">Prospect Reports</div>
 </div>
-<div class="categories">Digital Marketing · Web Design · Creative / Branding · Consulting · SaaS Startups</div>
+<div class="stat-card">
+<div class="stat-number" id="total-security">1</div>
+<div class="stat-label">Security Reports</div>
 </div>
-
-<div class="entry">
-<a class="entry-date" href="archive/2026-06-20.html">June 20, 2026</a>
-<div class="entry-meta">
-<span>12 agencies</span>
-<span>5 categories</span>
-<span><span class="badge-hot">4 Hot</span> <span class="badge-warm">6 Warm</span> <span class="badge-cold">2 Cold</span></span>
+<div class="stat-card">
+<div class="stat-number" id="total-agencies">144</div>
+<div class="stat-label">Agencies Tracked</div>
 </div>
-<div class="categories">Digital Marketing · Web Design · Creative / Branding · Consulting · SaaS Startups</div>
+<div class="stat-card">
+<div class="stat-number" id="total-days">9</div>
+<div class="stat-label">Active Days</div>
 </div>
-
-<div class="entry">
-<a class="entry-date" href="archive/2026-06-19.html">June 19, 2026</a>
-<div class="entry-meta">
-<span>12 agencies</span>
-<span>5 categories</span>
-<span><span class="badge-hot">3 Hot</span> <span class="badge-warm">6 Warm</span> <span class="badge-cold">3 Cold</span></span>
 </div>
-<div class="categories">Digital Marketing · Web Design · Creative / Branding · Consulting · SaaS Startups</div>
 </div>
 
-<div class="entry">
-<a class="entry-date" href="archive/2026-05-31.html">May 31, 2026</a>
-<div class="entry-meta">
-<span>12 agencies</span>
-<span>8 cities</span>
-<span><span class="badge-hot">2 Hot</span> <span class="badge-warm">9 Warm</span> <span class="badge-cold">1 Cold</span></span>
-</div>
-<div class="categories">Houston · Columbus · Baltimore · New Orleans · Nashville · Phoenix · Charlotte</div>
-</div>
-
-<div class="entry">
-<a class="entry-date" href="archive/2026-05-30.html">May 30, 2026</a>
-<div class="entry-meta">
-<span>12 agencies</span>
-<span>9 cities</span>
-<span><span class="badge-hot">2 Hot</span> <span class="badge-warm">9 Warm</span> <span class="badge-cold">1 Cold</span></span>
-</div>
-<div class="categories">Denver · Phoenix · San Francisco · DC · Midwest · Boston · Boise · Seattle</div>
-</div>
-
-<div class="entry">
-<a class="entry-date" href="archive/2026-05-29.html">May 29, 2026</a>
-<div class="entry-meta">
-<span>12 agencies</span>
-<span>7 cities</span>
-<span><span class="badge-hot">2 Hot</span> <span class="badge-warm">9 Warm</span> <span class="badge-cold">1 Cold</span></span>
-</div>
-<div class="categories">Boston · Winston-Salem · Minneapolis · Chicago · Austin · LA · Denver · Seattle · St. Louis · Portland · Cleveland</div>
-</div>
-
-<div class="entry">
-<a class="entry-date" href="archive/2026-05-28.html">May 28, 2026</a>
-<div class="entry-meta">
-<span>49 agencies</span>
-<span>10 cities</span>
-<span><span class="badge-hot">8+ Hot</span> <span class="badge-warm">20+ Warm</span></span>
-</div>
-<div class="categories">NYC · Austin · Denver · Chicago · Miami · Atlanta · Seattle · Portland · Nashville · Charlotte</div>
-</div>
-
-</div>
 <div class="footer">Generated by Netamuru · Aurora Tech</div>
 </div>
-<script>
-document.getElementById('total-count').textContent = document.querySelectorAll('.entry').length;
-</script>
 </body>
 </html>
