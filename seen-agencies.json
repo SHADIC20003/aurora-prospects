@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "last_updated": "2026-06-23",
   "agencies": [
     {
@@ -36,6 +36,11 @@
       "name": "Anvil Media",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Aufwind",
+      "source_date": "2026-06-08",
+      "source_url": "telegram-only"
     },
     {
       "name": "Bain & Company",
@@ -88,6 +93,11 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "Caffeine Connect",
+      "source_date": "2026-06-08",
+      "source_url": "telegram-only"
+    },
+    {
       "name": "Cal.com",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
@@ -136,6 +146,11 @@
       "name": "Contentworks",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Crafted",
+      "source_date": "2026-06-08",
+      "source_url": "telegram-only"
     },
     {
       "name": "Criteo",
@@ -303,6 +318,11 @@
       "source_url": "archive/2026-06-22.html"
     },
     {
+      "name": "Hundo",
+      "source_date": "2026-06-08",
+      "source_url": "telegram-only"
+    },
+    {
       "name": "Hush",
       "source_date": "2026-06-19",
       "source_url": "archive/2026-06-19.html"
@@ -336,6 +356,11 @@
       "name": "Jumpgrowth",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "KPS Digital",
+      "source_date": "2026-06-08",
+      "source_url": "telegram-only"
     },
     {
       "name": "Kuno Creative",
@@ -406,6 +431,11 @@
       "name": "Merkle",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "Metric Digital",
+      "source_date": "2026-06-08",
+      "source_url": "telegram-only"
     },
     {
       "name": "Mighty Citizen",
@@ -578,9 +608,19 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Roar Media",
+      "source_date": "2026-06-08",
+      "source_url": "telegram-only"
+    },
+    {
       "name": "RSM US",
       "source_date": "2026-06-21",
       "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "Run DM",
+      "source_date": "2026-06-08",
+      "source_url": "telegram-only"
     },
     {
       "name": "S&G Marketing",
