@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "last_updated": "2026-06-23",
   "agencies": [
     {
@@ -41,6 +41,11 @@
       "name": "Bain & Company",
       "source_date": "2026-06-20",
       "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "BBDO",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
     },
     {
       "name": "BDO USA",
@@ -133,6 +138,11 @@
       "source_url": "archive/2026-05-30.html"
     },
     {
+      "name": "Criteo",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
+    },
+    {
       "name": "Crosby Marketing",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
@@ -156,6 +166,11 @@
       "name": "Deep Fried Advertising",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "DEPT",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
     },
     {
       "name": "Digital Silk",
@@ -388,6 +403,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Merkle",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
+    },
+    {
       "name": "Mighty Citizen",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
@@ -396,6 +416,11 @@
       "name": "Monday.com",
       "source_date": "2026-06-20",
       "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "Moving Brands",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
     },
     {
       "name": "Moxie Agency",
@@ -423,6 +448,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Nurun",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
+    },
+    {
       "name": "OAK Interactive",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
@@ -431,6 +461,11 @@
       "name": "Obility",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Ogilvy",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
     },
     {
       "name": "Olive & Company",
@@ -451,6 +486,11 @@
       "name": "Oneupweb",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "OuterBox",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
     },
     {
       "name": "Overit Media",
@@ -503,6 +543,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Publicis Sapient",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
+    },
+    {
       "name": "Rain Agency",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
@@ -521,6 +566,11 @@
       "name": "RIESTER",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Rightpoint",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
     },
     {
       "name": "Rise Interactive",
@@ -611,6 +661,11 @@
       "name": "Tank Design",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "TBWA",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
     },
     {
       "name": "The Daring Society",
@@ -711,6 +766,11 @@
       "name": "Wray Ward",
       "source_date": "2026-05-27",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
+    },
+    {
+      "name": "Wynter",
+      "source_date": "2026-06-23",
+      "source_url": "archive/2026-06-23.html"
     },
     {
       "name": "Xugar",
