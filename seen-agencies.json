@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "last_updated": "2026-06-23",
+  "version": 4,
+  "last_updated": "2026-06-24",
   "agencies": [
     {
       "name": "10FOLD",
@@ -103,6 +103,16 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "Capgemini",
+      "source_date": "2026-06-24",
+      "source_url": "archive/2026-06-24.html"
+    },
+    {
+      "name": "Caxy",
+      "source_date": "2026-06-24",
+      "source_url": "archive/2026-06-24.html"
+    },
+    {
       "name": "Clarity Digital",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -111,6 +121,11 @@
       "name": "Clay",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "Clerk",
+      "source_date": "2026-06-24",
+      "source_url": "archive/2026-06-24.html"
     },
     {
       "name": "ClickScale Digital",
@@ -126,6 +141,11 @@
       "name": "Close",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "Cognizant",
+      "source_date": "2026-06-24",
+      "source_url": "archive/2026-06-24.html"
     },
     {
       "name": "Collins",
@@ -343,6 +363,11 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
+      "name": "Interbrand",
+      "source_date": "2026-06-24",
+      "source_url": "archive/2026-06-24.html"
+    },
+    {
       "name": "Intero Digital",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -391,6 +416,11 @@
       "name": "Lilo Social",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Linear",
+      "source_date": "2026-06-24",
+      "source_url": "archive/2026-06-24.html"
     },
     {
       "name": "Logic Inbound",
@@ -443,6 +473,11 @@
       "source_url": "archive/2026-05-30.html"
     },
     {
+      "name": "Miro",
+      "source_date": "2026-06-24",
+      "source_url": "archive/2026-06-24.html"
+    },
+    {
       "name": "Monday.com",
       "source_date": "2026-06-20",
       "source_url": "archive/2026-06-20.html"
@@ -466,6 +501,11 @@
       "name": "Neil Patel Digital",
       "source_date": "2026-06-22",
       "source_url": "archive/2026-06-22.html"
+    },
+    {
+      "name": "New Media Campaigns",
+      "source_date": "2026-06-24",
+      "source_url": "archive/2026-06-24.html"
     },
     {
       "name": "North Highland",
@@ -563,6 +603,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Power Digital Marketing",
+      "source_date": "2026-06-24",
+      "source_url": "archive/2026-06-24.html"
+    },
+    {
       "name": "Pravaah Consulting",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
@@ -581,6 +626,11 @@
       "name": "Rain Agency",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Raycast",
+      "source_date": "2026-06-24",
+      "source_url": "archive/2026-06-24.html"
     },
     {
       "name": "Ready State",
@@ -648,6 +698,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Siegel & Gale",
+      "source_date": "2026-06-24",
+      "source_url": "archive/2026-06-24.html"
+    },
+    {
       "name": "Silverback Strategies",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
@@ -691,6 +746,11 @@
       "name": "Sterling Communications",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Straight North",
+      "source_date": "2026-06-24",
+      "source_url": "archive/2026-06-24.html"
     },
     {
       "name": "Supabase",
