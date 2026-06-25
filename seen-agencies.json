@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "last_updated": "2026-06-24",
+  "version": 5,
+  "last_updated": "2026-06-25",
   "agencies": [
     {
       "name": "10FOLD",
@@ -46,6 +46,11 @@
       "name": "Bain & Company",
       "source_date": "2026-06-20",
       "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "Barkley",
+      "source_date": "2026-06-25",
+      "source_url": "archive/2026-06-25.html"
     },
     {
       "name": "BBDO",
@@ -101,6 +106,11 @@
       "name": "Cal.com",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Calendly",
+      "source_date": "2026-06-25",
+      "source_url": "archive/2026-06-25.html"
     },
     {
       "name": "Capgemini",
@@ -198,6 +208,11 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "Daylight Design",
+      "source_date": "2026-06-25",
+      "source_url": "archive/2026-06-25.html"
+    },
+    {
       "name": "Deep Fried Advertising",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
@@ -253,6 +268,11 @@
       "source_url": "archive/2026-06-19.html"
     },
     {
+      "name": "Elixir Interactive",
+      "source_date": "2026-06-25",
+      "source_url": "archive/2026-06-25.html"
+    },
+    {
       "name": "Epic Notion",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
@@ -291,6 +311,11 @@
       "name": "FSC Interactive",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Fueled",
+      "source_date": "2026-06-25",
+      "source_url": "archive/2026-06-25.html"
     },
     {
       "name": "Futurety",
@@ -348,9 +373,19 @@
       "source_url": "archive/2026-06-19.html"
     },
     {
+      "name": "Hyperquake",
+      "source_date": "2026-06-25",
+      "source_url": "archive/2026-06-25.html"
+    },
+    {
       "name": "ICS Creative",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "IDEO",
+      "source_date": "2026-06-25",
+      "source_url": "archive/2026-06-25.html"
     },
     {
       "name": "Ignite Visibility",
@@ -433,6 +468,11 @@
       "source_url": "archive/2026-06-19.html"
     },
     {
+      "name": "Lucid Software",
+      "source_date": "2026-06-25",
+      "source_url": "archive/2026-06-25.html"
+    },
+    {
       "name": "Mabbly",
       "source_date": "2026-05-27",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
@@ -496,6 +536,11 @@
       "name": "Moxie Communications",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Nebo",
+      "source_date": "2026-06-25",
+      "source_url": "archive/2026-06-25.html"
     },
     {
       "name": "Neil Patel Digital",
@@ -613,6 +658,11 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "Primacy",
+      "source_date": "2026-06-25",
+      "source_url": "archive/2026-06-25.html"
+    },
+    {
       "name": "Proof Analytics",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -661,6 +711,11 @@
       "name": "Roar Media",
       "source_date": "2026-06-08",
       "source_url": "telegram-only"
+    },
+    {
+      "name": "Robot Creative",
+      "source_date": "2026-06-25",
+      "source_url": "archive/2026-06-25.html"
     },
     {
       "name": "RSM US",
@@ -876,6 +931,11 @@
       "name": "Xugar",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Yellow Slice",
+      "source_date": "2026-06-25",
+      "source_url": "archive/2026-06-25.html"
     },
     {
       "name": "Zapier",
