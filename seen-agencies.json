@@ -1,6 +1,6 @@
 {
-  "version": 5,
-  "last_updated": "2026-06-25",
+  "version": 6,
+  "last_updated": "2026-06-26",
   "agencies": [
     {
       "name": "10FOLD",
@@ -61,6 +61,11 @@
       "name": "BDO USA",
       "source_date": "2026-06-21",
       "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "BIGEYE Agency",
+      "source_date": "2026-06-26",
+      "source_url": "archive/2026-06-26.html"
     },
     {
       "name": "Blend.",
@@ -143,6 +148,11 @@
       "source_url": "archive/2026-05-31.html"
     },
     {
+      "name": "ClickUp",
+      "source_date": "2026-06-26",
+      "source_url": "archive/2026-06-26.html"
+    },
+    {
       "name": "Clipboard Health",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
@@ -181,6 +191,11 @@
       "name": "Crafted",
       "source_date": "2026-06-08",
       "source_url": "telegram-only"
+    },
+    {
+      "name": "Cramer-Krasselt",
+      "source_date": "2026-06-26",
+      "source_url": "archive/2026-06-26.html"
     },
     {
       "name": "Criteo",
@@ -343,6 +358,11 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
     },
     {
+      "name": "Hawke Media",
+      "source_date": "2026-06-26",
+      "source_url": "archive/2026-06-26.html"
+    },
+    {
       "name": "Hiebing",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
@@ -416,6 +436,11 @@
       "name": "Jumpgrowth",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "KlientBoost",
+      "source_date": "2026-06-26",
+      "source_url": "archive/2026-06-26.html"
     },
     {
       "name": "KPS Digital",
@@ -498,6 +523,16 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Mckinney",
+      "source_date": "2026-06-26",
+      "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "Media.Monks",
+      "source_date": "2026-06-26",
+      "source_url": "archive/2026-06-26.html"
+    },
+    {
       "name": "Merkle",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
@@ -556,6 +591,11 @@
       "name": "North Highland",
       "source_date": "2026-06-19",
       "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "Notion",
+      "source_date": "2026-06-26",
+      "source_url": "archive/2026-06-26.html"
     },
     {
       "name": "NP Digital",
@@ -676,6 +716,11 @@
       "name": "Rain Agency",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "RAPP",
+      "source_date": "2026-06-26",
+      "source_url": "archive/2026-06-26.html"
     },
     {
       "name": "Raycast",
@@ -833,6 +878,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "The Martin Agency",
+      "source_date": "2026-06-26",
+      "source_url": "archive/2026-06-26.html"
+    },
+    {
       "name": "The Variable",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
@@ -878,6 +928,11 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "Viget",
+      "source_date": "2026-06-26",
+      "source_url": "archive/2026-06-26.html"
+    },
+    {
       "name": "Volume PR",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
@@ -911,6 +966,11 @@
       "name": "Wolff Olins",
       "source_date": "2026-06-21",
       "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "Work & Co",
+      "source_date": "2026-06-26",
+      "source_url": "archive/2026-06-26.html"
     },
     {
       "name": "Wpromote",
