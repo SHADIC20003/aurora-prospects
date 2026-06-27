@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurora Tech — Security Report: June 27, 2026</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:0 0 64px}
+.back{padding:16px 0 8px}
+.back a{color:#E8B840;text-decoration:none;font-size:14px;opacity:0.7}
+.back a:hover{opacity:1}
+.header{padding:8px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:22px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .date{font-size:14px;color:#888;margin-bottom:2px}
+.header .summary{font-size:14px;color:#999;margin-top:8px}
+.summary-badge{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:5px;margin-right:6px}
+.summary-badge.critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.summary-badge.high{background:rgba(232,184,64,0.15);color:#E8B840}
+.summary-badge.medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.summary-badge.low{background:rgba(255,255,255,0.06);color:#888}
+.section{margin-top:24px}
+.section h2{font-size:17px;font-weight:600;color:#f1f1f1;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.04)}
+.section h2.priority{color:#E8B840}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+.card h3{font-size:15px;font-weight:600;color:#f1f1f1;margin-bottom:4px;line-height:1.4}
+.card .meta{font-size:12px;color:#999;margin-bottom:8px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.card p{font-size:14px;color:#ccc;line-height:1.6;margin-bottom:6px}
+.card .source{font-size:12px;color:#666;word-break:break-all}
+.card .source a{color:#E8B840;text-decoration:none}
+.card .source a:hover{text-decoration:underline}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px}
+.badge-critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{background:rgba(255,255,255,0.06);color:#888}
+.cve{font-family:monospace;font-size:12px;color:#60a5fa;background:rgba(59,130,246,0.1);padding:1px 6px;border-radius:3px}
+.none{color:#888;font-style:italic;font-size:12px}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+.threat-list{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.threat-list li{font-size:13px;color:#bbb;background:rgba(255,255,255,0.04);padding:4px 10px;border-radius:5px;border:1px solid rgba(255,255,255,0.04)}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="back"><a href="../index.html">&larr; Dashboard</a> <span style="color:#555;margin:0 4px">·</span> <a href="index.html">&larr; Security Archive</a></div>
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="date">June 27, 2026</div>
+<div class="summary">
+<span class="summary-badge high">0 critical</span>
+<span class="summary-badge high">12 high</span>
+<span class="summary-badge medium">2 medium</span>
+<span class="summary-badge low">0 low</span>
+</div>
+</div>
+
+<div class="section">
+<h2 class="priority">1. Hermes Agent (NousResearch/hermes-agent)</h2>
+<div class="card">
+<p style="color:#888;font-style:italic">Nothing new in the last 24 hours. Checked: GitHub Security Advisories, NVD, GitHub issues.</p>
+</div>
+</div>
+
+<div class="section">
+<h2>2. AI Tools & Frameworks</h2>
+
+<div class="card">
+<h3>Amazon Q Developer — MCP Config Code Execution</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span> <span class="cve">CVE-2026-12957</span> <span class="badge" style="background:rgba(59,130,246,0.1);color:#60a5fa">CVSS 8.5</span></div>
+<p>Amazon Q Developer reads MCP configuration (<code>.amazonq/mcp.json</code>) from the workspace and launches MCP servers. A malicious repo can drop a config file enabling cloud compromise from <code>git clone</code>. Discovered by Wiz Research. Patched.</p>
+<div class="source"><a href="https://thehackernews.com/2026/06/amazon-q-developer-flaw-could-let.html">thehackernews.com</a></div>
+</div>
+
+<div class="card">
+<h3>Linux Kernel — pedit COW (act_pedit OOB Write)</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span> <span class="cve">CVE-2026-46331</span></div>
+<p>Out-of-bounds write in the Linux kernel traffic-control packet-editing action (<code>act_pedit</code>). Local unprivileged user can gain root by poisoning the cached copy of a setuid binary. Public exploit available.</p>
+<div class="source"><a href="https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html">thehackernews.com</a></div>
+</div>
+
+<div class="card">
+<h3>DirtyClone — Linux Kernel (DirtyFrag Variant)</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span> <span class="cve">CVE-2026-43503</span> <span class="badge" style="background:rgba(59,130,246,0.1);color:#60a5fa">CVSS 8.8</span></div>
+<p>New Linux kernel LPE in the DirtyFrag family. When the kernel copies a network packet internally, a safety flag is dropped. Local user can corrupt file-backed memory and gain root. First public exploit published June 25 by JFrog. Patch in mainline since May 21.</p>
+<div class="source"><a href="https://thehackernews.com/2026/06/new-dirtyclone-linux-kernel-flaw-lets.html">thehackernews.com</a></div>
+</div>
+</div>
+
+<div class="section">
+<h2>3. General Critical Vulnerabilities</h2>
+
+<div class="card">
+<h3>Cisco/ASA — CISA Urgent Deadline for Exploited Flaw</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span></div>
+<p>CISA set an urgent deadline to patch a Cisco flaw already being exploited in active attacks. Patch immediately.</p>
+<div class="source"><a href="https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/">bleepingcomputer.com</a></div>
+</div>
+
+<div class="card">
+<h3>FBI Warning — Russian Hackers Targeting Signal Backup Recovery Keys</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span></div>
+<p>The FBI and CISA warn that a phishing campaign tied to Russian intelligence services has evolved to steal Signal Backup Recovery Keys, enabling attackers to access victims' historical messages.</p>
+<div class="source"><a href="https://www.bleepingcomputer.com/news/security/fbi-russian-hackers-now-target-signal-backup-recovery-keys/">bleepingcomputer.com</a></div>
+</div>
+
+<div class="card">
+<h3>pnpm — Env Lockfile Short-Circuits Package Resolution</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span> <span class="cve">CVE-2026-55698</span> <span class="badge" style="background:rgba(59,130,246,0.1);color:#60a5fa">CVSS 8.8</span></div>
+<p>Project env lockfile can circumvent package-manager resolution and execute lockfile-selected pnpm bytes.</p>
+<div class="source"><a href="https://github.com/advisories/GHSA-w466-c33r-3gjp">github.com/advisories</a></div>
+</div>
+
+<div class="card">
+<h3>pnpm — Path Traversal in configDependencies Env Lockfile</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span> <span class="badge" style="background:rgba(59,130,246,0.1);color:#60a5fa">CVSS 8.2</span></div>
+<p>Path traversal in configDependencies allows symlink creation outside <code>node_modules/.pnpm-config</code> via crafted lockfile. Affects pnpm &lt; 10.34.4 and 11.0.0 &le; v &lt; 11.8.0.</p>
+<div class="source"><a href="https://github.com/advisories/GHSA-qrv3-253h-g69c">github.com/advisories</a></div>
+</div>
+
+<div class="card">
+<h3>gonic — Arbitrary File Write in createPlaylist</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span> <span class="cve">CVE-2026-49340</span> <span class="badge" style="background:rgba(59,130,246,0.1);color:#60a5fa">CVSS 8.1</span></div>
+<p>Any authenticated user can write playlist M3U content to an attacker-controlled path on the host.</p>
+<div class="source"><a href="https://github.com/advisories/GHSA-4gxv-p5g5-j7w7">github.com/advisories</a></div>
+</div>
+
+<div class="card">
+<h3>pnpm — <code>stage download</code> Manifest Traversal</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span> <span class="cve">CVE-2026-55700</span> <span class="badge" style="background:rgba(59,130,246,0.1);color:#60a5fa">CVSS 7.1</span></div>
+<p>Manifest name/version traversal allows <code>stage download</code> to write outside its destination directory.</p>
+<div class="source"><a href="https://github.com/advisories/GHSA-v23m-ccfg-pq9h">github.com/advisories</a></div>
+</div>
+
+<div class="card">
+<h3>pnpm — <code>patch-remove</code> Arbitrary File Deletion</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span> <span class="badge" style="background:rgba(59,130,246,0.1);color:#60a5fa">CVSS 7.1</span></div>
+<p>Crafted patch entries resolve outside the configured patches directory, enabling arbitrary file deletion. Affects pnpm &lt; 10.34.4 and 11.0.0 &le; v &lt; 11.7.0.</p>
+<div class="source"><a href="https://github.com/advisories/GHSA-72r4-9c5j-mj57">github.com/advisories</a></div>
+</div>
+
+<div class="card">
+<h3>pnpm — Hoisted Install Imports Lockfile Alias Outside node_modules</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span> <span class="badge" style="background:rgba(59,130,246,0.1);color:#60a5fa">CVSS 7.1</span></div>
+<p>A crafted lockfile alias under a hoisted <code>node_modules</code> directory could escape that directory.</p>
+<div class="source"><a href="https://github.com/advisories/GHSA-fr4h-3cph-29xv">github.com/advisories</a></div>
+</div>
+
+<div class="card">
+<h3>Subsonic API — IDOR Playlist Access</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span> <span class="cve">CVE-2026-49338</span> <span class="badge" style="background:rgba(59,130,246,0.1);color:#60a5fa">CVSS 7.1</span></div>
+<p>Any authenticated user can delete or read any other user's playlist via insecure direct object reference.</p>
+<div class="source"><a href="https://github.com/advisories/GHSA-hmgp-w9jm-vp95">github.com/advisories</a></div>
+</div>
+
+<div class="card">
+<h3>gonic — Path Traversal in Playlist ID</h3>
+<div class="meta"><span class="badge badge-high">HIGH</span> <span class="cve">CVE-2026-49339</span> <span class="badge" style="background:rgba(59,130,246,0.1);color:#60a5fa">CVSS 7.1</span></div>
+<p>Path traversal in playlist <code>id</code> bypasses ownership check, enabling any user to read/delete other users' playlists.</p>
+<div class="source"><a href="https://github.com/advisories/GHSA-2fp4-5v5c-4448">github.com/advisories</a></div>
+</div>
+
+<div class="card">
+<h3>pnpm — Reserved Bin Name Deletes PNPM_HOME</h3>
+<div class="meta"><span class="badge badge-medium">MEDIUM</span> <span class="cve">CVE-2026-55699</span> <span class="badge" style="background:rgba(245,158,11,0.15);color:#f59e0b">CVSS 6.5</span></div>
+<p>Reserved bin name can delete the PNPM_HOME directory during global remove operations.</p>
+<div class="source"><a href="https://github.com/advisories/GHSA-4gxm-v5v7-fqc4">github.com/advisories</a></div>
+</div>
+
+<div class="card">
+<h3>Nezha Dashboard — DDNS & Notification Credential Exposure</h3>
+<div class="meta"><span class="badge badge-medium">MEDIUM</span></div>
+<p>Unredacted list API exposes DDNS and notification credentials.</p>
+<div class="source"><a href="https://github.com/advisories/GHSA-ww5p-j6cj-6mqq">github.com/advisories</a></div>
+</div>
+
+<div class="card">
+<h3>Additional Threats This Week</h3>
+<ul class="threat-list">
+<li>SharkLoader malware deploys Cobalt Strike</li>
+<li>Chinese-speaking APT deploys new backdoor</li>
+<li>Miasma malware targets npm supply chains</li>
+<li>Microsoft warns of Photo ZIP phishing</li>
+<li>Google details Turla StockStay toolkit</li>
+<li>Russia used Cellebrite on opposition devices</li>
+</ul>
+</div>
+</div>
+
+<div class="footer">Generated by Netamaru · Aurora Tech</div>
+</div>
+</body>
+</html>
