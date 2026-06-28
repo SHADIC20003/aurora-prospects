@@ -1,6 +1,6 @@
 {
-  "version": 7,
-  "last_updated": "2026-06-27",
+  "version": 8,
+  "last_updated": "2026-06-28",
   "agencies": [
     {
       "name": "10FOLD",
@@ -38,6 +38,16 @@
       "source_url": "archive/2026-06-27.html"
     },
     {
+      "name": "AMP Agency",
+      "source_date": "2026-06-28",
+      "source_url": "archive/2026-06-28.html"
+    },
+    {
+      "name": "Amsive",
+      "source_date": "2026-06-28",
+      "source_url": "archive/2026-06-28.html"
+    },
+    {
       "name": "Anvil Media",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
@@ -66,6 +76,11 @@
       "name": "BDO USA",
       "source_date": "2026-06-21",
       "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "Big Human",
+      "source_date": "2026-06-28",
+      "source_url": "archive/2026-06-28.html"
     },
     {
       "name": "BIGEYE Agency",
@@ -113,6 +128,11 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "Brunner",
+      "source_date": "2026-06-28",
+      "source_url": "archive/2026-06-28.html"
+    },
+    {
       "name": "Caffeine Connect",
       "source_date": "2026-06-08",
       "source_url": "telegram-only"
@@ -146,6 +166,11 @@
       "name": "Clay",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "Clearbit",
+      "source_date": "2026-06-28",
+      "source_url": "archive/2026-06-28.html"
     },
     {
       "name": "Clerk",
@@ -458,6 +483,11 @@
       "source_url": "archive/2026-06-27.html"
     },
     {
+      "name": "Jump Associates",
+      "source_date": "2026-06-28",
+      "source_url": "archive/2026-06-28.html"
+    },
+    {
       "name": "Jumpgrowth",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -581,6 +611,11 @@
       "name": "Mighty Citizen",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Mintz & Hoke",
+      "source_date": "2026-06-28",
+      "source_url": "archive/2026-06-28.html"
     },
     {
       "name": "Miro",
@@ -753,6 +788,11 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
+      "name": "Push10",
+      "source_date": "2026-06-28",
+      "source_url": "archive/2026-06-28.html"
+    },
+    {
       "name": "R/GA",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
@@ -761,6 +801,11 @@
       "name": "Rain Agency",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Ramp",
+      "source_date": "2026-06-28",
+      "source_url": "archive/2026-06-28.html"
     },
     {
       "name": "RAPP",
@@ -843,6 +888,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Siege Media",
+      "source_date": "2026-06-28",
+      "source_url": "archive/2026-06-28.html"
+    },
+    {
       "name": "Siegel & Gale",
       "source_date": "2026-06-24",
       "source_url": "archive/2026-06-24.html"
@@ -903,6 +953,11 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "SYPartners",
+      "source_date": "2026-06-28",
+      "source_url": "archive/2026-06-28.html"
+    },
+    {
       "name": "Tank Design",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
@@ -956,6 +1011,11 @@
       "name": "Titan Growth",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "TopRank Marketing",
+      "source_date": "2026-06-28",
+      "source_url": "archive/2026-06-28.html"
     },
     {
       "name": "Trellis",
