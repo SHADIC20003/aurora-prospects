@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — June 28, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 16px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:22px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:13px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.summary{display:flex;gap:10px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.04);margin-bottom:16px;flex-wrap:wrap}
+.summary-item{flex:1;min-width:70px;text-align:center;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:10px 8px}
+.summary-item .num{font-size:22px;font-weight:700;display:block}
+.summary-item .label{font-size:11px;color:#888;margin-top:2px}
+.section{margin-top:20px}
+.section h2{font-size:16px;font-weight:600;color:#f1f1f1;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.04)}
+.section-priority{color:#E8B840}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+.card-critical{border-color:rgba(232,184,64,0.3)}
+.card-high{border-color:rgba(232,184,64,0.15)}
+.card-medium{border-color:rgba(245,158,11,0.2)}
+.card-low{border-color:rgba(255,255,255,0.06)}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1;margin-bottom:4px;line-height:1.4}
+.card-meta{font-size:12px;margin-bottom:6px}
+.badge{display:inline-block;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px;margin-right:4px}
+.badge-critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{background:rgba(232,184,64,0.12);color:#E8B840}
+.badge-medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{background:rgba(255,255,255,0.06);color:#888}
+.card-desc{font-size:13px;color:#b0b0c0;line-height:1.5;margin-bottom:4px}
+.card-source{font-size:11px;color:#666}
+.card-source a{color:#E8B840;text-decoration:none}
+.card-source a:hover{text-decoration:underline}
+.none-msg{font-size:13px;color:#888;font-style:italic;padding:8px 0}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">June 28, 2026 — <a href="../index.html">← Dashboard</a></div>
+</div>
+
+<div class="summary">
+<div class="summary-item"><span class="num" style="color:#E8B840">2</span><span class="label">Critical</span></div>
+<div class="summary-item"><span class="num" style="color:#E8B840">10</span><span class="label">High</span></div>
+<div class="summary-item"><span class="num" style="color:#f59e0b">1</span><span class="label">Medium</span></div>
+<div class="summary-item"><span class="num" style="color:#888">0</span><span class="label">Low</span></div>
+</div>
+
+<div class="section">
+<h2 class="section-priority">🔴 HIGH PRIORITY: Hermes Agent</h2>
+<p class="none-msg">Nothing new in last 24 hours. No CVEs, security advisories, or disclosed vulnerabilities found for NousResearch/hermes-agent.</p>
+</div>
+
+<div class="section">
+<h2 class="section-priority">🟠 HIGH PRIORITY: AI Tools &amp; Frameworks</h2>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-12957 — Amazon Q Developer MCP Command Injection</div>
+<div class="card-meta"><span class="badge badge-high">HIGH</span> CVSS 8.5</div>
+<div class="card-desc">Malicious GitHub repos can execute arbitrary commands via .amazonq/mcp.json MCP config files. AI assistant auto-launches MCP servers inheriting developer's cloud credentials (AWS keys, API tokens). No separate consent step existed before patch.</div>
+<div class="card-desc"><strong>Affected:</strong> Amazon Q Developer IDE plugins (VS Code &lt; 2.20, JetBrains &lt; 4.3, Eclipse &lt; 2.7.4, Visual Studio &lt; 1.94.0.0)</div>
+<div class="card-desc"><strong>Fix:</strong> Update to Language Servers for AWS 1.69.0+</div>
+<div class="card-source"><a href="https://thehackernews.com/2026/06/amazon-q-developer-flaw-could-let.html" target="_blank">The Hacker News</a> · <a href="https://www.cve.org/cverecord?id=CVE-2026-12957" target="_blank">CVE-2026-12957</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-12958 — Amazon Q Developer Symlink Bypass</div>
+<div class="card-meta"><span class="badge badge-high">HIGH</span> CVSS 8.0</div>
+<div class="card-desc">Missing symlink validation allows arbitrary file writes outside workspace trust boundary.</div>
+<div class="card-desc"><strong>Affected:</strong> Amazon Q Developer (Language Servers for AWS &lt; 1.69.0)</div>
+<div class="card-desc"><strong>Fix:</strong> Update to Language Servers for AWS 1.69.0+</div>
+<div class="card-source"><a href="https://thehackernews.com/2026/06/amazon-q-developer-flaw-could-let.html" target="_blank">The Hacker News</a> · <a href="https://www.cve.org/cverecord?id=CVE-2026-12958" target="_blank">CVE-2026-12958</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">AI Coding Agent Supply Chain — "Clone This Repo and I Own Your Machine"</div>
+<div class="card-meta"><span class="badge badge-high">HIGH</span></div>
+<div class="card-desc">Mozilla 0DIN researchers demonstrate multi-stage attack where a clean GitHub repo tricks AI coding agents (Claude Code) into executing a reverse shell. Uses DNS TXT records and setup error recovery — no malicious code in cloned repo.</div>
+<div class="card-desc"><strong>Affected:</strong> AI coding agents (Claude Code demonstrated; principle applies broadly)</div>
+<div class="card-source"><a href="https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/" target="_blank">BleepingComputer</a> · <a href="https://0din.ai/blog/clone-this-repo-and-i-own-your-machine" target="_blank">0DIN Research</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">Miasma Supply Chain Attack — npm + Go Ecosystem</div>
+<div class="card-meta"><span class="badge badge-high">HIGH</span></div>
+<div class="card-desc">Evolving supply chain campaign hits 24+ npm packages (LeoPlatform, RStreams) and Go modules (verana-blockchain). Uses binding.gyp install execution, Bun-runtime malware, GitHub Actions secret theft via "Run Copilot" workflow. Compromised codfish/semantic-release-action GitHub Action. 559+ GitHub repos used as dead-drops.</div>
+<div class="card-source"><a href="https://thehackernews.com/2026/06/miasma-malware-targets-npm-packages-and.html" target="_blank">The Hacker News</a></div>
+</div>
+
+<div class="card card-medium">
+<div class="card-title">OpenAI GPT-5.6 Sol Preview — Dual-Use Cybersecurity Model</div>
+<div class="card-meta"><span class="badge badge-medium">MEDIUM</span></div>
+<div class="card-desc">OpenAI releases GPT-5.6 Sol/Terra/Luna as limited preview. "Most capable model yet for cybersecurity" — produces credible memory safety leads on hardened software. OpenAI warns of potential over-refusal and increased misaligned agentic behavior. Dual-use concerns with offensive cyber capability.</div>
+<div class="card-source"><a href="https://thehackernews.com/2026/06/openai-limits-gpt-56-rollout-as-sol.html" target="_blank">The Hacker News</a></div>
+</div>
+</div>
+
+<div class="section">
+<h2>🟡 General Critical Vulnerabilities</h2>
+
+<div class="card card-critical">
+<div class="card-title">CVE-2026-20230 — Cisco Unified CM SSRF</div>
+<div class="card-meta"><span class="badge badge-critical">CRITICAL</span> CISA KEV — DEADLINE TODAY</div>
+<div class="card-desc">Server-side request forgery in Cisco Unified Communications Manager Server actively exploited in attacks. CISA added to Known Exploited Vulnerabilities catalog. PoC exploit code existed at disclosure. Patch released June 3, 2026.</div>
+<div class="card-desc"><strong>CISA deadline: June 28 (TODAY).</strong></div>
+<div class="card-source"><a href="https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/" target="_blank">BleepingComputer</a></div>
+</div>
+
+<div class="card card-critical">
+<div class="card-title">CVE-2026-12569 — PTC Windchill/FlexPLM RCE</div>
+<div class="card-meta"><span class="badge badge-critical">CRITICAL</span> CISA KEV — DEADLINE TODAY</div>
+<div class="card-desc">Remote code execution in PTC Windchill and FlexPLM via untrusted data deserialization. Actively exploited. Affects all versions up to 11.0 and multiple 11.1-13.0 release branches.</div>
+<div class="card-desc"><strong>CISA deadline: June 28 (TODAY).</strong></div>
+<div class="card-source"><a href="https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/" target="_blank">BleepingComputer</a> · <a href="https://www.cve.org/CVERecord?id=CVE-2026-12569" target="_blank">CVE-2026-12569</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-20245 — Cisco Catalyst SD-WAN Command Injection (Zero-Day)</div>
+<div class="card-meta"><span class="badge badge-high">HIGH</span> CVSS 8.8</div>
+<div class="card-desc">Mandiant reveals exploitation details: attackers uploaded crafted CSV file ("evil_tenant.csv") to create rogue "troot" root account. Attack chain began March 2026 via unauthorized SD-WAN peering. Attackers used anti-forensic tactics including backup/restore of config files. Related to CVE-2026-20127, CVE-2026-20182.</div>
+<div class="card-desc"><strong>Affected:</strong> Cisco Catalyst SD-WAN Manager (vManage), Controller (vSmart), Validator (vBond)</div>
+<div class="card-source"><a href="https://www.bleepingcomputer.com/news/security/mandiant-reveals-how-cisco-sd-wan-zero-day-attacks-gained-root-access/" target="_blank">BleepingComputer</a> · <a href="https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-privesc-4uxFrdzx" target="_blank">Cisco Advisory</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-43503 — DirtyClone Linux Kernel LPE</div>
+<div class="card-meta"><span class="badge badge-high">HIGH</span> CVSS 8.8</div>
+<div class="card-desc">New DirtyFrag family variant — local privilege escalation via cloned network packets. Attacker with CAP_NET_ADMIN (via unprivileged user namespaces) corrupts file-backed memory, overwrites privileged binaries in memory. Fourth variant in this series. Affects Debian, Ubuntu, Fedora with default namespace configurations.</div>
+<div class="card-desc"><strong>Fix:</strong> Linux &ge; v7.1-rc5 (commit 48f6a5356a33). Workaround: kernel.unprivileged_userns_clone=0 or blacklist esp4/esp6/rxrpc modules.</div>
+<div class="card-source"><a href="https://thehackernews.com/2026/06/new-dirtyclone-linux-kernel-flaw-lets.html" target="_blank">The Hacker News</a> · <a href="https://ubuntu.com/security/CVE-2026-43503" target="_blank">CVE-2026-43503</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">FBI/CISA: Russian Hackers Targeting Signal Backup Recovery Keys</div>
+<div class="card-meta"><span class="badge badge-high">HIGH</span></div>
+<div class="card-desc">Russian Intelligence Services (UNC5792, UNC4221) phishing campaign evolved to steal Signal Backup Recovery Keys. Two-stage attack: tricks user into enabling backups, then asks for recovery key. Attackers can restore all historical messages. Creating new Signal account does NOT invalidate old key — must generate new recovery key manually.</div>
+<div class="card-source"><a href="https://www.bleepingcomputer.com/news/security/fbi-russian-hackers-now-target-signal-backup-recovery-keys/" target="_blank">BleepingComputer</a> · <a href="https://www.ic3.gov/PSA/2026/PSA260626" target="_blank">FBI PSA</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">StrikeShark Campaign — SharkLoader Malware + Cobalt Strike</div>
+<div class="card-meta"><span class="badge badge-high">HIGH</span></div>
+<div class="card-desc">Kaspersky-detected campaign using new SharkLoader malware to deploy Cobalt Strike Beacon via Perfect DLL Hijacking. Targets: diplomatic orgs (Indonesia), Taiwan government, software companies globally. Initial access via Exchange ProxyLogon, Openfire, GeoServer exploits. Likely Chinese-speaking threat actor.</div>
+<div class="card-source"><a href="https://thehackernews.com/2026/06/new-sharkloader-malware-deploys-cobalt.html" target="_blank">The Hacker News</a> · <a href="https://securelist.com/strikeshark-campaign/120326/" target="_blank">Kaspersky</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">Miasma Supply Chain Attack — LeoPlatform npm + Go Packages</div>
+<div class="card-meta"><span class="badge badge-high">HIGH</span></div>
+<div class="card-desc">Evolving Mini Shai-Hulud/Miasma campaign compromises 24 npm packages and 1 Go module. Uses binding.gyp install execution, Bun-runtime JS malware, GitHub Actions secret theft. 559+ GitHub repos as dead-drops. Compromises codfish/semantic-release-action GitHub Action via forced push.</div>
+<div class="card-source"><a href="https://thehackernews.com/2026/06/miasma-malware-targets-npm-packages-and.html" target="_blank">The Hacker News</a></div>
+</div>
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech</div>
+</div>
+</body>
+</html>
