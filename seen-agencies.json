@@ -1,6 +1,6 @@
 {
-  "version": 8,
-  "last_updated": "2026-06-28",
+  "version": 9,
+  "last_updated": "2026-06-29",
   "agencies": [
     {
       "name": "10FOLD",
@@ -58,6 +58,11 @@
       "source_url": "telegram-only"
     },
     {
+      "name": "Avanade",
+      "source_date": "2026-06-29",
+      "source_url": "archive/2026-06-29.html"
+    },
+    {
       "name": "Bain & Company",
       "source_date": "2026-06-20",
       "source_url": "archive/2026-06-20.html"
@@ -76,6 +81,11 @@
       "name": "BDO USA",
       "source_date": "2026-06-21",
       "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "BearingPoint",
+      "source_date": "2026-06-29",
+      "source_url": "archive/2026-06-29.html"
     },
     {
       "name": "Big Human",
@@ -133,6 +143,11 @@
       "source_url": "archive/2026-06-28.html"
     },
     {
+      "name": "Buffer",
+      "source_date": "2026-06-29",
+      "source_url": "archive/2026-06-29.html"
+    },
+    {
       "name": "Caffeine Connect",
       "source_date": "2026-06-08",
       "source_url": "telegram-only"
@@ -156,6 +171,11 @@
       "name": "Caxy",
       "source_date": "2026-06-24",
       "source_url": "archive/2026-06-24.html"
+    },
+    {
+      "name": "Centric Consulting",
+      "source_date": "2026-06-29",
+      "source_url": "archive/2026-06-29.html"
     },
     {
       "name": "Clarity Digital",
@@ -283,6 +303,11 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
+      "name": "Designli",
+      "source_date": "2026-06-29",
+      "source_url": "archive/2026-06-29.html"
+    },
+    {
       "name": "Digital Silk",
       "source_date": "2026-06-22",
       "source_url": "archive/2026-06-22.html"
@@ -331,6 +356,11 @@
       "name": "Elixir Interactive",
       "source_date": "2026-06-25",
       "source_url": "archive/2026-06-25.html"
+    },
+    {
+      "name": "Emfluence",
+      "source_date": "2026-06-29",
+      "source_url": "archive/2026-06-29.html"
     },
     {
       "name": "Epic Notion",
@@ -558,6 +588,11 @@
       "source_url": "archive/2026-06-25.html"
     },
     {
+      "name": "LYFE Marketing",
+      "source_date": "2026-06-29",
+      "source_url": "archive/2026-06-29.html"
+    },
+    {
       "name": "Mabbly",
       "source_date": "2026-05-27",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
@@ -586,6 +621,11 @@
       "name": "Marstudio",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Matter Communications",
+      "source_date": "2026-06-29",
+      "source_url": "archive/2026-06-29.html"
     },
     {
       "name": "Mckinney",
@@ -903,6 +943,11 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "SimpleFocus",
+      "source_date": "2026-06-29",
+      "source_url": "archive/2026-06-29.html"
+    },
+    {
       "name": "Single Grain",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
@@ -936,6 +981,11 @@
       "name": "Solomon Group",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "SparkToro",
+      "source_date": "2026-06-29",
+      "source_url": "archive/2026-06-29.html"
     },
     {
       "name": "Sterling Communications",
@@ -1028,6 +1078,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Turner Duckworth",
+      "source_date": "2026-06-29",
+      "source_url": "archive/2026-06-29.html"
+    },
+    {
       "name": "UpBuild",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -1046,6 +1101,11 @@
       "name": "Viget",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "Viral Nation",
+      "source_date": "2026-06-29",
+      "source_url": "archive/2026-06-29.html"
     },
     {
       "name": "VML",
