@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — June 29, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;line-height:1.6}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:26px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:28px}
+.section h2{font-size:20px;font-weight:700;color:#f1f1f1;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.04)}
+.section h3{font-size:16px;font-weight:600;color:#ccc;margin:16px 0 10px}
+.section .note{font-size:13px;color:#f59e0b;margin-bottom:12px;padding:8px 12px;background:rgba(245,158,11,0.08);border-radius:6px;border-left:3px solid #f59e0b}
+.section .alert-note{font-size:13px;color:#E8B840;margin-bottom:12px;padding:8px 12px;background:rgba(232,184,64,0.08);border-radius:6px;border-left:3px solid #E8B840}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+.card-critical{border-color:rgba(232,184,64,0.25)}
+.card-high{border-color:rgba(232,184,64,0.12)}
+.card-medium{border-color:rgba(245,158,11,0.12)}
+.card-low{border-color:rgba(255,255,255,0.04)}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1;margin-bottom:4px}
+.card-title .cve{color:#888;font-weight:400;font-size:13px}
+.card-meta{font-size:13px;color:#999;line-height:1.6;margin-bottom:3px}
+.card-desc{font-size:14px;color:#ccc;line-height:1.5;margin-top:4px}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;margin-right:4px}
+.badge-critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{background:rgba(255,255,255,0.06);color:#888}
+.badge-hermes{background:rgba(232,184,64,0.2);color:#E8B840;font-size:10px;text-transform:uppercase;letter-spacing:0.5px}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+a{color:#E8B840;text-decoration:none}
+a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">June 29, 2026 · <a href="index.html">← Archive</a> · <a href="../index.html">Dashboard</a></div>
+</div>
+
+<div class="section">
+<h2>🚨 HERMES AGENT — PRIORITY ALERT</h2>
+<div class="alert-note">Hermes Agent users: review immediately if running version ≤ 2026.4.23</div>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-9353 <span class="badge badge-high">HIGH</span> <span class="badge badge-hermes">Hermes Agent</span></div>
+<div class="card-meta"><strong>Affected:</strong> hermes-agent ≤ 2026.4.23 · <strong>Status:</strong> Vendor contacted; NVD status: Deferred</div>
+<div class="card-desc">Skills Guard Multi-Word Prompt Handler — THREAT_PATTERNS argument injection in <code>agent/skills_guard.py</code>. Remote exploitation possible. Exploit has been disclosed publicly.</div>
+<div class="card-meta" style="margin-top:6px">🔗 <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-9353">NVD Entry</a></div>
+</div>
+</div>
+
+<div class="section">
+<h2>🛡️ AI TOOLS &amp; FRAMEWORKS</h2>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-12957 <span class="badge badge-high">HIGH</span> <span class="badge" style="background:rgba(59,130,246,0.12);color:#60a5fa">Amazon Q</span></div>
+<div class="card-meta"><strong>CVSS 8.5</strong> · Amazon Q Developer MCP server vulnerability</div>
+<div class="card-desc">Malicious repository can execute commands and steal cloud credentials via crafted <code>.amazonq/mcp.json</code>. MCP servers inherited full developer environment context (AWS keys, CLI tokens). Patched by Amazon.</div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">Clean GitHub Repo AI Agent Attack <span class="badge badge-high">HIGH</span></div>
+<div class="card-desc">Attack vector against AI coding agents: clean-appearing GitHub repos trick AI agents into running malware. Supply-chain risk for AI-assisted development workflows.</div>
+</div>
+
+<div class="card card-medium">
+<div class="card-title">Fraudulent OpenAI Organization Invites <span class="badge badge-medium">MEDIUM</span></div>
+<div class="card-desc">Cybersecurity firms targeted by phishing campaigns using fake OpenAI organization invite links.</div>
+</div>
+</div>
+
+<div class="section">
+<h2>🔴 CRITICAL VULNERABILITIES</h2>
+
+<div class="card card-critical">
+<div class="card-title">CVE-2026-12569 <span class="badge badge-critical">CRITICAL</span> <span class="cve">CVSS 9.3</span></div>
+<div class="card-meta">PTC Windchill PDMlink / FlexPLM</div>
+<div class="card-desc">Remote code execution through deserialization of untrusted data. Actively exploited in the wild. Added to CISA Known Exploited Vulnerabilities catalog.</div>
+<div class="card-meta" style="margin-top:6px">🔗 <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-12569">NVD</a></div>
+</div>
+
+<div class="card card-critical">
+<div class="card-title">F5 NGINX Open Source <span class="badge badge-critical">CRITICAL</span></div>
+<div class="card-desc">Two critical remote code execution vulnerabilities disclosed in NGINX Open Source. Patches available from F5.</div>
+</div>
+
+<div class="card card-critical">
+<div class="card-title">usbliter8 <span class="badge badge-critical">CRITICAL</span></div>
+<div class="card-desc">Unpatchable exploit breaking Apple A12 and A13 SecureROM boot chain. Affects millions of iOS devices.</div>
+</div>
+</div>
+
+<div class="section">
+<h2>🟡 HIGH SEVERITY</h2>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-46331 — "pedit COW" <span class="badge badge-high">HIGH</span></div>
+<div class="card-desc">Linux kernel out-of-bounds write in traffic-control act_pedit. Local privilege escalation to root. Public working exploit available. Validated on RHEL and Debian targets.</div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-43503 — "DirtyClone" <span class="badge badge-high">HIGH</span> <span class="cve">CVSS 8.8</span></div>
+<div class="card-desc">Linux kernel privilege escalation via file-backed memory corruption through cloned network packet. Public exploit walkthrough published June 25. Patched in mainline May 21.</div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-20245 <span class="badge badge-high">HIGH</span></div>
+<div class="card-desc">Cisco Catalyst SD-WAN zero-day exploited in the wild to gain root access on affected devices.</div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-55698 <span class="badge badge-high">HIGH</span> <span class="cve">CVSS 8.8</span></div>
+<div class="card-desc">pnpm: Project env lockfile can short-circuit package-manager resolution and execute attacker-controlled pnpm bytes. Affects pnpm &lt; 10.34.2 / &lt; 11.5.3.</div>
+</div>
+
+<div class="card card-high" style="border-color:rgba(232,184,64,0.2)">
+<div class="card-title">GHSA-qrv3-253h-g69c <span class="badge badge-high">HIGH</span> <span class="cve">CVSS 8.2</span></div>
+<div class="card-desc">pnpm: Path traversal in configDependencies env lockfile allows symlink creation outside node_modules/.pnpm-config. Affects pnpm &lt; 10.34.4 / &lt; 11.8.0.</div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-49340 <span class="badge badge-high">HIGH</span> <span class="cve">CVSS 8.1</span></div>
+<div class="card-desc">gonic: Arbitrary file write in createPlaylist — any authenticated user can write playlist content to attacker-controlled path. Affects gonic ≤ 0.20.1.</div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-55700 <span class="badge badge-high">HIGH</span> <span class="cve">CVSS 7.1</span></div>
+<div class="card-desc">pnpm: <code>stage download</code> writes outside destination directory via manifest name/version traversal. Affects pnpm 11.3.0–11.5.2.</div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-49338 <span class="badge badge-high">HIGH</span> <span class="cve">CVSS 7.1</span></div>
+<div class="card-desc">gonic: Subsonic API IDOR — any authenticated user can delete or read any other user's playlist. Affects gonic ≤ 0.20.1.</div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">CVE-2026-49339 <span class="badge badge-high">HIGH</span> <span class="cve">CVSS 7.1</span></div>
+<div class="card-desc">gonic: Path traversal in playlist ID bypasses ownership check. Affects gonic ≤ 0.20.1.</div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">GHSA-72r4-9c5j-mj57 <span class="badge badge-high">HIGH</span> <span class="cve">CVSS 7.1</span></div>
+<div class="card-desc">pnpm: <code>patch-remove</code> could delete files outside the patches directory. Affects pnpm &lt; 10.34.4 / &lt; 11.7.0.</div>
+</div>
+
+<div class="card card-high">
+<div class="card-title">GHSA-fr4h-3cph-29xv <span class="badge badge-high">HIGH</span> <span class="cve">CVSS 7.1</span></div>
+<div class="card-desc">pnpm: Hoisted install imports lockfile alias outside node_modules. Affects pnpm &lt; 10.34.4 / &lt; 11.7.0.</div>
+</div>
+</div>
+
+<div class="section">
+<h2>🟠 MEDIUM SEVERITY</h2>
+
+<div class="card card-medium">
+<div class="card-title">CVE-2026-55699 <span class="badge badge-medium">MEDIUM</span> <span class="cve">CVSS 6.5</span></div>
+<div class="card-desc">pnpm: Reserved bin name deletes PNPM_HOME during global remove. Affects pnpm &lt; 10.34.2 / &lt; 11.5.3.</div>
+</div>
+
+<div class="card card-medium">
+<div class="card-title">GHSA-ww5p-j6cj-6mqq <span class="badge badge-medium">MEDIUM</span> <span class="cve">CVSS 5.5</span></div>
+<div class="card-desc">Nezha Dashboard: DDNS and Notification credential exposure via unredacted list API. Affects Nezha &lt; 2.2.5.</div>
+</div>
+</div>
+
+<div class="section">
+<h2>📰 Security News</h2>
+
+<div class="card">
+<div class="card-title">🔴 FBI: Russian Hackers Target Signal Backup Recovery Keys</div>
+<div class="card-desc">Updated advisory (PSA I-062626-PSA) — Russian intelligence groups UNC5792, UNC4221 coaxing targets into handing over Signal Backup Recovery Keys. Key enables account takeover and message history exfiltration even after phone number reassignment. Fix: generate new key in Settings.</div>
+</div>
+
+<div class="card">
+<div class="card-title">🔴 Data Breach: Up to 14.2M Email Logins at Six ISPs</div>
+<div class="card-desc">Major data breach exposing email account credentials at six Internet Service Providers, including KDDI in Japan.</div>
+</div>
+
+<div class="card">
+<div class="card-title">🟡 Salesforce Disables Klue App After OAuth Token Abuse</div>
+<div class="card-desc">OAuth token abuse exposed customer data, prompting Salesforce to disable the Klue app integration.</div>
+</div>
+
+<div class="card">
+<div class="card-title">🟡 CL-STA-1062 / TinyRCT: Chinese APT Targets SE Asia</div>
+<div class="card-desc">Chinese-speaking APT deploying custom backdoor TinyRCT against government entities and critical infrastructure in Southeast Asia. Active since March 2022.</div>
+</div>
+</div>
+
+<div class="section">
+<h2>🔧 Recommended Actions</h2>
+
+<div class="card">
+<div class="card-desc">
+<strong>1. Hermes Agent:</strong> Update if running ≤ 2026.4.23. Review and patch skills_guard.py THREAT_PATTERNS injection path.<br>
+<strong>2. Linux:</strong> Patch immediately for CVE-2026-46331 (pedit COW) and CVE-2026-43503 (DirtyClone) — both have public working exploits granting root.<br>
+<strong>3. pnpm:</strong> Update to ≥ 11.8.0 (or ≥ 10.34.4 for v10 LTS) — batch of 6 disclosed vulnerabilities including code execution and path traversal.<br>
+<strong>4. Amazon Q Developer:</strong> Ensure latest version is deployed (patched by Amazon for CVE-2026-12957).<br>
+<strong>5. PTC Windchill:</strong> Patch immediately — actively exploited, listed on CISA KEV.<br>
+<strong>6. Signal users:</strong> Generate a new backup recovery key in Settings. Never share keys with support bots.
+</div>
+</div>
+</div>
+
+<div class="footer">Generated 2026-06-29 by Netamuru · Aurora Tech Security Watch</div>
+
+</div>
+</body>
+</html>
