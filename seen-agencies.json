@@ -1,11 +1,16 @@
 {
-  "version": 9,
-  "last_updated": "2026-06-29",
+  "version": 10,
+  "last_updated": "2026-06-30",
   "agencies": [
     {
       "name": "10FOLD",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "72andSunny",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
     },
     {
       "name": "A Whole Agency",
@@ -123,6 +128,11 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
+      "name": "Boston Consulting Group",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
+    },
+    {
       "name": "Bounteous",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
@@ -161,6 +171,11 @@
       "name": "Calendly",
       "source_date": "2026-06-25",
       "source_url": "archive/2026-06-25.html"
+    },
+    {
+      "name": "Canva",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
     },
     {
       "name": "Capgemini",
@@ -340,7 +355,12 @@
     {
       "name": "DMi Partners",
       "source_date": "2026-05-28",
-      "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+      "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
+    },
+    {
+      "name": "Droga5",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
     },
     {
       "name": "Duckpin",
@@ -366,6 +386,11 @@
       "name": "Epic Notion",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Figma",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
     },
     {
       "name": "Fin (formerly Intercom)",
@@ -628,6 +653,11 @@
       "source_url": "archive/2026-06-29.html"
     },
     {
+      "name": "McKinsey & Company",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
+    },
+    {
       "name": "Mckinney",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
@@ -641,6 +671,11 @@
       "name": "Merkle",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "Metric Theory",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
     },
     {
       "name": "Metric Digital",
@@ -666,6 +701,11 @@
       "name": "Monday.com",
       "source_date": "2026-06-20",
       "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "Mother",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
     },
     {
       "name": "Moving Brands",
@@ -803,6 +843,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Postman",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
+    },
+    {
       "name": "Power Digital Marketing",
       "source_date": "2026-06-24",
       "source_url": "archive/2026-06-24.html"
@@ -831,6 +876,11 @@
       "name": "Push10",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
+    },
+    {
+      "name": "PwC Digital",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
     },
     {
       "name": "R/GA",
@@ -988,6 +1038,11 @@
       "source_url": "archive/2026-06-29.html"
     },
     {
+      "name": "SPINX Digital",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
+    },
+    {
       "name": "Sterling Communications",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
@@ -1141,6 +1196,11 @@
       "name": "West Monroe",
       "source_date": "2026-06-19",
       "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "Wieden+Kennedy",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
     },
     {
       "name": "Wolff Olins",
