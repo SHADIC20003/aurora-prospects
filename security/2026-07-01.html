@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 01, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;font-size:14px;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:24px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.back-link{display:inline-block;margin-top:8px;font-size:13px;color:#E8B840;text-decoration:none}
+.back-link:hover{text-decoration:underline}
+.section{margin-top:28px}
+.section-title{font-size:18px;font-weight:700;color:#f1f1f1;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section-priority{color:#E8B840}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px;transition:border-color 0.2s}
+.card:hover{border-color:rgba(232,184,64,0.3)}
+.card-header{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1}
+.card-desc{font-size:13px;color:#bbb;line-height:1.5;margin-bottom:6px}
+.card-meta{font-size:12px;color:#888;line-height:1.6}
+.card-meta a{color:#E8B840;text-decoration:none}
+.card-meta a:hover{text-decoration:underline}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px}
+.badge-critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{background:rgba(255,255,255,0.06);color:#888}
+.cve-id{font-family:monospace;font-size:12px;color:#E8B840}
+.summary-bar{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.summary-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:10px 14px;text-align:center;flex:1;min-width:70px}
+.summary-item .num{font-size:22px;font-weight:700;margin-bottom:2px}
+.summary-item .label{font-size:11px;color:#888}
+.summary-item .num-critical{color:#E8B840}
+.summary-item .num-high{color:#E8B840}
+.summary-item .num-medium{color:#f59e0b}
+.summary-item .num-low{color:#888}
+.table-cve{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+.table-cve th{text-align:left;color:#888;font-weight:600;font-size:11px;text-transform:uppercase;padding:6px 8px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.table-cve td{padding:6px 8px;border-bottom:1px solid rgba(255,255,255,0.03);vertical-align:top}
+.table-cve tr:hover td{background:rgba(255,255,255,0.02)}
+.affects{font-size:11px;color:#666;margin-top:2px}
+.empty-state{padding:24px;text-align:center;color:#888;font-size:14px}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+@media(max-width:600px){.summary-bar{gap:6px}.summary-item{padding:8px 6px}.summary-item .num{font-size:18px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 01, 2026 — Daily CVE &amp; Threat Briefing</div>
+<a class="back-link" href="../index.html">← Dashboard</a>
+</div>
+
+<div class="summary-bar">
+<div class="summary-item"><div class="num num-critical">20</div><div class="label">Critical</div></div>
+<div class="summary-item"><div class="num num-high">40</div><div class="label">High</div></div>
+<div class="summary-item"><div class="num num-medium">0</div><div class="label">Medium</div></div>
+<div class="summary-item"><div class="num num-low">0</div><div class="label">Low</div></div>
+</div>
+
+<div class="section">
+<h2 class="section-title section-priority">🔴 Hermes Agent — High Priority</h2>
+<div class="empty-state">No security advisories, CVEs, or disclosed vulnerabilities found for Hermes Agent (NousResearch/hermes-agent). ✓ Clear</div>
+</div>
+
+<div class="section">
+<h2 class="section-title section-priority">🟠 AI Tools &amp; Frameworks</h2>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">Langflow / IBM Langflow OSS — Mass Vulnerability Drop</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">IBM published a wave of 12 CVEs for Langflow OSS. CVE-2026-33017 (CVSS 9.3) is confirmed exploited in the wild to deploy Monero cryptocurrency miners via unauthenticated API endpoints. Multiple CVSS 10.0 and 9.x flaws allow full system compromise, secret theft, and tenant isolation bypass.</div>
+<table class="table-cve">
+<tr><th>CVE</th><th>Score</th><th>Description</th></tr>
+<tr><td><span class="cve-id">CVE-2026-33017</span></td><td><span class="badge badge-critical">9.3</span></td><td>RCE — exploited in wild (Monero miner)<div class="affects">Langflow OSS</div></td></tr>
+<tr><td><span class="cve-id">CVE-2026-10134</span></td><td><span class="badge badge-critical">10.0</span></td><td>Read all secrets + flows + conversations<div class="affects">Langflow OSS 1.0–1.9.3</div></td></tr>
+<tr><td><span class="cve-id">CVE-2026-10140</span></td><td><span class="badge badge-critical">9.6</span></td><td>Voice mode tenant isolation bypass<div class="affects">Langflow OSS 1.0–1.10.0</div></td></tr>
+<tr><td><span class="cve-id">CVE-2026-7663</span></td><td><span class="badge badge-critical">9.1</span></td><td>Unauthenticated MCP resource access<div class="affects">Langflow OSS 1.0–1.9.6</div></td></tr>
+<tr><td><span class="cve-id">CVE-2026-7803</span></td><td><span class="badge badge-critical">9.8</span></td><td>Arbitrary code execution via flow nodes<div class="affects">Langflow OSS 1.0–1.10.0</div></td></tr>
+<tr><td><span class="cve-id">CVE-2026-7871</span></td><td><span class="badge badge-critical">9.8</span></td><td>Redis → arbitrary code execution<div class="affects">Langflow OSS 1.0–1.10.0</div></td></tr>
+<tr><td><span class="cve-id">CVE-2026-7873</span></td><td><span class="badge badge-critical">9.9</span></td><td>OS command execution, credential theft<div class="affects">Langflow OSS 1.0–1.10.0</div></td></tr>
+<tr><td><span class="cve-id">CVE-2026-7874</span></td><td><span class="badge badge-critical">9.1</span></td><td>Weak key derivation → credential disclosure<div class="affects">Langflow OSS 1.0–1.10.0</div></td></tr>
+<tr><td><span class="cve-id">CVE-2026-10129</span></td><td><span class="badge badge-high">8.5</span></td><td>SSRF protection bypass<div class="affects">Langflow OSS 1.0–1.9.3</div></td></tr>
+<tr><td><span class="cve-id">CVE-2026-10560</span></td><td><span class="badge badge-high">8.2</span></td><td>Missing auth on /api/v1/build_public_tmp/<div class="affects">Langflow OSS 1.0–1.9.6</div></td></tr>
+<tr><td><span class="cve-id">CVE-2026-10564</span></td><td><span class="badge badge-high">8.2</span></td><td>SSRF in RSSReaderComponent<div class="affects">Langflow OSS 1.0–1.9.6</div></td></tr>
+<tr><td><span class="cve-id">CVE-2026-10546</span></td><td><span class="badge badge-high">7.1</span></td><td>SSRF in URL component<div class="affects">Langflow OSS 1.0–1.9.3</div></td></tr>
+</table>
+<div class="card-meta">Source: <a href="https://thehackernews.com/2026/06/langflow-rce-exploited-to-deploy-monero.html" target="_blank">The Hacker News</a> · NVD · Trend Micro</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">ChatDev (OpenBMB) — Path Traversal RCE</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">CVE-2026-58166 (CVSS 9.1) — Unauthenticated path traversal allowing remote file writes. Fixed in commit 4fd4da6.</div>
+<div class="card-meta">Affects: ChatDev through 2.2.0</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">Orkes Conductor — Unauthenticated RCE</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">CVE-2026-58138 (CVSS 9.8) — Unauthenticated RCE in Orkes Conductor 3.21.21 before 3.30.2.</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">txtai — RCE via /reindex Endpoint</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">CVE-2026-58449 (CVSS 9.8) — /reindex endpoint function body resolved through Resolver class leading to RCE. Fixed in commit 11b32da.</div>
+<div class="card-meta">Affects: txtai through 9.10.0</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">Flowise — Weak Default Session Secret</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">CVE-2026-56278 (CVSS 9.1) — Hardcoded default secret ('flowise') for express-session middleware enables session forgery.</div>
+<div class="card-meta">Affects: Flowise before 3.1.0 (3.0.13 and earlier)</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">PickleScan Bypasses — AI Supply Chain</span>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-desc">8 CVEs (CVE-2025-71349 through CVE-2025-71374) — picklescan fails to detect malicious pickle files using trace.run, cProfile.run, doctest.debug_script, code.InteractiveInterpreter.runcode, profile.Profile.run, and other built-in Python functions. Critical for AI model loading security.</div>
+<div class="card-meta">Affects: picklescan before 0.0.29/0.0.30 | <a href="https://nvd.nist.gov/vuln/search/results?query=picklescan&pub_date_start=2026-06-29&pub_date_end=2026-07-01" target="_blank">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">Microsoft MCP Tool Description Injection</span>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-desc">Microsoft research: poisoned MCP tool descriptions can make AI agents leak data by replacing tool behavior with malicious intent. Affects Microsoft 365 Copilot, Copilot Studio, Azure AI Foundry. No CVE assigned — research disclosure.</div>
+<div class="card-meta">Source: <a href="https://thehackernews.com/2026/06/microsoft-warns-poisoned-mcp-tool.html" target="_blank">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">282 iOS Apps Leaking LLM API Keys</span>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-desc">Research found 282 iOS apps with hardcoded LLM API keys exposed in binary. Risk of credential theft and unauthorized LLM usage. No CVE assigned.</div>
+<div class="card-meta">Source: <a href="https://thehackernews.com" target="_blank">The Hacker News</a></div>
+</div>
+
+</div>
+
+<div class="section">
+<h2 class="section-title">🔴 General Critical Vulnerabilities</h2>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">Adobe ColdFusion — CVSS 10.0 RCEs</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Two CVSS 10.0 vulnerabilities: unrestricted file upload (CVE-2026-48276) and improper input validation (CVE-2026-48277), both allowing unauthenticated remote code execution. Plus reflected XSS (CVE-2026-48307, CVSS 8.8).</div>
+<div class="card-meta">Affects: ColdFusion 2025.9, 2023.20 and earlier</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">Adobe Campaign Classic — CVSS 10.0</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">CVE-2026-48286 (CVSS 10.0) — Incorrect authorization → arbitrary code execution with no authentication required.</div>
+<div class="card-meta">Affects: Adobe Campaign Classic 7.4.3 build 9396 and earlier</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">IBM Db2 — RCE via DRDA Handshake</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">CVE-2026-10109 (CVSS 9.8) — Remote code execution due to improper pre-auth DRDA handshake handling.</div>
+<div class="card-meta">Affects: IBM Db2 11.5.0–11.5.9, 12.1.0–12.1.4</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">IBM WebSphere Application Server</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Multiple vulns: CVE-2026-11708 (CVSS 9.3 XSS), CVE-2026-11712 (CVSS 9.3 XSS), CVE-2026-11594 (CVSS 8.5 XSS), CVE-2026-11714 (CVSS 8.5 SSRF), CVE-2026-11546 (CVSS 7.1 SSRF), CVE-2026-11806 (CVSS 7.2 file read), CVE-2026-11541 (CVSS 7.4 disclosure).</div>
+<div class="card-meta">Affects: WAS 9.0, 8.5; Liberty 17.0.0.3–26.0.0.7</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">Grav CMS — Unserialize RCE</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">CVE-2026-56700 (CVSS 9.8) — Multiple unsafe unserialize() calls in Scheduler\JobQueue, Framework\Cache, and other components.</div>
+<div class="card-meta">Affects: Grav CMS before 2.0.0-beta.2</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">Ocelot — Security Control Bypass</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">CVE-2026-58172 (CVSS 9.1) — Security control bypass allowing denied clients to circumvent IP-based access controls.</div>
+<div class="card-meta">Affects: Ocelot through 24.1.0, fixed in commit f156fd4</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">Citrix NetScaler — Six Patched Flaws</span>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-desc">CVE-2026-8451, CVE-2026-8452, CVE-2026-8655 (all CVSS 8.8), plus CVE-2026-10816, CVE-2026-10817, CVE-2026-13474, CVE-2026-3055. Memory overflow, file read, and DoS in NetScaler ADC/Gateway.</div>
+<div class="card-meta">Source: <a href="https://thehackernews.com/2026/07/citrix-patches-six-netscaler-flaws.html" target="_blank">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">SimpleHelp — Active Exploitation</span>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-desc">CVE-2026-48558 — Vulnerability in SimpleHelp remote support software being actively exploited in attacks.</div>
+<div class="card-meta">Source: <a href="https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html" target="_blank">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">Capgo — Multiple Vulnerabilities</span>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-desc">Auth bypass (CVE-2026-56219, CVSS 7.5), broken access control (CVE-2026-56230, CVSS 8.8), path traversal (CVE-2026-56233, CVSS 8.3), RBAC scope bypass (CVE-2026-56247, CVSS 8.8), account deletion bypass (CVE-2026-56286, CVSS 8.1).</div>
+<div class="card-meta">Affects: Capgo before 12.128.2</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">Crawl4AI — Arbitrary JS Execution</span>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-desc">CVE-2026-56264 (CVSS 8.1) — Arbitrary JavaScript execution via /execute_js endpoint in Docker API server.</div>
+<div class="card-meta">Affects: Crawl4AI before 0.8.7</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">RustDuck Botnet — Rust Rebuild</span>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-desc">RustDuck botnet rebuilt in Rust to hijack routers and servers for DDoS attacks.</div>
+<div class="card-meta">Source: <a href="https://thehackernews.com" target="_blank">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">Silent Swap — Crypto Clipper Campaign</span>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-desc">Cryptocurrency clipper campaign using fake "Google Notes" Chromium extension to replace wallet addresses during transactions. Detected by McAfee Labs.</div>
+<div class="card-meta">Source: <a href="https://thehackernews.com" target="_blank">The Hacker News</a></div>
+</div>
+
+</div>
+
+<div class="footer">Report generated by Netamuru · Aurora Tech · Data from NVD, The Hacker News, GitHub Security Advisories</div>
+</div>
+</body>
+</html>
