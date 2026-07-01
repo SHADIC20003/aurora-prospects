@@ -1,6 +1,6 @@
 {
-  "version": 10,
-  "last_updated": "2026-06-30",
+  "version": 11,
+  "last_updated": "2026-07-01",
   "agencies": [
     {
       "name": "10FOLD",
@@ -16,6 +16,11 @@
       "name": "A Whole Agency",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Acceleration Partners",
+      "source_date": "2026-07-01",
+      "source_url": "archive/2026-07-01.html"
     },
     {
       "name": "Accenture",
@@ -173,6 +178,11 @@
       "source_url": "archive/2026-06-25.html"
     },
     {
+      "name": "Canny",
+      "source_date": "2026-07-01",
+      "source_url": "archive/2026-07-01.html"
+    },
+    {
       "name": "Canva",
       "source_date": "2026-06-30",
       "source_url": "archive/2026-06-30.html"
@@ -231,6 +241,11 @@
       "name": "Close",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "Coda",
+      "source_date": "2026-07-01",
+      "source_url": "archive/2026-07-01.html"
     },
     {
       "name": "Cognizant",
@@ -443,6 +458,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Grant Thornton",
+      "source_date": "2026-07-01",
+      "source_url": "archive/2026-07-01.html"
+    },
+    {
       "name": "Green Schlaik",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -456,6 +476,11 @@
       "name": "GS&F",
       "source_date": "2026-05-27",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
+    },
+    {
+      "name": "Happy Cog",
+      "source_date": "2026-07-01",
+      "source_url": "archive/2026-07-01.html"
     },
     {
       "name": "Hawke Media",
@@ -538,6 +563,11 @@
       "source_url": "archive/2026-06-27.html"
     },
     {
+      "name": "JKR (Jones Knowles Ritchie)",
+      "source_date": "2026-07-01",
+      "source_url": "archive/2026-07-01.html"
+    },
+    {
       "name": "Jump Associates",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
@@ -551,6 +581,11 @@
       "name": "KlientBoost",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "KPMG",
+      "source_date": "2026-07-01",
+      "source_url": "archive/2026-07-01.html"
     },
     {
       "name": "KPS Digital",
@@ -596,6 +631,11 @@
       "name": "Logic Inbound",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Logical Position",
+      "source_date": "2026-07-01",
+      "source_url": "archive/2026-07-01.html"
     },
     {
       "name": "Loom",
@@ -653,14 +693,14 @@
       "source_url": "archive/2026-06-29.html"
     },
     {
-      "name": "McKinsey & Company",
-      "source_date": "2026-06-30",
-      "source_url": "archive/2026-06-30.html"
-    },
-    {
       "name": "Mckinney",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "McKinsey & Company",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
     },
     {
       "name": "Media.Monks",
@@ -673,14 +713,14 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
-      "name": "Metric Theory",
-      "source_date": "2026-06-30",
-      "source_url": "archive/2026-06-30.html"
-    },
-    {
       "name": "Metric Digital",
       "source_date": "2026-06-08",
       "source_url": "telegram-only"
+    },
+    {
+      "name": "Metric Theory",
+      "source_date": "2026-06-30",
+      "source_url": "archive/2026-06-30.html"
     },
     {
       "name": "Mighty Citizen",
@@ -913,6 +953,11 @@
       "source_url": "archive/2026-06-19.html"
     },
     {
+      "name": "Red Antler",
+      "source_date": "2026-07-01",
+      "source_url": "archive/2026-07-01.html"
+    },
+    {
       "name": "RedRover Sales & Marketing",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -1138,9 +1183,19 @@
       "source_url": "archive/2026-06-29.html"
     },
     {
+      "name": "Typeform",
+      "source_date": "2026-07-01",
+      "source_url": "archive/2026-07-01.html"
+    },
+    {
       "name": "UpBuild",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Ustwo",
+      "source_date": "2026-07-01",
+      "source_url": "archive/2026-07-01.html"
     },
     {
       "name": "Valtech",
