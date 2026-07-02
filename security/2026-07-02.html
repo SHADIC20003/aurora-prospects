@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 02, 2026 — Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;font-size:14px;line-height:1.6}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:22px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:13px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:28px}
+.section h2{font-size:18px;font-weight:600;color:#f1f1f1;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section h2.priority{color:#E8B840}
+.section h2 .badge-priority{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.2);color:#E8B840;margin-left:8px;vertical-align:middle;letter-spacing:0.5px}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:16px;margin-bottom:12px;transition:border-color 0.2s}
+.card:hover{border-color:rgba(232,184,64,0.2)}
+.card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1;flex:1}
+.card-meta{display:flex;gap:6px;flex-wrap:wrap;flex-shrink:0}
+.badge-critical{display:inline-block;font-size:11px;font-weight:700;padding:2px 10px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{display:inline-block;font-size:11px;font-weight:700;padding:2px 10px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{display:inline-block;font-size:11px;font-weight:700;padding:2px 10px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{display:inline-block;font-size:11px;font-weight:700;padding:2px 10px;border-radius:4px;background:rgba(255,255,255,0.06);color:#888}
+.badge-info{display:inline-block;font-size:11px;font-weight:700;padding:2px 10px;border-radius:4px;background:rgba(59,130,246,0.15);color:#60a5fa}
+.card-body{font-size:13px;color:#bbb;line-height:1.6}
+.card-body .field{display:inline-block;color:#888;width:90px;flex-shrink:0}
+.card-body .row{display:flex;margin-bottom:4px;gap:8px}
+.card-body .row:last-child{margin-bottom:0}
+.card-body a{color:#E8B840;text-decoration:none}
+.card-body a:hover{text-decoration:underline}
+.cve-list{display:inline;color:#e8e8f0}
+.empty{font-size:14px;color:#666;padding:16px 0;font-style:italic}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+@media(max-width:480px){.card-header{flex-direction:column}.card-title{font-size:14px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 02, 2026 — <a href="../index.html">← Dashboard</a> · <a href="index.html">Archive</a></div>
+</div>
+
+<!-- HERMES AGENT -->
+<div class="section">
+<h2 class="priority">1. Hermes Agent <span class="badge-priority">ABSOLUTE PRIORITY</span></h2>
+<div class="empty">✓ No vulnerabilities, CVEs, or security advisories found in the last 7 days.</div>
+</div>
+
+<!-- AI TOOLS & FRAMEWORKS -->
+<div class="section">
+<h2>2. AI Tools &amp; Frameworks — High Priority</h2>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Critical Cursor Flaws — Prompt Injection Sandbox Escape</div>
+<div class="card-meta"><span class="badge-critical">CRITICAL</span></div>
+</div>
+<div class="card-body">
+<div class="row"><span class="field">CVE</span><span class="cve-list">CVE-2026-50548, CVE-2026-50549</span></div>
+<div class="row"><span class="field">Affected</span>Cursor AI code editor</div>
+<div class="row"><span class="field">Summary</span>Two critical vulnerabilities allow prompt injection to escape the AI sandbox and execute arbitrary commands on the host system.</div>
+<div class="row"><span class="field">Source</span><a href="https://thehackernews.com/2026/07/critical-cursor-flaws-could-let-prompt.html" target="_blank" rel="noopener">The Hacker News →</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Anthropic Restores Claude Fable 5 After Export Control Lift</div>
+<div class="card-meta"><span class="badge-info">INFO</span></div>
+</div>
+<div class="card-body">
+<div class="row"><span class="field">Summary</span>Anthropic restored Claude Fable 5 after the U.S. lifted jailbreak-linked export controls. Relevant to AI model governance.</div>
+<div class="row"><span class="field">Source</span><a href="https://thehackernews.com/2026/07/anthropic-restores-claude-fable-5-after.html" target="_blank" rel="noopener">The Hacker News →</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Phantom Squatting — AI-Hallucinated Domains Used for Phishing</div>
+<div class="card-meta"><span class="badge-medium">MEDIUM</span></div>
+</div>
+<div class="card-body">
+<div class="row"><span class="field">Summary</span>Attackers using AI-generated hallucinated domains (phantom squatting) for convincing phishing and malware distribution.</div>
+<div class="row"><span class="field">Source</span><a href="https://thehackernews.com/2026/07/phantom-squatting-uses-ai-hallucinated.html" target="_blank" rel="noopener">The Hacker News →</a></div>
+</div>
+</div>
+
+</div>
+
+<!-- GENERAL CRITICAL VULNS -->
+<div class="section">
+<h2>3. General Critical &amp; High-Severity Vulnerabilities</h2>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Adobe Patches 7 CVSS 10.0 Flaws in ColdFusion &amp; Campaign Classic</div>
+<div class="card-meta"><span class="badge-critical">CRITICAL</span></div>
+</div>
+<div class="card-body">
+<div class="row"><span class="field">CVEs</span><span class="cve-list">CVE-2026-48276, CVE-2026-48283, CVE-2026-48277, CVE-2026-48281, CVE-2026-48316, CVE-2026-48282, CVE-2026-48313, CVE-2026-48315</span></div>
+<div class="row"><span class="field">Affected</span>Adobe ColdFusion, Adobe Campaign Classic</div>
+<div class="row"><span class="field">Severity</span>CVSS 10.0 — Critical</div>
+<div class="row"><span class="field">Summary</span>Seven critical vulnerabilities patched, all rated CVSS 10.0. Remote code execution and other severe impacts.</div>
+<div class="row"><span class="field">Source</span><a href="https://thehackernews.com/2026/07/adobe-patches-7-cvss-100-flaws-in.html" target="_blank" rel="noopener">The Hacker News →</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Progress Kemp LoadMaster — Pre-Auth RCE Under Active Exploitation</div>
+<div class="card-meta"><span class="badge-critical">CRITICAL</span></div>
+</div>
+<div class="card-body">
+<div class="row"><span class="field">CVE</span><span class="cve-list">CVE-2026-8037 (CVSS 9.6), CVE-2026-33691, CVE-2024-1212, CVE-2026-20245</span></div>
+<div class="row"><span class="field">Affected</span>Progress Kemp LoadMaster load balancer</div>
+<div class="row"><span class="field">Summary</span>Pre-authentication remote code execution vulnerability with active exploitation attempts in the wild.</div>
+<div class="row"><span class="field">Source</span><a href="https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html" target="_blank" rel="noopener">The Hacker News →</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Unpatched Argo CD Repo-Server Flaw — Kubernetes Cluster Takeover</div>
+<div class="card-meta"><span class="badge-critical">CRITICAL</span></div>
+</div>
+<div class="card-body">
+<div class="row"><span class="field">CVEs</span><span class="cve-list">CVE-2024-31989, CVE-2025-55190, CVE-2026-42880, CVE-2026-20245</span></div>
+<div class="row"><span class="field">Affected</span>Argo CD repo-server component</div>
+<div class="row"><span class="field">Summary</span>Unpatched flaw allowing attackers to take over Kubernetes clusters via the repo-server component.</div>
+<div class="row"><span class="field">Source</span><a href="https://thehackernews.com/2026/07/unpatched-argo-cd-repo-server-flaw.html" target="_blank" rel="noopener">The Hacker News →</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">AI-Generated Browser Ransomware Abuses Chromium API</div>
+<div class="card-meta"><span class="badge-high">HIGH</span></div>
+</div>
+<div class="card-body">
+<div class="row"><span class="field">Summary</span>AI-generated browser-based ransomware abuses Chromium API on both Windows and Android platforms.</div>
+<div class="row"><span class="field">Source</span><a href="https://thehackernews.com/2026/07/ai-generated-browser-ransomware-abuses.html" target="_blank" rel="noopener">The Hacker News →</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">VEIL#DROP Malware Chain — Blogger Platform Delivers PureLogs Stealer</div>
+<div class="card-meta"><span class="badge-high">HIGH</span></div>
+</div>
+<div class="card-body">
+<div class="row"><span class="field">Summary</span>Malware campaign using Google's Blogger platform to host malicious content delivering PureLogs information stealer.</div>
+<div class="row"><span class="field">Source</span><a href="https://thehackernews.com/2026/07/veildrop-malware-chain-uses-blogger.html" target="_blank" rel="noopener">The Hacker News →</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Ousaban Banking Trojan — Targets Iberian Bank Users</div>
+<div class="card-meta"><span class="badge-high">HIGH</span></div>
+</div>
+<div class="card-body">
+<div class="row"><span class="field">Summary</span>Ousaban banking trojan targeting Spanish/Portuguese bank users with fake PDF lures.</div>
+<div class="row"><span class="field">Source</span><a href="https://thehackernews.com/2026/07/ousaban-banking-trojan-targets-iberian.html" target="_blank" rel="noopener">The Hacker News →</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">SEO-Poisoned Software Sites Abuse ScreenConnect to Deploy AsyncRAT</div>
+<div class="card-meta"><span class="badge-high">HIGH</span></div>
+</div>
+<div class="card-body">
+<div class="row"><span class="field">Summary</span>Fake software download sites using SEO poisoning and ScreenConnect to deploy AsyncRAT malware.</div>
+<div class="row"><span class="field">Source</span><a href="https://thehackernews.com/2026/07/seo-poisoned-software-sites-abuse.html" target="_blank" rel="noopener">The Hacker News →</a></div>
+</div>
+</div>
+
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech · Sources: The Hacker News, GitHub Security Advisories, NVD</div>
+</div>
+</body>
+</html>
