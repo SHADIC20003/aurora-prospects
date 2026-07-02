@@ -1,6 +1,6 @@
 {
-  "version": 11,
-  "last_updated": "2026-07-01",
+  "version": 12,
+  "last_updated": "2026-07-02",
   "agencies": [
     {
       "name": "10FOLD",
@@ -48,6 +48,11 @@
       "source_url": "archive/2026-06-27.html"
     },
     {
+      "name": "Alvarez & Marsal",
+      "source_date": "2026-07-02",
+      "source_url": "archive/2026-07-02.html"
+    },
+    {
       "name": "AMP Agency",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
@@ -56,6 +61,11 @@
       "name": "Amsive",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
+    },
+    {
+      "name": "Animalz",
+      "source_date": "2026-07-02",
+      "source_url": "archive/2026-07-02.html"
     },
     {
       "name": "Anvil Media",
@@ -153,6 +163,11 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "Bruce Mau Design",
+      "source_date": "2026-07-02",
+      "source_url": "archive/2026-07-02.html"
+    },
+    {
       "name": "Brunner",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
@@ -201,6 +216,11 @@
       "name": "Centric Consulting",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
+    },
+    {
+      "name": "ChartMogul",
+      "source_date": "2026-07-02",
+      "source_url": "archive/2026-07-02.html"
     },
     {
       "name": "Clarity Digital",
@@ -403,6 +423,11 @@
       "source_url": "archive/2026-05-31.html"
     },
     {
+      "name": "FATJOE",
+      "source_date": "2026-07-02",
+      "source_url": "archive/2026-07-02.html"
+    },
+    {
       "name": "Figma",
       "source_date": "2026-06-30",
       "source_url": "archive/2026-06-30.html"
@@ -441,6 +466,11 @@
       "name": "FSC Interactive",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "FTI Consulting",
+      "source_date": "2026-07-02",
+      "source_url": "archive/2026-07-02.html"
     },
     {
       "name": "Fueled",
@@ -843,9 +873,19 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Paddle",
+      "source_date": "2026-07-02",
+      "source_url": "archive/2026-07-02.html"
+    },
+    {
       "name": "Page One Power",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Pearlfisher",
+      "source_date": "2026-07-02",
+      "source_url": "archive/2026-07-02.html"
     },
     {
       "name": "Pentagram",
@@ -908,6 +948,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Protiviti",
+      "source_date": "2026-07-02",
+      "source_url": "archive/2026-07-02.html"
+    },
+    {
       "name": "Publicis Sapient",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
@@ -963,6 +1008,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "RevenueCat",
+      "source_date": "2026-07-02",
+      "source_url": "archive/2026-07-02.html"
+    },
+    {
       "name": "RIESTER",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -993,6 +1043,11 @@
       "source_url": "archive/2026-06-21.html"
     },
     {
+      "name": "Ruckus Agency",
+      "source_date": "2026-07-02",
+      "source_url": "archive/2026-07-02.html"
+    },
+    {
       "name": "Run DM",
       "source_date": "2026-06-08",
       "source_url": "telegram-only"
@@ -1011,6 +1066,11 @@
       "name": "Seer Interactive",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Sensis",
+      "source_date": "2026-07-02",
+      "source_url": "archive/2026-07-02.html"
     },
     {
       "name": "SevenCube",
