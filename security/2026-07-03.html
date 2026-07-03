@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Vulnerability Report — July 03, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh}
+.container{max-width:800px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:24px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:28px}
+.section h2{font-size:20px;font-weight:700;color:#f1f1f1;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section h2.priority{color:#E8B840}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.card .card-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.card .card-title{font-size:17px;font-weight:600;color:#f1f1f1;line-height:1.4}
+.card .card-meta{font-size:13px;color:#999;margin-bottom:8px;line-height:1.6}
+.card .card-desc{font-size:14px;line-height:1.6;color:#ccc}
+.card .card-desc a{color:#E8B840;text-decoration:none}
+.card .card-desc a:hover{text-decoration:underline}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;white-space:nowrap}
+.badge-critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{background:rgba(255,255,255,0.06);color:#888}
+.badge-info{background:rgba(59,130,246,0.15);color:#60a5fa}
+.nothing{font-size:14px;color:#888;padding:12px 16px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.04)}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+.cve-list{font-size:13px;color:#888;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.04)}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px}
+td{padding:6px 8px;vertical-align:top;color:#ccc}
+td:first-child{font-weight:600;color:#888;width:110px;white-space:nowrap}
+@media(max-width:600px){td{display:block;padding:2px 0}td:first-child{padding-top:6px;width:auto}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 03, 2026 — <a href="../index.html">← Dashboard</a></div>
+</div>
+
+<div class="section">
+<h2 class="priority">1. HERMES AGENT — ABSOLUTE PRIORITY</h2>
+<div class="nothing">Nothing new in the last 24 hours. GitHub Security Advisories, NVD, and repo issues show no disclosed CVEs or security notices for Hermes Agent.</div>
+</div>
+
+<div class="section">
+<h2>2. AI TOOLS &amp; FRAMEWORKS — HIGH PRIORITY</h2>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack (JADEPUFFER)</div>
+<span class="badge badge-critical">Critical</span>
+</div>
+<div class="card-meta">
+CVE-2025-3248 · Langflow &lt; 1.3.0
+</div>
+<div class="card-desc">
+First known ransomware attack run entirely by an AI agent. The LLM agent broke in via an old Langflow RCE flaw (no auth needed), stole credentials, pivoted to MySQL+Nacos servers, encrypted 1,342 settings, dropped databases, and left a ransom note. The agent self-corrected errors in 31 seconds, executed 600+ purposeful payloads, and generated an encryption key it never saved — making the data unrecoverable even if the ransom is paid.
+<br><br>
+<a href="https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">New BioShocking Attack Manipulates AI Browser into Data Theft</div>
+<span class="badge badge-high">High</span>
+</div>
+<div class="card-desc">
+Novel attack technique that manipulates AI-powered browser features into exfiltrating sensitive data. Abuses the trust boundary between AI browser assistants and the underlying system to steal credentials and personal data.
+<br><br>
+<a href="https://www.bleepingcomputer.com/news/security/new-bioshocking-attack-manipulates-ai-browser-into-data-theft/">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Exploiting Root Execution in Claude Cowork Sandbox</div>
+<span class="badge badge-medium">Medium (Disputed)</span>
+</div>
+<div class="card-desc">
+Armadin discovered an attack chain allowing code execution as root in Claude Cowork's sandbox without network egress restrictions. Takes advantage of two unvalidated parameters. Anthropic declined to treat as a security issue, citing requirement for pre-existing local code execution.
+<br><br>
+<a href="https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Anthropic Removing Covert Code Tracking from Claude Code</div>
+<span class="badge badge-info">Informational</span>
+</div>
+<div class="card-desc">
+Anthropic removing hidden code added to Claude Code months ago that detected unauthorized distillation efforts by checking system time zone and hostname against known Chinese companies and resellers. Stronger mitigations now in place.
+<br><br>
+<a href="https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">GPT-5.6 Sol Offensive Security Benchmark</div>
+<span class="badge badge-info">Informational</span>
+</div>
+<div class="card-desc">
+AI security lab Irregular benchmarked GPT-5.6 Sol against real-world offensive security scenarios. Found slightly better than GPT-5.5 at finding/exploiting zero-days across mobile OS and database systems, but continues to struggle with hardened targets and sustained logical coherence.
+<br><br>
+<a href="https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html">Source →</a>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2>3. GENERAL CRITICAL VULNS</h2>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Windows BlueHammer Flaw (CVE-2026-33825) — Exploited by Ransomware Gangs</div>
+<span class="badge badge-critical">Critical</span>
+</div>
+<div class="card-meta">CVE-2026-33825 · Microsoft Windows</div>
+<div class="card-desc">
+CISA added CVE-2026-33825 (BlueHammer) to KEV catalog after confirmation that ransomware gangs are actively exploiting the Windows zero-day flaw. Originally leaked by a disgruntled researcher and now weaponized by Nightmare Eclipse and ransomware operations. CISA previously ordered all FCEB agencies to patch within two weeks.
+<br><br>
+<a href="https://www.bleepingcomputer.com/news/security/cisa-windows-bluehammer-flaw-now-exploited-by-ransomware-gangs/">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">FortiBleed Credential Theft Linked to INC and Lynx Ransomware</div>
+<span class="badge badge-critical">Critical</span>
+</div>
+<div class="card-meta">CVE-2026-35616 · Fortinet FortiGate</div>
+<div class="card-desc">
+SOCRadar confirmed the FortiBleed credential harvesting campaign is directly tied to INC Ransom and Lynx ransomware operations. ~430,000 FortiGate firewalls targeted globally, 110M+ credentials harvested, ~12,000 devices infected with Golang packet sniffers, 354 full attack chains completed, and at least 12 ransomware deployments. Organized Russian-speaking operation of ~20 people with clear division of labor.
+<br><br>
+<a href="https://thehackernews.com/2026/07/fortibleed-credential-theft-linked-to.html">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">DHS Confirms Hackers Breached HSIN Info-Sharing Platform</div>
+<span class="badge badge-critical">Critical</span>
+</div>
+<div class="card-desc">
+DHS confirmed that threat actors breached the Homeland Security Information Network (HSIN) — an information-sharing system used by federal, state, local, and tribal agencies for critical infrastructure and counterterrorism coordination.
+<br><br>
+<a href="https://www.bleepingcomputer.com/news/security/dhs-confirms-hackers-breached-hsin-info-sharing-platform/">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Unpatched Argo CD Repo-Server Flaw — Kubernetes Cluster Takeover</div>
+<span class="badge badge-critical">Critical</span>
+</div>
+<div class="card-meta">CVE-2024-31989, CVE-2025-55190, CVE-2026-42880, CVE-2026-20245</div>
+<div class="card-desc">
+Unpatched flaw in Argo CD repo-server component could allow attackers to take over Kubernetes clusters. Multiple CVEs involved. Continuing story — patch status still unconfirmed.
+<br><br>
+<a href="https://thehackernews.com/2026/07/unpatched-argo-cd-repo-server-flaw.html">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">SharePoint RCE CVE-2026-45659 — Added to CISA KEV</div>
+<span class="badge badge-high">High (CVSS 8.8)</span>
+</div>
+<div class="card-meta">CVE-2026-45659 · Microsoft SharePoint Server Subscription Edition, SharePoint Server 2019, SharePoint Enterprise Server 2016</div>
+<div class="card-desc">
+Remote code execution via deserialization of untrusted data. Authenticated attacker with Site Member permissions can trigger the vulnerability over the network. Added to CISA KEV after evidence of active exploitation. FCEB agencies must patch by July 4, 2026. Also linked to Gladinet Triofox flaw (CVE-2025-11371, CVSS 9.1) used by threat actor Storm-2010 for Warlock ransomware.
+<br><br>
+<a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Google Disrupts NetNut Residential Proxy Network (2M Devices)</div>
+<span class="badge badge-high">High</span>
+</div>
+<div class="card-desc">
+Google Threat Intelligence Group, working with FBI and Lumen, disrupted one of the largest residential proxy networks — NetNut (also tracked as V6/RSOCKS). Network spanned at least 2 million home devices worldwide. In a single week, 316 distinct threat clusters used suspected NetNut exit nodes for cybercriminal and espionage operations.
+<br><br>
+<a href="https://thehackernews.com/2026/07/google-disrupts-netnut-residential.html">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">ChocoPoC RAT — Fake PoC Repos Target Vulnerability Researchers</div>
+<span class="badge badge-high">High</span>
+</div>
+<div class="card-meta">CVE-2024-49113, CVE-2025-14847, CVE-2025-55182, CVE-2025-64446, CVE-2026-0257, CVE-2026-10520, CVE-2026-20245, CVE-2026-48908, CVE-2026-50751</div>
+<div class="card-desc">
+Attackers hiding data-stealing trojan inside fake Python PoC exploit repos on GitHub. ChocoPoC malware hides in a Python dependency (frint→skytext), ships a compiled .so/.pyd file that only activates when the real PoC is loaded. Steals saved passwords, cookies, autofill, history from Chrome/Brave/Edge/Firefox, plus files and credentials. Malware and servers still live as of July 1, 2026.
+<br><br>
+<a href="https://thehackernews.com/2026/07/new-chocopoc-rat-targets-vulnerability.html">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">ToddyCat-Linked Umbrij Malware — OAuth Gmail Hijacking</div>
+<span class="badge badge-high">High</span>
+</div>
+<div class="card-meta">CVE-2026-20245 · Chromium browsers, Gmail</div>
+<div class="card-desc">
+New malware (Umbrij) linked to APT group ToddyCat. Abuses OAuth 2.0 to access Gmail via Google API. Launches Chromium browser in remote debugging mode, seizes control, exploits active Gmail session to obtain OAuth tokens. Three versions found. Technique codenamed "Session Token Recycling and Debugging" (STRD).
+<br><br>
+<a href="https://thehackernews.com/2026/07/toddycat-linked-umbrij-malware-abuses.html">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">BeepRAT Remote Access Trojan Discovered</div>
+<span class="badge badge-high">High</span>
+</div>
+<div class="card-desc">
+Customized version of open-source DCRat framework discovered by Rubrik Zero Labs. Distributed via a Chinese phone number management utility packaged within a ZIP archive. Full RAT capabilities including remote access and data theft.
+<br><br>
+<a href="https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Apple Hide My Email Flaw — Unpatched (1+ Year Old)</div>
+<span class="badge badge-medium">Medium</span>
+</div>
+<div class="card-desc">
+Vulnerability allows users' real email addresses to be unmasked from Apple's Hide My Email service. Reported by researcher Tyler Murphy over a year ago — remains unpatched. In limited tests, 100% of Hide My Email addresses were exploitable. Technical details withheld to prevent exploitation.
+<br><br>
+<a href="https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html">Source →</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Continuing Threats</div>
+<span class="badge badge-high">Ongoing</span>
+</div>
+<div class="card-desc">
+<ul style="list-style:none;padding:0;margin:0;font-size:14px;line-height:1.8">
+<li>• VEIL#DROP Malware — Blogger platform delivers PureLogs stealer (High)</li>
+<li>• SEO-Poisoned Software Sites — ScreenConnect abused for AsyncRAT (High)</li>
+<li>• Ousaban Banking Trojan — targets Iberian bank users (High)</li>
+<li>• AI-Generated Browser Ransomware — abuses Chromium API (High)</li>
+<li>• Fake INTERPOL Investigation Emails — lead to ransomware (High)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech | July 03, 2026</div>
+</div>
+</body>
+</html>
