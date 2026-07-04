@@ -1,6 +1,6 @@
 {
-  "version": 13,
-  "last_updated": "2026-07-03",
+  "version": 14,
+  "last_updated": "2026-07-04",
   "agencies": [
     {
       "name": "10FOLD",
@@ -353,6 +353,11 @@
       "source_url": "archive/2026-06-25.html"
     },
     {
+      "name": "Deel",
+      "source_date": "2026-07-04",
+      "source_url": "archive/2026-07-04.html"
+    },
+    {
       "name": "Deep Fried Advertising",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
@@ -418,6 +423,11 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
     },
     {
+      "name": "Dogstudio",
+      "source_date": "2026-07-04",
+      "source_url": "archive/2026-07-04.html"
+    },
+    {
       "name": "Droga5",
       "source_date": "2026-06-30",
       "source_url": "archive/2026-06-30.html"
@@ -446,6 +456,11 @@
       "name": "Emfluence",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
+    },
+    {
+      "name": "Envision IT",
+      "source_date": "2026-07-04",
+      "source_url": "archive/2026-07-04.html"
     },
     {
       "name": "Epic Notion",
@@ -608,6 +623,11 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
+      "name": "Insider",
+      "source_date": "2026-07-04",
+      "source_url": "archive/2026-07-04.html"
+    },
+    {
       "name": "Instrument",
       "source_date": "2026-07-03",
       "source_url": "archive/2026-07-03.html"
@@ -666,6 +686,11 @@
       "name": "Kuno Creative",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Ladder",
+      "source_date": "2026-07-04",
+      "source_url": "archive/2026-07-04.html"
     },
     {
       "name": "Landor",
@@ -743,6 +768,11 @@
       "source_url": "archive/2026-06-27.html"
     },
     {
+      "name": "Mailmodo",
+      "source_date": "2026-07-04",
+      "source_url": "archive/2026-07-04.html"
+    },
+    {
       "name": "MARION",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
@@ -783,6 +813,11 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
+      "name": "Metalab",
+      "source_date": "2026-07-04",
+      "source_url": "archive/2026-07-04.html"
+    },
+    {
       "name": "Metric Digital",
       "source_date": "2026-06-08",
       "source_url": "telegram-only"
@@ -806,6 +841,11 @@
       "name": "Miro",
       "source_date": "2026-06-24",
       "source_url": "archive/2026-06-24.html"
+    },
+    {
+      "name": "Modgility",
+      "source_date": "2026-07-04",
+      "source_url": "archive/2026-07-04.html"
     },
     {
       "name": "Monday.com",
@@ -1001,6 +1041,11 @@
       "name": "Proof Analytics",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Propellant Digital",
+      "source_date": "2026-07-04",
+      "source_url": "archive/2026-07-04.html"
     },
     {
       "name": "Protiviti",
@@ -1308,6 +1353,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Upstatement",
+      "source_date": "2026-07-04",
+      "source_url": "archive/2026-07-04.html"
+    },
+    {
       "name": "Ustwo",
       "source_date": "2026-07-01",
       "source_url": "archive/2026-07-01.html"
@@ -1316,6 +1366,11 @@
       "name": "Valtech",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
+    },
+    {
+      "name": "VaynerMedia",
+      "source_date": "2026-07-04",
+      "source_url": "archive/2026-07-04.html"
     },
     {
       "name": "Vercel",
@@ -1346,6 +1401,11 @@
       "name": "VSA Partners",
       "source_date": "2026-06-22",
       "source_url": "archive/2026-06-22.html"
+    },
+    {
+      "name": "Wakefly",
+      "source_date": "2026-07-04",
+      "source_url": "archive/2026-07-04.html"
     },
     {
       "name": "Warschawski",
