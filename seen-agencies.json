@@ -1,6 +1,6 @@
 {
-  "version": 14,
-  "last_updated": "2026-07-04",
+  "version": 15,
+  "last_updated": "2026-07-05",
   "agencies": [
     {
       "name": "10FOLD",
@@ -158,9 +158,19 @@
       "source_url": "archive/2026-06-30.html"
     },
     {
+      "name": "Bottle Rocket",
+      "source_date": "2026-07-05",
+      "source_url": "archive/2026-07-05.html"
+    },
+    {
       "name": "Bounteous",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
+    },
+    {
+      "name": "Brightter",
+      "source_date": "2026-07-05",
+      "source_url": "archive/2026-07-05.html"
     },
     {
       "name": "Brogan & Partners",
@@ -186,6 +196,11 @@
       "name": "Buffer",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
+    },
+    {
+      "name": "Cactus",
+      "source_date": "2026-07-05",
+      "source_url": "archive/2026-07-05.html"
     },
     {
       "name": "Caffeine Connect",
@@ -271,6 +286,16 @@
       "name": "Close",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "Clutch Creative",
+      "source_date": "2026-07-05",
+      "source_url": "archive/2026-07-05.html"
+    },
+    {
+      "name": "CMS Group",
+      "source_date": "2026-07-05",
+      "source_url": "archive/2026-07-05.html"
     },
     {
       "name": "Coda",
@@ -536,6 +561,11 @@
       "name": "Geek Digital",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Grain",
+      "source_date": "2026-07-05",
+      "source_url": "archive/2026-07-05.html"
     },
     {
       "name": "Grant Thornton",
@@ -988,6 +1018,11 @@
       "source_url": "archive/2026-06-19.html"
     },
     {
+      "name": "Phenomenon Studio",
+      "source_date": "2026-07-05",
+      "source_url": "archive/2026-07-05.html"
+    },
+    {
       "name": "Pitch",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
@@ -1108,6 +1143,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Resn",
+      "source_date": "2026-07-05",
+      "source_url": "archive/2026-07-05.html"
+    },
+    {
       "name": "RevenueCat",
       "source_date": "2026-07-02",
       "source_url": "archive/2026-07-02.html"
@@ -1136,6 +1176,11 @@
       "name": "Robot Creative",
       "source_date": "2026-06-25",
       "source_url": "archive/2026-06-25.html"
+    },
+    {
+      "name": "Rockerbox",
+      "source_date": "2026-07-05",
+      "source_url": "archive/2026-07-05.html"
     },
     {
       "name": "RSM US",
@@ -1246,6 +1291,11 @@
       "name": "SPINX Digital",
       "source_date": "2026-06-30",
       "source_url": "archive/2026-06-30.html"
+    },
+    {
+      "name": "Spring Marketing Group",
+      "source_date": "2026-07-05",
+      "source_url": "archive/2026-07-05.html"
     },
     {
       "name": "Sterling Communications",
@@ -1408,6 +1458,11 @@
       "source_url": "archive/2026-07-04.html"
     },
     {
+      "name": "Walker Sands",
+      "source_date": "2026-07-05",
+      "source_url": "archive/2026-07-05.html"
+    },
+    {
       "name": "Warschawski",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
@@ -1456,6 +1511,11 @@
       "name": "Wray Ward",
       "source_date": "2026-05-27",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
+    },
+    {
+      "name": "Wunderkind",
+      "source_date": "2026-07-05",
+      "source_url": "archive/2026-07-05.html"
     },
     {
       "name": "Wynter",
