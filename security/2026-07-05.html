@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 05, 2026</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh}
+.container{max-width:800px;margin:0 auto;padding:0 0 48px}
+.back{display:inline-block;font-size:14px;color:#888;text-decoration:none;margin-bottom:20px}
+.back:hover{color:#E8B840}
+h1{font-size:26px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.date{font-size:15px;color:#888;margin-bottom:28px}
+.section{margin-bottom:28px}
+.section h2{font-size:20px;font-weight:700;color:#f1f1f1;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section h2.priority{color:#E8B840}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:18px 20px;margin-bottom:14px;transition:border-color 0.2s}
+.card:hover{border-color:rgba(232,184,64,0.3)}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;flex-wrap:wrap;gap:8px}
+.card-title{font-size:17px;font-weight:600;color:#f1f1f1}
+.card-title .cve{font-size:14px;font-weight:400;color:#888;margin-left:6px}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;white-space:nowrap}
+.badge-critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{background:rgba(255,255,255,0.06);color:#888}
+.card-meta{font-size:13px;color:#999;margin-bottom:6px;line-height:1.5}
+.card-desc{font-size:14px;color:#ccc;line-height:1.7}
+.card-desc a{color:#E8B840;text-decoration:none}
+.card-desc a:hover{text-decoration:underline}
+.none{font-size:14px;color:#666;padding:12px 0;font-style:italic}
+.threat-item{font-size:14px;color:#ccc;line-height:1.6;padding:8px 0 8px 16px;border-left:2px solid rgba(232,184,64,0.2);margin-bottom:4px}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back" href="../security/index.html">← Back to Security Reports</a>
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="date">July 05, 2026</div>
+
+<!-- HERMES AGENT SECTION -->
+<div class="section">
+<h2 class="priority">🥇 HERMES AGENT — Priority Scan</h2>
+<div class="card">
+<div class="card-header"><div class="card-title">No Findings</div><span class="badge badge-low">Clean</span></div>
+<div class="card-desc">No security advisories, CVEs, or disclosed vulnerabilities related to Hermes Agent (NousResearch/hermes-agent) were found in the last 24 hours.</div>
+<div class="card-meta">Sources: GitHub Security Advisories · NVD · The Hacker News · Bleeping Computer</div>
+</div>
+</div>
+
+<!-- AI TOOLS & FRAMEWORKS -->
+<div class="section">
+<h2>🥈 AI TOOLS & FRAMEWORKS — High Priority</h2>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">n8n Execute Command Node RCE <span class="cve">CVE-2025-71380</span></div>
+<span class="badge badge-high">HIGH 8.8</span>
+</div>
+<div class="card-meta">Affected: n8n (all versions)</div>
+<div class="card-desc">The Execute Command node in n8n allows authenticated users to execute arbitrary commands on the host system. Attackers with user access or compromised credentials can exploit this for RCE.</div>
+<div class="card-meta">Source: <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-71380">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">NLTK Stanford Interface Vulnerability <span class="cve">CVE-2026-12252</span></div>
+<span class="badge badge-high">HIGH 7.8</span>
+</div>
+<div class="card-meta">Affected: nltk ≤ 3.9.3</div>
+<div class="card-desc">Five Stanford interface classes (StanfordPOSTagger, StanfordNERTagger, StanfordParser, StanfordDependencyParser, StanfordNeuralDependencyParser) are vulnerable to command injection or improper input handling.</div>
+<div class="card-meta">Source: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-12252">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Picklescan Bypass — 18 Gadget CVEs <span class="cve">CVE-2025-71342 et al.</span></div>
+<span class="badge badge-high">HIGH 8.1</span>
+</div>
+<div class="card-meta">Affected: picklescan before 0.0.28–0.0.34 (varies by CVE)</div>
+<div class="card-desc">Multiple bypass techniques allow malicious pickle files to evade detection. Gadgets include idlelib, lib2to3, torch.utils.bottleneck, torch._dynamo.guards, numpy.f2py.crackfortran, asyncio.unix_events, _operator.attrgetter, and operator.methodcaller. <strong>Critical for ML model loading pipelines.</strong></div>
+<div class="card-meta">CVEs: 71342, 71343, 71345, 71347, 71353, 71356, 71359, 71360, 71362, 71364, 71366, 71367, 71369, 71372, 71373, 71375 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-71342">NVD</a></div>
+</div>
+
+<div class="none">No new CVEs for LangChain · LlamaIndex · DSPy · AutoGPT · CrewAI · OpenAI · Anthropic in last 24 hours.</div>
+</div>
+
+<!-- GENERAL CRITICAL VULNS -->
+<div class="section">
+<h2>🥉 GENERAL CRITICAL VULNERABILITIES</h2>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">🔴 "Bad Epoll" Linux Kernel Flaw — Root Escalation</div>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-meta">Affected: Linux kernel (epoll subsystem), impacts Android</div>
+<div class="card-desc">A newly disclosed flaw in the Linux kernel's epoll subsystem lets unprivileged users gain root privileges. The vulnerability also impacts Android devices running affected kernels. Monitor for CVE assignment and patch deployment.</div>
+<div class="card-meta">Source: <a href="https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">🔴 Kairos Ransomware — U.S. Gov Entity Paid $1M Extortion</div>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-meta">Type: Incident / Data-theft extortion</div>
+<div class="card-desc">A U.S. government entity paid the Kairos ransomware group $1 million following a double-extortion attack involving data exfiltration and encryption.</div>
+<div class="card-meta">Source: <a href="https://thehackernews.com/2026/07/us-government-entity-paid-kairos-group.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Unpatched Flaws in Embedded Device Filesystem</div>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-meta">Affected: Millions of embedded devices</div>
+<div class="card-desc">Multiple unpatched flaws disclosed in a filesystem implementation bundled into millions of embedded devices. Full technical details pending patch availability.</div>
+<div class="card-meta">Source: <a href="https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Unity Parsec Elevation of Privilege <span class="cve">CVE-2026-54424</span></div>
+<span class="badge badge-high">HIGH 8.4</span>
+</div>
+<div class="card-meta">Affected: Parsec through v2026-05-04.0 on Windows</div>
+<div class="card-desc">Incorrect Use of Privileged APIs vulnerability in Unity Parsec on Windows hosts leads to potential Elevation of Privilege.</div>
+<div class="card-meta">Source: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-54424">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Open5GS AMF Vulnerability <span class="cve">CVE-2026-14618</span></div>
+<span class="badge badge-medium">MEDIUM 4.3</span>
+</div>
+<div class="card-meta">Affected: Open5GS up to 2.7.7</div>
+<div class="card-desc">Vulnerability in AMF component function amf_nnrf_handle_nf_discover.</div>
+<div class="card-meta">Source: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14618">NVD</a></div>
+</div>
+</div>
+
+<!-- THREAT INTELLIGENCE -->
+<div class="section">
+<h2>📰 Threat Intelligence</h2>
+<div class="threat-item"><strong>PolinRider Campaign:</strong> North Korean hackers published 108 malicious packages and browser extensions targeting developers.</div>
+<div class="threat-item"><strong>npm Supply Chain:</strong> North Korea-linked npm packages mimic Rollup polyfills to steal developer secrets.</div>
+<div class="threat-item"><strong>Avalon Malware:</strong> New framework packs CrownX ransomware capabilities with multi-stage attack modules.</div>
+<div class="threat-item"><strong>Pegasus Spyware:</strong> European Parliament member investigating spyware was hacked with Pegasus.</div>
+<div class="threat-item"><strong>PamStealer:</strong> macOS credential stealer distributed via fake Maccy websites targeting login passwords.</div>
+<div class="threat-item"><strong>NetNut Proxy Network:</strong> Google disrupted residential proxy network spanning 2 million home devices.</div>
+<div class="threat-item"><strong>Umbrij Malware:</strong> ToddyCat-linked malware abuses OAuth to access Gmail via Google API.</div>
+<div class="threat-item"><strong>Armored Likho:</strong> Targets government agencies and power sector with BusySnake stealer.</div>
+<div class="threat-item"><strong>Citrix Bleed 2:</strong> Ransomware groups adopting new exploits, BYOVD attacks, and supply chain credentials.</div>
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech</div>
+</div>
+</body>
+</html>
