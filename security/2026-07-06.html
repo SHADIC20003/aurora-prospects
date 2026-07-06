@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 06, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh}
+.container{max-width:800px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:22px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.back-link{display:inline-block;margin-bottom:16px;font-size:13px;color:#888;text-decoration:none}
+.back-link:hover{color:#E8B840}
+.section{margin-top:24px}
+.section h2{font-size:18px;font-weight:600;color:#f1f1f1;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1;margin-bottom:4px;line-height:1.4}
+.card-desc{font-size:13px;color:#999;line-height:1.5;margin-bottom:6px}
+.card-meta{font-size:12px;color:#666;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.card-meta a{color:#E8B840;text-decoration:none}
+.card-meta a:hover{text-decoration:underline}
+.badge-critical{display:inline-block;font-size:11px;font-weight:700;padding:2px 10px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{display:inline-block;font-size:11px;font-weight:700;padding:2px 10px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{display:inline-block;font-size:11px;font-weight:700;padding:2px 10px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{display:inline-block;font-size:11px;font-weight:700;padding:2px 10px;border-radius:4px;background:rgba(255,255,255,0.06);color:#888}
+.empty-note{font-size:14px;color:#666;padding:12px 0;font-style:italic}
+.news-table{width:100%;border-collapse:collapse;font-size:13px}
+.news-table td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:top;color:#ccc}
+.news-table td:first-child{font-weight:600;color:#f1f1f1;white-space:nowrap;padding-right:14px}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+.summary-bar{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.summary-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:10px 14px;text-align:center;min-width:70px}
+.summary-item .num{font-size:22px;font-weight:700}
+.summary-item .label{font-size:11px;color:#888;margin-top:2px}
+.severity-critical .num{color:#E8B840}
+.severity-high .num{color:#E8B840}
+.severity-medium .num{color:#f59e0b}
+.severity-low .num{color:#888}
+.priority-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 6px;border-radius:3px;margin-left:8px;vertical-align:middle}
+.priority-absolute{background:rgba(232,184,64,0.2);color:#E8B840}
+.priority-high{background:rgba(232,184,64,0.12);color:#d4a830}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<a class="back-link" href="../security/index.html">← Back to Security Archive</a>
+<h1>🛡️ Security Vulnerability Report — July 06, 2026</h1>
+<div class="sub">Daily vulnerability &amp; CVE monitoring by Netamuru</div>
+</div>
+
+<div class="summary-bar">
+<div class="summary-item severity-critical"><div class="num">2</div><div class="label">Critical</div></div>
+<div class="summary-item severity-high"><div class="num">10</div><div class="label">High</div></div>
+<div class="summary-item severity-medium"><div class="num">11</div><div class="label">Medium</div></div>
+<div class="summary-item severity-low"><div class="num">6</div><div class="label">Low</div></div>
+</div>
+
+<div class="section">
+<h2>1. Hermes Agent <span class="priority-tag priority-absolute">ABSOLUTE PRIORITY</span></h2>
+<div class="empty-note">Nothing new in the last 24 hours. No CVEs, advisories, or disclosed vulnerabilities related to Hermes Agent (NousResearch/hermes-agent).</div>
+</div>
+
+<div class="section">
+<h2>2. AI Tools &amp; Frameworks <span class="priority-tag priority-high">HIGH PRIORITY</span></h2>
+<div class="empty-note">Nothing new in the last 24 hours. No CVEs specific to LangChain, LlamaIndex, DSPy, CrewAI, AutoGPT, or other AI agent frameworks. No new prompt injection disclosures or AI supply chain attacks.</div>
+</div>
+
+<div class="section">
+<h2>3. Critical Vulnerabilities</h2>
+
+<div class="card">
+<div class="card-title">CVE-2026-49352 — 9router Hardcoded Default JWT Secret <span class="badge-critical">CRITICAL</span></div>
+<div class="card-desc">9router shipped with a default fallback JWT secret, enabling authentication bypass in default configurations.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-jphh-m39h-6gwx">GHSA-jphh-m39h-6gwx</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-54617 — LaunchServer FileServerHandler Path Traversal <span class="badge-critical">CRITICAL</span></div>
+<div class="card-desc">Unauthenticated path traversal in LaunchServer's FileServerHandler allows arbitrary file read.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-5g75-477j-2c2f">GHSA-5g75-477j-2c2f</a></div>
+</div>
+</div>
+
+<div class="section">
+<h2>4. High Severity</h2>
+
+<div class="card">
+<div class="card-title">CVE-2026-49360 — Recce Server SQL Injection <span class="badge-high">HIGH</span></div>
+<div class="card-desc">Unauthenticated SQL execution via DuckDB allowing local file read/write.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-rh62-j648-g5qc">GHSA-rh62-j648-g5qc</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-49353 — 9router Host Header Bypass <span class="badge-high">HIGH</span></div>
+<div class="card-desc">Incomplete fix: local-only access gate bypass via Host header spoofing.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-6g2f-w7g3-77vf">GHSA-6g2f-w7g3-77vf</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-46599 — golang.org/x/image/tiff DoS <span class="badge-high">HIGH</span></div>
+<div class="card-desc">Excessive resource consumption in PackBits decompression.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-q675-qj96-32m9">GHSA-q675-qj96-32m9</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-49284 — SimpleSAMLphp IdP Spoofing <span class="badge-high">HIGH</span></div>
+<div class="card-desc">SP accepts response from unexpected IdP when unsigned Response/InResponseTo combined with signed assertion.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-q8r6-xj3f-wrrm">GHSA-q8r6-xj3f-wrrm</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-52792 — Algernon Script Source Disclosure <span class="badge-high">HIGH</span></div>
+<div class="card-desc">Server-side script source disclosure on Windows via NTFS filename handling.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-mm6c-5j6x-hq8m">GHSA-mm6c-5j6x-hq8m</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-52834 — jxl-grid OOB Writes <span class="badge-high">HIGH</span></div>
+<div class="card-desc">Out-of-bounds writes on 32-bit platforms due to integer overflow.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-5pmv-rx8r-wmv5">GHSA-5pmv-rx8r-wmv5</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-14688 — Online Hotel Management System 1.0 SQL Injection <span class="badge-high">HIGH</span></div>
+<div class="card-desc">SQL injection vulnerability in /admin/login.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14688">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-14690 — Multi-Vendor Grocery Management SQL Injection <span class="badge-high">HIGH</span></div>
+<div class="card-desc">SQL injection vulnerability in save_users function.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14690">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-14695 — Multi-Vendor Grocery Management SQL Injection <span class="badge-high">HIGH</span></div>
+<div class="card-desc">SQL injection vulnerability in save_client function.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14695">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-14700 — Internship Management System 1.0 SQL Injection <span class="badge-high">HIGH</span></div>
+<div class="card-desc">SQL injection vulnerability.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14700">NVD</a></div>
+</div>
+</div>
+
+<div class="section">
+<h2>5. Medium Severity</h2>
+
+<div class="card">
+<div class="card-title">CVE-2026-52834 — jxl-oxide OOB Slices <span class="badge-medium">MEDIUM</span></div>
+<div class="card-desc">FrameBuffer::new creates out-of-bounds slices on overflow.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-66m8-c62j-h6v5">GHSA-66m8-c62j-h6v5</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-14687 — BettaFish Path Traversal <span class="badge-medium">MEDIUM</span></div>
+<div class="card-desc">Path traversal in _deduplicate_results.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14687">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-14689 — Apartment Visitor Management SQL Injection <span class="badge-medium">MEDIUM</span></div>
+<div class="card-desc">SQL injection vulnerability.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14689">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">+ 8 more medium-severity CVEs published today <span class="badge-medium">MEDIUM</span></div>
+<div class="card-desc">Includes multiple SQL injection vulnerabilities in various PHP web applications (grocery management, learning management, hospital management, internship management, bluebox).</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/search/results?query=pubStartDate%3A2026-07-05">NVD Search</a></div>
+</div>
+</div>
+
+<div class="section">
+<h2>6. Low Severity</h2>
+
+<div class="card">
+<div class="card-title">CVE-2026-49292 — Kiwi TCMS /init-db/ <span class="badge-low">LOW</span></div>
+<div class="card-desc">/init-db/ page renders and responds after first use.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-v8rp-6xcv-fwgh">GHSA-v8rp-6xcv-fwgh</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-14684/685/686 — HdrHistogram DoS <span class="badge-low">LOW</span></div>
+<div class="card-desc">Multiple denial-of-service vulnerabilities in HdrHistogram up to 2.2.2.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14684">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-14699/702 — markdownify-mcp Path Traversal <span class="badge-low">LOW</span></div>
+<div class="card-desc">Path traversal in zcaceres markdownify-mcp up to 1.1.0.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14699">NVD</a></div>
+</div>
+</div>
+
+<div class="section">
+<h2>7. Notable Security News (The Hacker News)</h2>
+<div class="empty-note">Today's top stories from The Hacker News:</div>
+
+<div class="card">
+<div class="card-title">North Korean PolinRider Campaign</div>
+<div class="card-desc">108 malicious packages and extensions published in coordinated campaign.</div>
+</div>
+
+<div class="card">
+<div class="card-title">Bad Epoll Linux Kernel Flaw</div>
+<div class="card-desc">Unprivileged users can gain root access; affects Android devices.</div>
+</div>
+
+<div class="card">
+<div class="card-title">Unpatched Embedded Filesystem Flaws</div>
+<div class="card-desc">Vulnerabilities in filesystem drivers bundled into millions of embedded devices.</div>
+</div>
+
+<div class="card">
+<div class="card-title">Avalon Malware Framework</div>
+<div class="card-desc">New framework packing CrownX ransomware capabilities.</div>
+</div>
+
+<div class="card">
+<div class="card-title">Google Disrupts NetNut Proxy Network</div>
+<div class="card-desc">Residential proxy network spanning 2 million home devices taken down.</div>
+</div>
+
+<div class="card">
+<div class="card-title">Ransomware Landscape Shifts</div>
+<div class="card-desc">Groups turn to Citrix Bleed 2, BYOVD, and supply chain credential attacks.</div>
+</div>
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech</div>
+</div>
+</body>
+</html>
