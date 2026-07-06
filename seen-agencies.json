@@ -1,6 +1,6 @@
 {
-  "version": 15,
-  "last_updated": "2026-07-05",
+  "version": 16,
+  "last_updated": "2026-07-06",
   "agencies": [
     {
       "name": "10FOLD",
@@ -33,6 +33,16 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "Agency Minds",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
+      "name": "Agency Stack Global",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Agital",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
@@ -46,6 +56,11 @@
       "name": "AKQA",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
+    },
+    {
+      "name": "Alexander Group",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "AlixPartners",
@@ -81,6 +96,11 @@
       "name": "Anvil Media",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Arcade",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Aufwind",
@@ -248,9 +268,19 @@
       "source_url": "archive/2026-07-02.html"
     },
     {
+      "name": "Chatter Buzz",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Clarity Digital",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Clarkston Consulting",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Clay",
@@ -276,6 +306,16 @@
       "name": "ClickUp",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "Clickx",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
+      "name": "Clikk",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Clipboard Health",
@@ -328,6 +368,11 @@
       "source_url": "archive/2026-05-29.html"
     },
     {
+      "name": "Conduit Digital",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Contentworks",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
@@ -373,6 +418,11 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "DashClicks",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Daylight Design",
       "source_date": "2026-06-25",
       "source_url": "archive/2026-06-25.html"
@@ -416,6 +466,11 @@
       "name": "Digital Third Coast",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Digital White Labels",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "DigitalHyre",
@@ -466,6 +521,11 @@
       "name": "Edelman",
       "source_date": "2026-07-03",
       "source_url": "archive/2026-07-03.html"
+    },
+    {
+      "name": "Effiqs",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "EIGHT25MEDIA",
@@ -563,6 +623,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Globital",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Grain",
       "source_date": "2026-07-05",
       "source_url": "archive/2026-07-05.html"
@@ -628,9 +693,19 @@
       "source_url": "archive/2026-06-19.html"
     },
     {
+      "name": "Hype Insight",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Hyperquake",
       "source_date": "2026-06-25",
       "source_url": "archive/2026-06-25.html"
+    },
+    {
+      "name": "IBCSCorp",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "ICS Creative",
@@ -648,9 +723,24 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "iMark Infotech",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Impression Digital",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "inBeat",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
+      "name": "IndeedSEO",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Insider",
@@ -666,6 +756,11 @@
       "name": "Interbrand",
       "source_date": "2026-06-24",
       "source_url": "archive/2026-06-24.html"
+    },
+    {
+      "name": "Internet Marketing Team",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Intero Digital",
@@ -783,6 +878,11 @@
       "source_url": "archive/2026-06-29.html"
     },
     {
+      "name": "Lyssna",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Mabbly",
       "source_date": "2026-05-27",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
@@ -821,6 +921,11 @@
       "name": "Matter Communications",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
+    },
+    {
+      "name": "Mavlers",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Mckinney",
@@ -863,6 +968,11 @@
       "source_url": "archive/2026-05-30.html"
     },
     {
+      "name": "Millipixels Interactive",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Mintz & Hoke",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
@@ -871,6 +981,11 @@
       "name": "Miro",
       "source_date": "2026-06-24",
       "source_url": "archive/2026-06-24.html"
+    },
+    {
+      "name": "Missive Digital",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Modgility",
@@ -943,6 +1058,11 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
+      "name": "Nvent Marketing",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "OAK Interactive",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
@@ -971,6 +1091,11 @@
       "name": "OnCuba Agency",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "OneIMS",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Oneupweb",
@@ -1026,6 +1151,11 @@
       "name": "Pitch",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
+    },
+    {
+      "name": "PixelCrayons",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Pizzazz Group",
@@ -1093,6 +1223,11 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
+      "name": "Publicity Port",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Push10",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
@@ -1101,6 +1236,11 @@
       "name": "PwC Digital",
       "source_date": "2026-06-30",
       "source_url": "archive/2026-06-30.html"
+    },
+    {
+      "name": "Quantum Agency",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "R/GA",
@@ -1183,6 +1323,11 @@
       "source_url": "archive/2026-07-05.html"
     },
     {
+      "name": "ROI Minds",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "RSM US",
       "source_date": "2026-06-21",
       "source_url": "archive/2026-06-21.html"
@@ -1208,6 +1353,11 @@
       "source_url": "archive/2026-05-29.html"
     },
     {
+      "name": "SearchBerg",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Seer Interactive",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -1218,6 +1368,11 @@
       "source_url": "archive/2026-07-02.html"
     },
     {
+      "name": "SEO Beyond Organic",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "SevenCube",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
@@ -1226,6 +1381,11 @@
       "name": "Sherpa Agency",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Sid Lee",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Siege Media",
@@ -1256,6 +1416,11 @@
       "name": "Slalom",
       "source_date": "2026-06-20",
       "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "Sleight Advertising",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "SmartBug Media",
@@ -1298,6 +1463,11 @@
       "source_url": "archive/2026-07-05.html"
     },
     {
+      "name": "StableWP",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Sterling Communications",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
@@ -1311,6 +1481,16 @@
       "name": "Supabase",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Superside",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
+      "name": "Symphonic Digital",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "SYPartners",
@@ -1328,6 +1508,16 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
+      "name": "10X White Label Marketing",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
+      "name": "That! Company",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "The Daring Society",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
@@ -1341,6 +1531,11 @@
       "name": "The Martin Agency",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "The Outsourced Agency",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "The Variable",
@@ -1401,6 +1596,11 @@
       "name": "UpBuild",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Uplers",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Upstatement",
@@ -1468,6 +1668,11 @@
       "source_url": "archive/2026-05-31.html"
     },
     {
+      "name": "Webential",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "Webflow",
       "source_date": "2026-07-03",
       "source_url": "archive/2026-07-03.html"
@@ -1483,9 +1688,29 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "WebSpero Solutions",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
       "name": "West Monroe",
       "source_date": "2026-06-19",
       "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "White Label Agency",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
+      "name": "White Label Club",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
+    },
+    {
+      "name": "White Label DM",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Wieden+Kennedy",
@@ -1501,6 +1726,11 @@
       "name": "Work & Co",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "WPWeb Infotech",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Wpromote",
