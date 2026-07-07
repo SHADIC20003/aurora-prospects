@@ -1,11 +1,16 @@
 {
-  "version": 16,
-  "last_updated": "2026-07-06",
+  "version": 17,
+  "last_updated": "2026-07-07",
   "agencies": [
     {
       "name": "10FOLD",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "10X White Label Marketing",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "72andSunny",
@@ -148,6 +153,11 @@
       "source_url": "archive/2026-06-26.html"
     },
     {
+      "name": "Blend Interactive",
+      "source_date": "2026-07-07",
+      "source_url": "archive/2026-07-07.html"
+    },
+    {
       "name": "Blend.",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
@@ -176,6 +186,11 @@
       "name": "Boston Consulting Group",
       "source_date": "2026-06-30",
       "source_url": "archive/2026-06-30.html"
+    },
+    {
+      "name": "Botify",
+      "source_date": "2026-07-07",
+      "source_url": "archive/2026-07-07.html"
     },
     {
       "name": "Bottle Rocket",
@@ -448,6 +463,11 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
+      "name": "Design Army",
+      "source_date": "2026-07-07",
+      "source_url": "archive/2026-07-07.html"
+    },
+    {
       "name": "Designli",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
@@ -663,6 +683,11 @@
       "source_url": "archive/2026-06-26.html"
     },
     {
+      "name": "Hennessey Digital",
+      "source_date": "2026-07-07",
+      "source_url": "archive/2026-07-07.html"
+    },
+    {
       "name": "Hiebing",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
@@ -776,6 +801,11 @@
       "name": "Jasper",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
+    },
+    {
+      "name": "Jellyfish",
+      "source_date": "2026-07-07",
+      "source_url": "archive/2026-07-07.html"
     },
     {
       "name": "JKR (Jones Knowles Ritchie)",
@@ -1003,6 +1033,11 @@
       "source_url": "archive/2026-06-30.html"
     },
     {
+      "name": "Mother Design",
+      "source_date": "2026-07-07",
+      "source_url": "archive/2026-07-07.html"
+    },
+    {
       "name": "Moving Brands",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
@@ -1016,6 +1051,11 @@
       "name": "Moxie Communications",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Moz",
+      "source_date": "2026-07-07",
+      "source_url": "archive/2026-07-07.html"
     },
     {
       "name": "MullenLowe",
@@ -1101,6 +1141,16 @@
       "name": "Oneupweb",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Online Optimism",
+      "source_date": "2026-07-07",
+      "source_url": "archive/2026-07-07.html"
+    },
+    {
+      "name": "Orbit Media",
+      "source_date": "2026-07-07",
+      "source_url": "archive/2026-07-07.html"
     },
     {
       "name": "OuterBox",
@@ -1448,6 +1498,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Space150",
+      "source_date": "2026-07-07",
+      "source_url": "archive/2026-07-07.html"
+    },
+    {
       "name": "SparkToro",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
@@ -1506,11 +1561,6 @@
       "name": "TBWA",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
-    },
-    {
-      "name": "10X White Label Marketing",
-      "source_date": "2026-07-06",
-      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "That! Company",
@@ -1603,6 +1653,11 @@
       "source_url": "archive/2026-07-06.html"
     },
     {
+      "name": "Upqode",
+      "source_date": "2026-07-07",
+      "source_url": "archive/2026-07-07.html"
+    },
+    {
       "name": "Upstatement",
       "source_date": "2026-07-04",
       "source_url": "archive/2026-07-04.html"
@@ -1626,6 +1681,11 @@
       "name": "Vercel",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Victorious SEO",
+      "source_date": "2026-07-07",
+      "source_url": "archive/2026-07-07.html"
     },
     {
       "name": "Viget",
@@ -1728,14 +1788,14 @@
       "source_url": "archive/2026-06-26.html"
     },
     {
-      "name": "WPWeb Infotech",
-      "source_date": "2026-07-06",
-      "source_url": "archive/2026-07-06.html"
-    },
-    {
       "name": "Wpromote",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "WPWeb Infotech",
+      "source_date": "2026-07-06",
+      "source_url": "archive/2026-07-06.html"
     },
     {
       "name": "Wray Ward",
