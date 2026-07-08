@@ -1,6 +1,6 @@
 {
-  "version": 17,
-  "last_updated": "2026-07-07",
+  "version": 18,
+  "last_updated": "2026-07-08",
   "agencies": [
     {
       "name": "10FOLD",
@@ -228,9 +228,19 @@
       "source_url": "archive/2026-06-28.html"
     },
     {
+      "name": "BUCK",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
+    },
+    {
       "name": "Buffer",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
+    },
+    {
+      "name": "Builders",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
     },
     {
       "name": "Cactus",
@@ -353,6 +363,11 @@
       "source_url": "archive/2026-07-05.html"
     },
     {
+      "name": "Coalition Technologies",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
+    },
+    {
       "name": "Coda",
       "source_date": "2026-07-01",
       "source_url": "archive/2026-07-01.html"
@@ -413,6 +428,11 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
+      "name": "Critical Mass",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
+    },
+    {
       "name": "Crosby Marketing",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
@@ -456,6 +476,11 @@
       "name": "Deloitte Digital",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
+    },
+    {
+      "name": "Demandbase",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
     },
     {
       "name": "DEPT",
@@ -573,6 +598,11 @@
       "source_url": "archive/2026-05-31.html"
     },
     {
+      "name": "Epsilon",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
+    },
+    {
       "name": "FATJOE",
       "source_date": "2026-07-02",
       "source_url": "archive/2026-07-02.html"
@@ -596,6 +626,11 @@
       "name": "Fitzco",
       "source_date": "2026-05-27",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-27.md"
+    },
+    {
+      "name": "FleishmanHillard",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
     },
     {
       "name": "Framer",
@@ -763,6 +798,11 @@
       "source_url": "archive/2026-07-06.html"
     },
     {
+      "name": "Incubeta",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
+    },
+    {
       "name": "IndeedSEO",
       "source_date": "2026-07-06",
       "source_url": "archive/2026-07-06.html"
@@ -796,6 +836,11 @@
       "name": "Intuitive Digital",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "iProspect",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
     },
     {
       "name": "Jasper",
@@ -876,6 +921,11 @@
       "name": "Linear",
       "source_date": "2026-06-24",
       "source_url": "archive/2026-06-24.html"
+    },
+    {
+      "name": "Lippincott",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
     },
     {
       "name": "Logic Inbound",
@@ -1733,6 +1783,11 @@
       "source_url": "archive/2026-07-06.html"
     },
     {
+      "name": "Weber Shandwick",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
+    },
+    {
       "name": "Webflow",
       "source_date": "2026-07-03",
       "source_url": "archive/2026-07-03.html"
@@ -1826,6 +1881,11 @@
       "name": "Zapier",
       "source_date": "2026-06-20",
       "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "ZURB",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
     }
   ]
 }
