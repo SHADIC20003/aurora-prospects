@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 08, 2026 · Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;font-size:14px;line-height:1.6}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:24px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:28px}
+.section h2{font-size:18px;font-weight:600;color:#f1f1f1;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section h3{font-size:16px;font-weight:600;color:#e0e0e0;margin:16px 0 8px}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px;transition:border-color 0.2s}
+.card:hover{border-color:rgba(232,184,64,0.3)}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.card-desc{font-size:13px;color:#bbb;margin-bottom:6px;line-height:1.5}
+.card-meta{font-size:12px;color:#888;display:flex;flex-wrap:wrap;gap:8px}
+.card-meta a{color:#E8B840;text-decoration:none}
+.card-meta a:hover{text-decoration:underline}
+.badge-critical{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.06);color:#888}
+.badge-none{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.04);color:#666}
+.none-msg{font-size:13px;color:#888;font-style:italic;padding:8px 0}
+.summary-bar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 20px;padding:12px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.04)}
+.summary-bar span{font-size:13px;color:#aaa}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+@media (max-width:480px){.card-title{font-size:14px}.card-desc{font-size:12px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 08, 2026 · <a href="index.html">← Archive</a></div>
+</div>
+
+<div class="summary-bar">
+<span><span class="badge-critical">6 critical</span></span>
+<span><span class="badge-high">19 high</span></span>
+<span><span class="badge-medium">12 medium</span></span>
+<span><span class="badge-low">9 low</span></span>
+</div>
+
+<!-- ============== SECTION 1: HERMES AGENT ============== -->
+<div class="section">
+<h2>🔴 1. Hermes Agent (NousResearch/hermes-agent)</h2>
+<p class="none-msg">Nothing new in the last 24 hours. No CVEs, GitHub Security Advisories, or disclosed vulnerabilities specific to Hermes Agent.</p>
+
+<div class="card">
+<div class="card-title">Notable: Security-adjacent open issues</div>
+<div class="card-desc">
+<strong>#60685</strong> — <code>hermes update</code> downgrades CVE-pinned packages to stale exact versions, overwriting newer compatible installs.<br>
+<strong>#60680</strong> — fix(env): remove HASS_TOKEN from unconditional Tier-1 env strip — labeled <code>sweeper:risk-security-boundary</code>.
+</div>
+<div class="card-meta">Repo: 211k stars · 26.7k open issues</div>
+</div>
+</div>
+
+<!-- ============== SECTION 2: AI TOOLS & FRAMEWORKS ============== -->
+<div class="section">
+<h2>🤖 2. AI Tools & Frameworks</h2>
+
+<h3>Critical</h3>
+<div class="card">
+<div class="card-title"><span class="badge-critical">CRITICAL</span> KVM VM Escape — 16-Year-Old Flaw</div>
+<div class="card-desc">A 16-year-old vulnerability in Linux KVM allows guest virtual machines to escape to the host system. Affects both Intel and AMD x86 architectures.</div>
+<div class="card-meta"><a href="https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html">The Hacker News</a></div>
+</div>
+
+<h3>High</h3>
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> Google Dialogflow CX — "Rogue Agent" Hijack</div>
+<div class="card-desc">Vulnerability could have allowed attackers to hijack Google Dialogflow CX chatbots via agent impersonation in the conversational AI platform.</div>
+<div class="card-meta"><a href="https://thehackernews.com/2026/07/rogue-agent-flaw-could-have-let.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> Writer AI — Session Token Leak via Agent Previews</div>
+<div class="card-desc">AI agent preview flaw could leak session tokens across tenants, potentially allowing cross-tenant account takeover.</div>
+<div class="card-meta"><a href="https://thehackernews.com/2026/07/writer-ai-flaw-could-let-agent-previews.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> GitHub Agentic Workflows — Private Repo Data Leak</div>
+<div class="card-desc">Attackers can trick GitHub agentic workflows into leaking private repository data by crafting malicious public GitHub issues.</div>
+<div class="card-meta"><a href="https://thehackernews.com/2026/07/public-github-issue-could-trick-github.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> JadePuffer Ransomware — AI Agent Automation</div>
+<div class="card-desc">JadePuffer ransomware group used an AI agent to automate the entire attack chain, from initial access to data exfiltration.</div>
+<div class="card-meta"><a href="https://www.bleepingcomputer.com/news/security/jadepuffer-ransomware-used-ai-agent-to-automate-entire-attack/">Bleeping Computer</a></div>
+</div>
+
+<p class="none-msg">No new CVEs in the last 24h for: LangChain, LlamaIndex, DSPy, CrewAI, AutoGPT, OpenAI, Anthropic.</p>
+</div>
+
+<!-- ============== SECTION 3: GENERAL CRITICAL ============== -->
+<div class="section">
+<h2>⚠️ 3. General Critical Vulnerabilities</h2>
+
+<h3>Critical</h3>
+
+<div class="card">
+<div class="card-title"><span class="badge-critical">CRITICAL</span> CVE-2026-34037 · Coolify (CVSS 9.9)</div>
+<div class="card-desc">The cloneTo() Livewire action in ResourceOperations.php authorizes the source resource only, not the destination stack, allowing unauthorized resource duplication across environments.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.464 · <a href="https://github.com/advisories/GHSA-ggrr-wrvr-x83v">GHSA-ggrr-wrvr-x83v</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-critical">CRITICAL</span> CVE-2026-34047 · Coolify (CVSS 9.9)</div>
+<div class="card-desc">Terminal WebSocket bootstrap routes did not enforce the expected authorization, allowing unauthorized terminal access.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.471 · <a href="https://github.com/coollabsio/coolify/security/advisories/GHSA-mw6q-2hmg-mhxv">GHSA-mw6q-2hmg-mhxv</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-critical">CRITICAL</span> CVE-2026-34048 · Coolify (CVSS 9.9)</div>
+<div class="card-desc">Terminal WebSocket bootstrap routes only check authentication and do not enforce authorization, allowing unauthorized terminal access.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.471 · <a href="https://github.com/coollabsio/coolify/security/advisories/GHSA-mw6q-2hmg-mhxv">GHSA-mw6q-2hmg-mhxv</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-critical">CRITICAL</span> CVE-2026-53552 · Goploy — IDOR + RCE</div>
+<div class="card-desc">Cross-namespace IDOR and RCE via body-supplied row ID in project and project_file handlers. Allows unauthenticated remote code execution.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-26rh-24rg-j3vv">GHSA-26rh-24rg-j3vv</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-critical">CRITICAL</span> BeyondTrust — Auth Bypass</div>
+<div class="card-desc">Critical authentication bypass vulnerabilities in BeyondTrust Remote Support and Privileged Remote Access (PRA). Could allow unauthenticated attackers to gain unauthorized access.</div>
+<div class="card-meta"><a href="https://thehackernews.com/2026/07/beyondtrust-patches-critical-auth-bypass.html">The Hacker News</a></div>
+</div>
+
+<h3>High</h3>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> CVE-2026-45659 · Microsoft SharePoint RCE (Actively Exploited)</div>
+<div class="card-desc">Deserialization of untrusted data vulnerability allows low-privilege attackers to execute arbitrary code on unpatched SharePoint servers. CISA confirms active exploitation.</div>
+<div class="card-meta"><a href="https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-rce-flaw-now-actively-exploited/">Bleeping Computer</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> Tenda Router — Hidden Admin Backdoor</div>
+<div class="card-desc">CERT/CC warns of a hidden admin backdoor in Tenda router firmware that could allow unauthorized administrative access.</div>
+<div class="card-meta"><a href="https://thehackernews.com/2026/07/certcc-warns-of-hidden-admin-backdoor-in.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> CVE-2026-34034 · Coolify (CVSS 8.8)</div>
+<div class="card-desc">sentinel_token setting used in shell commands without sufficient validation, leading to command injection.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.466</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> CVE-2026-34035 · Coolify (CVSS 8.8)</div>
+<div class="card-desc">Log drain secret and environment values interpolated into shell commands without sanitization.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.466</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> CVE-2026-34044 · Coolify (CVSS 7.7)</div>
+<div class="card-desc">Logs::mount() component looks up resources by UUID without scoping, leaking cross-tenant data.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.466</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> CVE-2026-34057 + CVE-2026-34058 · Coolify (CVSS 8.8)</div>
+<div class="card-desc">Database import Livewire component and Server\Resources Livewire component lack authorization checks.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.471</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> CVE-2026-34152 + CVE-2026-34168 · Coolify (CVSS 8.8)</div>
+<div class="card-desc">Pre/post-deployment commands and LocalPersistentVolume.name interpolated into shell/docker commands without proper sanitization.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.471</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> CVE-2026-34171 · Coolify (CVSS 8.0)</div>
+<div class="card-desc">GET /invitations/{uuid} endpoint performs state-changing password reset as a GET request (CSRF-like).</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.471</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> CVE-2026-34158 + CVE-2026-42200 + CVE-2026-42143 · Coolify (CVSS 8.8)</div>
+<div class="card-desc">executeInDocker() helper, PostgreSQL init script generation, and persistent volume names all interpolate unsanitized user input into shell commands.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.469/471/474</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> GHSA-4g5x-hcwm-82jw · Goploy Path Traversal</div>
+<div class="card-desc">Arbitrary File Read via Path Traversal in /deploy/fileDiff allows Remote Server Compromise.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-4g5x-hcwm-82jw">GitHub Advisory</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> GHSA-4hgp-59h5-gvrj · ratex-parser (CVE-2026-53530)</div>
+<div class="card-desc">Panics on `\verb` with a multibyte delimiter (UTF-8 byte-boundary slice) causing denial of service.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-4hgp-59h5-gvrj">GitHub Advisory</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-high">HIGH</span> GHSA-j8v8-g9cx-5qf4 · Better Auth SCIM Account Takeover</div>
+<div class="card-desc">Account/provider takeover via missing owner binding on non-org SCIM providers.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-j8v8-g9cx-5qf4">GitHub Advisory</a></div>
+</div>
+
+<h3>Medium</h3>
+
+<div class="card">
+<div class="card-title"><span class="badge-medium">MEDIUM</span> CVE-2026-34170 · Coolify SSRF (4.3)</div>
+<div class="card-desc">GithubApp api_url SSRF — base URL used for server-side HTTP requests without validation.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-3g6r-cxv5-3c7h">GHSA-3g6r-cxv5-3c7h</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-medium">MEDIUM</span> CVE-2026-34198 · Coolify TrustProxies (5.3)</div>
+<div class="card-desc">TrustProxies middleware trusts all proxies ($proxies = '*'), accepting forged X-Forwarded-* headers.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.471</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-medium">MEDIUM</span> CVE-2026-42147 · Coolify S3 Bypass (4.9)</div>
+<div class="card-desc">S3 storage endpoint validation only checks URL format, not actual endpoint validity.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.474</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-medium">MEDIUM</span> CVE-2026-50127 · Weblate SSRF</div>
+<div class="card-desc">Outbound URL guard misses some private ranges, allowing SSRF attacks.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-vmfc-9982-2m45">GHSA-vmfc-9982-2m45</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-medium">MEDIUM</span> CVE-2026-53508 · oasdiff SSRF</div>
+<div class="card-desc">oasdiff does not enforce --allow-external-refs=false on the git-revision load path.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-2jcc-mxv7-p3f9">GHSA-2jcc-mxv7-p3f9</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-medium">MEDIUM</span> CVE-2026-53572 · KEDA PostgreSQL Injection</div>
+<div class="card-desc">PostgreSQL connection string parameter injection via incomplete whitespace escaping.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-6w3m-4hhp-775q">GHSA-6w3m-4hhp-775q</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-medium">MEDIUM</span> GHSA-f66q-9rf6-8795 · Flask-Security-Too WebAuthn Bypass</div>
+<div class="card-desc">WebAuthn reauthentication freshness bypass via cross-user assertion.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-f66q-9rf6-8795">GitHub Advisory</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-medium">MEDIUM</span> CVE-2026-53533 · aiosmtplib Injection</div>
+<div class="card-desc">SMTP command injection via CR/LF in sender/recipient address fields.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-v3q9-hj7j-63hq">GHSA-v3q9-hj7j-63hq</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-medium">MEDIUM</span> CVE-2026-53487 · Kite RBAC Bypass</div>
+<div class="card-desc">Authenticated cluster RBAC bypass in /api/v1/overview endpoint.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-gvhc-wv3v-7pf8">GHSA-gvhc-wv3v-7pf8</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-medium">MEDIUM</span> GHSA-4w5h-hx6r-28q7 · ratex-parser Stack Overflow</div>
+<div class="card-desc">Unbounded parser recursion leads to stack overflow (process abort).</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-4w5h-hx6r-28q7">GitHub Advisory</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-medium">MEDIUM</span> GHSA-q855-8rh5-jfgq · ha-mcp Auth Bypass</div>
+<div class="card-desc">Add-on settings and policy routes are reachable without authentication at the bare root path.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-q855-8rh5-jfgq">GitHub Advisory</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-medium">MEDIUM</span> CVE-2026-26053 · Gallagher Incorrect Privilege Assignment (5.3)</div>
+<div class="card-desc">Authenticated operator with limited privileges can perform unauthorized operations in Command Centre Server.</div>
+<div class="card-meta"><a href="https://security.gallagher.com/en-NZ/Security-Advisories/CVE-2026-26053">Gallagher Security</a></div>
+</div>
+
+<h3>Low</h3>
+
+<div class="card">
+<div class="card-title"><span class="badge-low">LOW</span> CVE-2026-34149 · Coolify (3.3)</div>
+<div class="card-desc">Database credentials interpolated in backup scripts.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.471</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-low">LOW</span> CVE-2026-42145 · Coolify (3.1)</div>
+<div class="card-desc">File upload endpoint lacks MIME validation.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.474</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-low">LOW</span> CVE-2026-42172 · Coolify (3.1)</div>
+<div class="card-desc">Sanctum API tokens do not expire.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.474</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-low">LOW</span> CVE-2026-42201 · Coolify (3.3)</div>
+<div class="card-desc">Unspecified low-severity vulnerability.</div>
+<div class="card-meta">Affected: Coolify &lt; 4.0.0-beta.474</div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-low">LOW</span> CVE-2026-27790 · Gallagher T20 DoS (2.7)</div>
+<div class="card-desc">Uncaught exception allows authenticated operator to trigger restart (DoS).</div>
+<div class="card-meta"><a href="https://security.gallagher.com/en-NZ/Security-Advisories/CVE-2026-27790">Gallagher Security</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-low">LOW</span> CVE-2026-27844 · Gallagher Controller DoS (2.7)</div>
+<div class="card-desc">Uncaught exception in Controller 6000/7000 diagnostic web interface allows restart DoS.</div>
+<div class="card-meta"><a href="https://security.gallagher.com/en-NZ/Security-Advisories/CVE-2026-27844">Gallagher Security</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-low">LOW</span> GHSA-cwv4-h3j5-w3cf · rama Stored XSS</div>
+<div class="card-desc">Stored XSS in ServeDir HTML directory listing via unescaped file names and URI path.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-cwv4-h3j5-w3cf">GitHub Advisory</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-low">LOW</span> GHSA-gq4g-fpc9-vjfq · Webauthn Predictable Credentials</div>
+<div class="card-desc">SimpleFakeCredentialGenerator with empty secret produces predictable fake credentials, weakening username enumeration protection.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-gq4g-fpc9-vjfq">GitHub Advisory</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge-low">LOW</span> GHSA-2vg6-77g8-24mp · Better Auth Stale Sessions</div>
+<div class="card-desc">Stale sessions persist after user deletion across admin, anonymous, and SCIM flows.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-2vg6-77g8-24mp">GitHub Advisory</a></div>
+</div>
+
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech · July 08, 2026</div>
+</div>
+</body>
+</html>
