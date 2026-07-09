@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Vulnerability Report — July 09, 2026</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:24px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.summary-grid{display:flex;gap:8px;margin:20px 0;flex-wrap:wrap}
+.badge{display:inline-block;font-size:12px;font-weight:600;padding:4px 10px;border-radius:5px;margin-right:4px}
+.badge-critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{background:rgba(255,255,255,0.06);color:#888}
+.section{margin-top:28px}
+.section h2{font-size:18px;font-weight:600;color:#f1f1f1;margin-bottom:14px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section h2.priority{color:#E8B840}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:16px;margin-bottom:10px;transition:border-color 0.2s}
+.card:hover{border-color:rgba(232,184,64,0.3)}
+.card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;gap:8px;flex-wrap:wrap}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1;line-height:1.4;flex:1}
+.card-body{font-size:14px;color:#bbb;line-height:1.6}
+.card-body .meta{font-size:13px;color:#888;margin-top:6px}
+.card-body .meta a{color:#E8B840;text-decoration:none}
+.card-body .meta a:hover{text-decoration:underline}
+.nothing{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:10px;padding:14px 16px;font-size:14px;color:#888}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 09, 2026 — <a href="../index.html">← Dashboard</a> · <a href="index.html">Archive</a></div>
+</div>
+
+<div class="summary-grid">
+<span><span class="badge badge-critical">9 critical</span></span>
+<span><span class="badge badge-high">7 high</span></span>
+<span><span class="badge badge-medium">3 medium</span></span>
+<span><span class="badge badge-low">0 low</span></span>
+</div>
+
+<div class="section">
+<h2 class="priority">1. Hermes Agent (NousResearch)</h2>
+<div class="nothing">Nothing new in the last 24 hours. No CVEs, advisories, or disclosed vulnerabilities found.</div>
+</div>
+
+<div class="section">
+<h2>2. AI Tools &amp; Frameworks</h2>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CISA Adds Langflow Auth Bypass to KEV — Actively Exploited</div>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-body">
+CISA ordered federal agencies to patch by Friday. Authentication bypass / IDOR vulnerability in the Langflow visual framework for building AI agents. Actively exploited in the wild.
+<div class="meta">Affected: Langflow · <a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-langflow-auth-bypass-flaw/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">HalluSquatting Attack — New AI Supply Chain Vector</div>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-body">
+New attack technique exploiting LLM hallucinations to trick AI coding assistants (GitHub Copilot, Codex) into recommending and installing malicious packages that don't exist but sound legitimate. Could lead to broad supply chain compromise.
+<div class="meta">Affected: AI coding assistants · <a href="https://thehackernews.com/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">AI Coding Agents Triggering Endpoint Security Rules</div>
+<span class="badge badge-medium">MEDIUM</span>
+</div>
+<div class="card-body">
+AI coding agents increasingly triggering endpoint security rules designed for human attackers, creating operational security challenges for organizations deploying agentic AI workflows.
+<div class="meta"><a href="https://thehackernews.com/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">GitHub Copilot — Safety Inconsistency Across Modalities</div>
+<span class="badge badge-medium">MEDIUM</span>
+</div>
+<div class="card-body">
+Copilot's chat interface refused harmful code generation requests, but the same prompt delivered through code completion mode produced dangerous output — exposing safety alignment gaps across interaction modalities.
+<div class="meta">Affected: GitHub Copilot · <a href="https://thehackernews.com/">Source</a></div>
+</div>
+</div>
+
+</div>
+
+<div class="section">
+<h2>3. General Critical Vulnerabilities</h2>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Ubiquiti UniFi OS — 7 Critical Vulnerabilities</div>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-body">
+Ubiquiti patched seven critical vulnerabilities including a maximum-severity command injection flaw in UniFi OS. Remote attackers can execute arbitrary commands on affected UniFi devices without authentication across Connect, Talk, Access, Protect, and OS.
+<div class="meta">Affected: UniFi OS (Connect, Talk, Access, Protect, OS) · <a href="https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Adobe ColdFusion — Max-Severity Actively Exploited</div>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-body">
+CISA ordered federal agencies to patch an actively exploited maximum-severity Adobe ColdFusion flaw by Friday. Details of the specific CVE under active exploitation.
+<div class="meta">Affected: Adobe ColdFusion · <a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-max-severity-coldfusion-flaw-by-friday/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">GhostLock — 15-Year-Old Linux Kernel Root &amp; Container Escape</div>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-body">
+Long-standing Linux kernel vulnerability enabling both root privilege escalation and container escape on most Linux distributions. Present for 15 years across most major distros.
+<div class="meta">Affected: Most Linux kernels · <a href="https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Tenda Router Firmware — Hidden Authentication Backdoor</div>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-body">
+Hidden authentication backdoor in multiple Tenda router firmware versions granting administrative access to web management panels without credentials.
+<div class="meta">Affected: Multiple Tenda router models · <a href="https://www.bleepingcomputer.com/news/security/hidden-backdoor-in-tenda-router-firmware-grants-admin-access/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">GitHub 'Verified' Commits — Signature Bypass</div>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-body">
+GitHub's "Verified" commit badges can be rewritten into new hashes without breaking original signatures, undermining integrity guarantees of the verified commit system.
+<div class="meta">Affected: GitHub commit verification system · <a href="https://thehackernews.com/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Fake Paysafe/Skrill SDKs on npm &amp; PyPI — Credential Theft</div>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-body">
+Malicious packages impersonating Paysafe, Skrill, and Neteller SDKs discovered on npm and PyPI delivering credential-stealing malware to developers.
+<div class="meta">Affected: npm, PyPI · <a href="https://www.bleepingcomputer.com/news/security/fake-paysafe-skrill-sdks-on-npm-and-pypi-steal-credentials/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Roundcube Exploited Against Academic Researchers</div>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-body">
+China-linked threat cluster exploiting vulnerable Roundcube servers at U.S. and Canadian universities to steal credentials and deploy backdoors targeting academic researchers.
+<div class="meta">Affected: Roundcube webmail · <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-roundcube-flaw-to-spy-on-academic-researchers/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">KDDI Data Breach — 12 Million Affected</div>
+<span class="badge badge-medium">MEDIUM</span>
+</div>
+<div class="card-body">
+Japanese telecom giant KDDI confirmed a data breach affecting 12M+ people. Email addresses and passwords exposed via compromised ISP email platform.
+<div class="meta">Affected: KDDI / Japanese ISPs · <a href="https://www.bleepingcomputer.com/news/security/japanese-telecom-giant-kddi-says-data-breach-affects-12-million-people/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">SCMBANKER Malware — ClickFix Lures</div>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-body">
+SCMBANKER malware campaign using ClickFix social engineering lures targeting Mexican banking users. Steals credentials and performs unauthorized transactions.
+<div class="meta">Affected: Windows / Mexican banking users · <a href="https://thehackernews.com/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">China-Linked UAT-7810 — LONGLEASH Malware</div>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-body">
+China-linked threat group UAT-7810 expanded ORB network using new LONGLEASH malware enabling proxy-based anonymized attacks.
+<div class="meta">Affected: Global networks · <a href="https://thehackernews.com/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">RedWing MaaS — Android Bank Fraud via Telegram</div>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-body">
+Malware-as-a-Service operation "RedWing" packages Android banking fraud tools as a rental service distributed through Telegram.
+<div class="meta">Affected: Android users · <a href="https://thehackernews.com/">Source</a></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Mount Royal University Breach</div>
+<span class="badge badge-medium">MEDIUM</span>
+</div>
+<div class="card-body">
+Hackers breached Mount Royal University's network, stealing and deleting data from file storage systems.
+<div class="meta">Affected: Mount Royal University · <a href="https://www.bleepingcomputer.com/news/security/mount-royal-university-confirms-breach-as-hackers-claim-attack/">Source</a></div>
+</div>
+</div>
+
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech Security Watch · Sources: NVD, GitHub Security Advisories, The Hacker News, Bleeping Computer</div>
+
+</div>
+</body>
+</html>
