@@ -1,6 +1,6 @@
 {
-  "version": 18,
-  "last_updated": "2026-07-08",
+  "version": 19,
+  "last_updated": "2026-07-09",
   "agencies": [
     {
       "name": "10FOLD",
@@ -128,6 +128,11 @@
       "source_url": "archive/2026-06-25.html"
     },
     {
+      "name": "Basic Agency (BASIC/DEPT\u00ae)",
+      "source_date": "2026-07-09",
+      "source_url": "archive/2026-07-09.html"
+    },
+    {
       "name": "BBDO",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
@@ -201,6 +206,11 @@
       "name": "Bounteous",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
+    },
+    {
+      "name": "BrandFire",
+      "source_date": "2026-07-09",
+      "source_url": "archive/2026-07-09.html"
     },
     {
       "name": "Brightter",
@@ -423,6 +433,11 @@
       "source_url": "archive/2026-06-26.html"
     },
     {
+      "name": "Credera",
+      "source_date": "2026-07-09",
+      "source_url": "archive/2026-07-09.html"
+    },
+    {
       "name": "Criteo",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
@@ -563,6 +578,11 @@
       "source_url": "archive/2026-05-31.html"
     },
     {
+      "name": "Eagle Hill Consulting",
+      "source_date": "2026-07-09",
+      "source_url": "archive/2026-07-09.html"
+    },
+    {
       "name": "Edelman",
       "source_date": "2026-07-03",
       "source_url": "archive/2026-07-03.html"
@@ -633,6 +653,11 @@
       "source_url": "archive/2026-07-08.html"
     },
     {
+      "name": "Foundation Inc",
+      "source_date": "2026-07-09",
+      "source_url": "archive/2026-07-09.html"
+    },
+    {
       "name": "Framer",
       "source_date": "2026-07-03",
       "source_url": "archive/2026-07-03.html"
@@ -683,6 +708,11 @@
       "source_url": "archive/2026-07-06.html"
     },
     {
+      "name": "Gong",
+      "source_date": "2026-07-09",
+      "source_url": "archive/2026-07-09.html"
+    },
+    {
       "name": "Grain",
       "source_date": "2026-07-05",
       "source_url": "archive/2026-07-05.html"
@@ -731,6 +761,11 @@
       "name": "Highwire",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Hotjar",
+      "source_date": "2026-07-09",
+      "source_url": "archive/2026-07-09.html"
     },
     {
       "name": "HubSpot",
@@ -871,6 +906,11 @@
       "name": "KlientBoost",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "Koto",
+      "source_date": "2026-07-09",
+      "source_url": "archive/2026-07-09.html"
     },
     {
       "name": "KPMG",
@@ -1228,6 +1268,11 @@
       "source_url": "archive/2026-07-02.html"
     },
     {
+      "name": "Pendo",
+      "source_date": "2026-07-09",
+      "source_url": "archive/2026-07-09.html"
+    },
+    {
       "name": "Penpot",
       "source_date": "2026-07-03",
       "source_url": "archive/2026-07-03.html"
@@ -1271,6 +1316,11 @@
       "name": "PMG",
       "source_date": "2026-07-03",
       "source_url": "archive/2026-07-03.html"
+    },
+    {
+      "name": "Point B",
+      "source_date": "2026-07-09",
+      "source_url": "archive/2026-07-09.html"
     },
     {
       "name": "Point It Digital",
@@ -1678,6 +1728,11 @@
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
     },
     {
+      "name": "Tribute Media",
+      "source_date": "2026-07-09",
+      "source_url": "archive/2026-07-09.html"
+    },
+    {
       "name": "Trotter Digital",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -1726,6 +1781,11 @@
       "name": "VaynerMedia",
       "source_date": "2026-07-04",
       "source_url": "archive/2026-07-04.html"
+    },
+    {
+      "name": "Venveo",
+      "source_date": "2026-07-09",
+      "source_url": "archive/2026-07-09.html"
     },
     {
       "name": "Vercel",
