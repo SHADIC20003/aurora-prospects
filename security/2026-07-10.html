@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 10, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;font-size:14px;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:24px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:24px}
+.section h2{font-size:18px;font-weight:600;color:#f1f1f1;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.04)}
+.section h3{font-size:15px;font-weight:600;color:#ccc;margin:16px 0 8px}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px;transition:border-color 0.2s}
+.card:hover{border-color:rgba(232,184,64,0.3)}
+.card-header{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.card-cve{font-size:15px;font-weight:600;color:#f1f1f1}
+.card-desc{font-size:13px;color:#aaa;line-height:1.5;margin-bottom:4px}
+.card-meta{font-size:12px;color:#777;display:flex;gap:8px;flex-wrap:wrap}
+.card-meta a{color:#E8B840;text-decoration:none}
+.card-meta a:hover{text-decoration:underline}
+.badge-critical{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840;text-transform:uppercase;letter-spacing:0.5px}
+.badge-high{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840;text-transform:uppercase;letter-spacing:0.5px}
+.badge-medium{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b;text-transform:uppercase;letter-spacing:0.5px}
+.badge-low{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.06);color:#888;text-transform:uppercase;letter-spacing:0.5px}
+.severity-summary{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+.severity-summary .badge-critical,.severity-summary .badge-high,.severity-summary .badge-medium,.severity-summary .badge-low{font-size:12px;padding:4px 12px}
+.note{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;font-size:13px;color:#888;margin-bottom:10px}
+.note strong{color:#aaa}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+.footer a{color:#E8B840;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 10, 2026 — <a href="../index.html">← Dashboard</a> · <a href="index.html">Archive</a></div>
+<div class="severity-summary">
+<span><span class="badge-critical">6 critical</span></span>
+<span><span class="badge-high">19 high</span></span>
+<span><span class="badge-medium">12 medium</span></span>
+<span><span class="badge-low">2 low</span></span>
+</div>
+</div>
+
+<div class="section">
+<h2>1. Hermes Agent (NousResearch/hermes-agent)</h2>
+<div class="note"><strong>No new vulnerabilities.</strong> No CVEs, GitHub Security Advisories, or disclosed vulnerabilities found in the last 24 hours. The repo has 1,037 open security-related issues but these are ongoing development/maintenance tasks (pinned dependency updates, CSP headers, command blocklist improvements) — not disclosed vulnerabilities requiring action.</div>
+</div>
+
+<div class="section">
+<h2>2. AI Tools & Frameworks</h2>
+
+<h3>Hermes WebUI (nesquena/hermes-webui) — ⚠️ Critical</h3>
+<div class="note"><strong>Note:</strong> This is a separate project from NousResearch Hermes Agent. Hermes WebUI is an LLM management web UI frontend (like Open WebUI).</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-58122</span>
+<span class="badge-critical">critical</span>
+<span style="font-size:12px;color:#999">CVSS 9.1</span>
+</div>
+<div class="card-desc">Authentication bypass via X-Forwarded-For header spoofing. Allows unauthenticated remote attackers to circumvent local-origin IP restrictions, perform SSRF against internal services (including cloud metadata endpoints), overwrite LLM provider configuration and API keys, or initiate OAuth device code flow attacks.</div>
+<div class="card-meta">Affected: &lt; 0.51.307 · Fixed: 0.51.307 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-58122">NVD</a> · <a href="https://github.com/nesquena/hermes-webui/commit/70596e6993be0d4cee083c1c1a86f5e7ad5d57b7">Commit</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-58123</span>
+<span class="badge-critical">critical</span>
+<span style="font-size:12px;color:#999">CVSS 9.8</span>
+</div>
+<div class="card-desc">Unauthenticated remote code execution via embedded terminal API. Attackers can create a session, attach a PTY shell, and write arbitrary commands through the terminal input endpoint — achieving full command execution as the server process user via four sequential unauthenticated HTTP requests.</div>
+<div class="card-meta">Affected: &lt; 0.51.788 · Fixed: 0.51.788 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-58123">NVD</a> · <a href="https://github.com/nesquena/hermes-webui/commit/d257e5f36cfa9328600c8bde6f0de09a6ad9b6f4">Commit</a></div>
+</div>
+
+<h3>n8n Workflow Automation</h3>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-59257</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 8.8</span>
+</div>
+<div class="card-desc">SQL injection vulnerability in the legacy MySQL v1 node's executeQuery operation.</div>
+<div class="card-meta">Affected: &lt; 1.123.61, 2.x &lt; 2.27.4, 2.28.x &lt; 2.28.1 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59257">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-59206</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 7.1</span>
+</div>
+<div class="card-desc">Authenticated users with default workflow:create permissions can create workflows with arbitrary code execution.</div>
+<div class="card-meta">Affected: &lt; 1.123.61, 2.27.4, 2.28.1 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59206">NVD</a></div>
+</div>
+
+<h3>OpenLLM (bentoml)</h3>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-15035</span>
+<span class="badge-medium">medium</span>
+<span style="font-size:12px;color:#999">CVSS 5.3</span>
+</div>
+<div class="card-desc">Command injection vulnerability in async_run_command function of OpenLLM.</div>
+<div class="card-meta">Affected: 0.6.30 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-15035">NVD</a></div>
+</div>
+
+<div class="note"><strong>Other AI frameworks:</strong> LangChain, LlamaIndex, DSPy, AutoGPT, CrewAI — no new vulnerabilities disclosed in the last 24 hours.</div>
+</div>
+
+<div class="section">
+<h2>3. General Critical & High-Severity Vulnerabilities</h2>
+
+<h3>Critical</h3>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-58480</span>
+<span class="badge-critical">critical</span>
+<span style="font-size:12px;color:#999">CVSS 9.8</span>
+</div>
+<div class="card-desc">Blocksy Companion Pro WordPress plugin — unauthenticated arbitrary file upload allowing remote code execution.</div>
+<div class="card-meta">Affected: &lt; 2.1.47 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-58480">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-52778</span>
+<span class="badge-critical">critical</span>
+</div>
+<div class="card-desc">YesWiki — Unsafe eval() in Formula Calculator leading to Remote Code Execution & Denial of Service.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-px5m-h76g-p7p8">GHSA</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-52777</span>
+<span class="badge-critical">critical</span>
+</div>
+<div class="card-desc">YesWiki — Authenticated PHP Object Injection in BazarImportAction via unserialize.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-9369-69wj-7m2f">GHSA</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-52766</span>
+<span class="badge-critical">critical</span>
+</div>
+<div class="card-desc">YesWiki — Unauthenticated arbitrary page deletion via `{{erasespamedcomments}}` action.</div>
+<div class="card-meta"><a href="https://github.com/advisories/GHSA-6x7x-gcmf-7r8x">GHSA</a></div>
+</div>
+
+<h3>High</h3>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-60002</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 7.7</span>
+</div>
+<div class="card-desc">OpenSSH — use-after-free vulnerability when a server changes its host key during a key re-exchange.</div>
+<div class="card-meta">Affected: &lt; 10.4 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-60002">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-55999</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 8.5</span>
+</div>
+<div class="card-desc">xorg-server / xwayland — heap buffer overflow when providing PCX fonts to the X server.</div>
+<div class="card-meta">Affected: xorg-server &lt; 21.2.24, xwayland &lt; 24.1.13 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-55999">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-56000</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 7.8</span>
+</div>
+<div class="card-desc">xorg-server / xwayland — heap buffer overflow when providing GLX commit.</div>
+<div class="card-meta">Affected: xorg-server &lt; 21.2.24, xwayland &lt; 24.1.13 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56000">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-56001</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 8.5</span>
+</div>
+<div class="card-desc">libXfont2 — heap buffer overflow in BitmapScaleBitmaps due to overflowing 32-bit size.</div>
+<div class="card-meta">Affected: &lt; 2.0.8 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56001">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-56003</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 8.5</span>
+</div>
+<div class="card-desc">libXfont2 — heap buffer overflow in ComputeScaledProperties() when parsing PCF files.</div>
+<div class="card-meta">Affected: &lt; 2.0.8 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56003">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-57239</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 8.2</span>
+</div>
+<div class="card-desc">User-controllable executable files executed by high-privilege processes.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-57239">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-58459</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 7.8</span>
+</div>
+<div class="card-desc">gpsd — command injection vulnerability in gpsprof allowing attackers who control the GPS data to execute arbitrary commands.</div>
+<div class="card-meta">Affected: &lt;= 3.27.5 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-58459">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-29009</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 8.2</span>
+</div>
+<div class="card-desc">U-Boot — buffer overflow in nfs_readlink_reply() when CONFIG_CMD_NFS is enabled.</div>
+<div class="card-meta">Affected: &lt;= 2026.04-rc3 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-29009">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-57023</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 7.5</span>
+</div>
+<div class="card-desc">Juniper Junos OS — TCP proxy plugin improper validation of specified quantity in input.</div>
+<div class="card-meta">Affected: MX Series with SPC3, SRX · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-57023">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-57026</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 7.5</span>
+</div>
+<div class="card-desc">Juniper Junos OS — SIP plugin improper validation of syntactic correctness of input.</div>
+<div class="card-meta">Affected: MX Series with SPC3, SRX · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-57026">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-57028</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 7.3</span>
+</div>
+<div class="card-desc">Juniper Junos OS Evolved — improper restriction of communication channel to intended endpoints.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-57028">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-15270</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 7.5</span>
+</div>
+<div class="card-desc">D-Link DIR-823G — vulnerability in /etc/boa/b unknown functionality.</div>
+<div class="card-meta">Affected: 1.0.2B05_20181207 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-15270">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-15271</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 7.5</span>
+</div>
+<div class="card-desc">TOTOLINK A3000RU, A3100R, A950RG, AC1200T10, CP450, CS185R_T10, EX200 — security vulnerability.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-15271">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-59935</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 7.5</span>
+</div>
+<div class="card-desc">pypdf — denial of service via malformed page content stream.</div>
+<div class="card-meta">Affected: &lt; 6.14.2 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59935">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-59936</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 7.5</span>
+</div>
+<div class="card-desc">pypdf — denial of service via malformed page content stream.</div>
+<div class="card-meta">Affected: &lt; 6.14.1 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59936">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-cve">CVE-2026-59937</span>
+<span class="badge-high">high</span>
+<span style="font-size:12px;color:#999">CVSS 7.5</span>
+</div>
+<div class="card-desc">pypdf — denial of service via malformed cross-reference streams.</div>
+<div class="card-meta">Affected: &lt; 6.14.0 · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-59937">NVD</a></div>
+</div>
+
+<h3>Notable Medium & Low</h3>
+<div class="note">
+<strong>OpenSSH CVE-2026-59999</strong> (HIGH, 5.9): DisableForwarding=yes bypassed by PermitTunnel=yes in sshd &lt; 10.4.<br>
+<strong>MOVEit Transfer:</strong> Multiple medium/low issues (path traversal, auth bypass, incorrect authorization) in versions before 2025.0.7/2025.0.8.<br>
+<strong>Wireshark:</strong> Multiple protocol dissector infinite loops and crashes in 4.6.0-4.6.6 and 4.4.0-4.4.16.<br>
+<strong>ImageMagick:</strong> Heap buffer overflows in &lt; 7.1.2-15/7.1.2-19.<br>
+<strong>NATS Server:</strong> WebSocket listener crash vulnerability (CVSS 6.8) in &lt; 2.14.3, 2.12.12.
+</div>
+
+<h3>Security News</h3>
+<div class="note">
+<strong>Ubiquiti</strong> warns of new max severity UniFi OS vulnerability — patch immediately.<br>
+<strong>CISA</strong> orders federal agencies to patch a max severity ColdFusion flaw by Friday.<br>
+<strong>Hidden backdoor</strong> discovered in Tenda router firmware granting admin access.<br>
+<strong>DuckDuckGo</strong> browser now blocks YouTube video ads.
+</div>
+</div>
+
+<div class="footer">
+Generated by Netamuru · Aurora Tech · Sources: NVD, GitHub Security Advisories, Bleeping Computer, The Hacker News · <a href="https://shadic20003.github.io/aurora-prospects/security/2026-07-10.html">Permalink</a>
+</div>
+</div>
+</body>
+</html>
