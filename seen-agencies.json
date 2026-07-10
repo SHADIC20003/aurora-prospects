@@ -1,6 +1,6 @@
 {
-  "version": 19,
-  "last_updated": "2026-07-09",
+  "version": 20,
+  "last_updated": "2026-07-10",
   "agencies": [
     {
       "name": "10FOLD",
@@ -51,6 +51,11 @@
       "name": "Agital",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Agorapulse",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
     },
     {
       "name": "Airtable",
@@ -208,9 +213,19 @@
       "source_url": "archive/2026-06-27.html"
     },
     {
+      "name": "Brafton",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
+    },
+    {
       "name": "BrandFire",
       "source_date": "2026-07-09",
       "source_url": "archive/2026-07-09.html"
+    },
+    {
+      "name": "Brandroot",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
     },
     {
       "name": "Brightter",
@@ -296,6 +311,11 @@
       "name": "Centric Consulting",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
+    },
+    {
+      "name": "Charlie Oscar",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
     },
     {
       "name": "ChartMogul",
@@ -408,6 +428,11 @@
       "source_url": "archive/2026-05-29.html"
     },
     {
+      "name": "Conductor",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
+    },
+    {
       "name": "Conduit Digital",
       "source_date": "2026-07-06",
       "source_url": "archive/2026-07-06.html"
@@ -483,6 +508,11 @@
       "source_url": "archive/2026-07-04.html"
     },
     {
+      "name": "Deepend",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
+    },
+    {
       "name": "Deep Fried Advertising",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
@@ -516,6 +546,11 @@
       "name": "Deutsch",
       "source_date": "2026-07-03",
       "source_url": "archive/2026-07-03.html"
+    },
+    {
+      "name": "Digital Radium",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
     },
     {
       "name": "Digital Silk",
@@ -728,6 +763,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Greenlight Digital",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
+    },
+    {
       "name": "Greenough Communications",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
@@ -746,6 +786,11 @@
       "name": "Hawke Media",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "Haymaker",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
     },
     {
       "name": "Hennessey Digital",
@@ -901,6 +946,11 @@
       "name": "Jumpgrowth",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Kalypso",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
     },
     {
       "name": "KlientBoost",
@@ -1171,6 +1221,11 @@
       "name": "North Highland",
       "source_date": "2026-06-19",
       "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "Northbound",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
     },
     {
       "name": "Notion",
@@ -1501,6 +1556,11 @@
       "name": "Satori",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Screaming Frog",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
     },
     {
       "name": "SearchBerg",
