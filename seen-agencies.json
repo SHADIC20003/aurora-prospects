@@ -1,6 +1,6 @@
 {
-  "version": 20,
-  "last_updated": "2026-07-10",
+  "version": 21,
+  "last_updated": "2026-07-11",
   "agencies": [
     {
       "name": "10FOLD",
@@ -2006,6 +2006,66 @@
       "name": "ZURB",
       "source_date": "2026-07-08",
       "source_url": "archive/2026-07-08.html"
+    },
+    {
+      "name": "Addictive Technology Solutions",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "Ample",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "Astronaut",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "Descript",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "dotdotdash",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "Happy Medium",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "Kickdrum",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "Playground",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "Rock Paper Simple",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "Swerve Agency",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "Whitecap Consulting",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "Zencastr",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
     }
   ]
 }
