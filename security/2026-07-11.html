@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 11, 2026 — Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;font-size:14px}
+.container{max-width:800px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:24px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:28px}
+.section h2{font-size:18px;font-weight:600;color:#f1f1f1;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:16px;margin-bottom:12px}
+.card:hover{border-color:rgba(232,184,64,0.3)}
+.card h3{font-size:16px;font-weight:600;color:#f1f1f1;margin-bottom:4px}
+.card .cve-id{font-size:13px;font-weight:600;margin-bottom:6px}
+.card .desc{font-size:14px;color:#c0c0d0;line-height:1.5;margin-bottom:8px}
+.card .meta{font-size:13px;color:#999;line-height:1.5}
+.card .meta span{margin-right:16px}
+.card .link{display:inline-block;margin-top:6px;font-size:13px;color:#E8B840;text-decoration:none}
+.card .link:hover{text-decoration:underline}
+.badge-critical{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;background:rgba(255,255,255,0.06);color:#888}
+.badge-critical-tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;background:rgba(232,184,64,0.2);color:#E8B840;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px}
+.badge-high-tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;background:rgba(232,184,64,0.12);color:#E8B840;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px}
+.badge-medium-tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;background:rgba(245,158,11,0.12);color:#f59e0b;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px}
+.badge-low-tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;background:rgba(255,255,255,0.05);color:#888;text-transform:uppercase;letter-spacing:0.5px;margin-right:6px}
+.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.summary-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:12px;text-align:center}
+.summary-card .num{font-size:22px;font-weight:700;margin-bottom:2px}
+.summary-card .label{font-size:12px;color:#999}
+.summary-card.crit .num{color:#E8B840}
+.summary-card.high .num{color:#E8B840}
+.summary-card.med .num{color:#f59e0b}
+.summary-card.low .num{color:#888}
+.priority-banner{background:rgba(232,184,64,0.08);border:1px solid rgba(232,184,64,0.25);border-radius:10px;padding:14px 16px;margin-bottom:16px}
+.priority-banner .title{font-size:15px;font-weight:600;color:#E8B840;margin-bottom:4px}
+.priority-banner .body{font-size:14px;color:#c0c0d0;line-height:1.5}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 11, 2026 — <a href="../index.html">← Dashboard</a> · <a href="index.html">Archive</a></div>
+</div>
+
+<div class="priority-banner">
+<div class="title">🔴 Hermes Agent — High Priority</div>
+<div class="body">1 critical, 3 high, and 5 medium severity vulnerabilities currently disclosed against NousResearch/hermes-agent. CVE-2026-14625 (RCE) is the most urgent — check your version immediately.</div>
+</div>
+
+<!-- HERMES AGENT SECTION -->
+<div class="section">
+<h2>🔴 Hermes Agent (NousResearch/hermes-agent)</h2>
+
+<div class="card">
+<div class="cve-id"><span class="badge-critical-tag">Critical</span> CVE-2026-14625</div>
+<h3>Remote Code Execution via shell.exec</h3>
+<div class="desc">RCE vulnerability in <code>shell.exec</code> within <code>tui_gateway/server.py</code>. Unauthenticated remote attacker can execute arbitrary shell commands on the host. Exploit made public.</div>
+<div class="meta">
+<span>Affected: hermes-agent ≤ 0.15.2</span>
+</div>
+<a class="link" href="https://nvd.nist.gov/vuln/detail/CVE-2026-14625" target="_blank">NVD Entry →</a>
+</div>
+
+<div class="card">
+<div class="cve-id"><span class="badge-high-tag">High</span> CVE-2026-14626</div>
+<h3>Denial of Service via HTTP API</h3>
+<div class="desc">DoS in <code>AIAgent.run_conversation</code> via <code>todos</code> argument manipulation in HTTP API component (<code>run_agent.py</code>). Remotely exploitable.</div>
+<div class="meta">
+<span>Affected: hermes-agent ≤ 2026.4.30</span>
+</div>
+<a class="link" href="https://nvd.nist.gov/vuln/detail/CVE-2026-14626" target="_blank">NVD Entry →</a>
+</div>
+
+<div class="card">
+<div class="cve-id"><span class="badge-high-tag">High</span> GHSA-33qv-c5qm-799v</div>
+<h3>Injection in Memory Tool</h3>
+<div class="desc">Injection vulnerability in <code>_scan_memory_content</code> (<code>tools/memory_tool.py</code>). Remotely exploitable; public exploit available.</div>
+<div class="meta">
+<span>Affected: hermes-agent ≤ 2026.4.30</span>
+</div>
+<a class="link" href="https://github.com/advisories/GHSA-33qv-c5qm-799v" target="_blank">GitHub Advisory →</a>
+</div>
+
+<div class="card">
+<div class="cve-id"><span class="badge-high-tag">High</span> CVE-2026-10548</div>
+<h3>Improper Authentication in Credential Pool</h3>
+<div class="desc">Authentication flaw in <code>_sync_anthropic_entry_from_credentials_file</code> (<code>agent/credential_pool.py</code>). Allows credential manipulation.</div>
+<div class="meta">
+<span>Affected: hermes-agent ≤ 2026.4.23</span>
+</div>
+<a class="link" href="https://nvd.nist.gov/vuln/detail/CVE-2026-10548" target="_blank">NVD Entry →</a>
+</div>
+
+<div class="card">
+<div class="cve-id"><span class="badge-medium-tag">Medium</span> CVE-2026-14783</div>
+<h3>Path Traversal in Skill View</h3>
+<div class="desc">Path traversal in <code>skill_view</code> function (<code>tools/skills_tool.py</code>). Name argument manipulation leads to arbitrary file read.</div>
+<div class="meta">
+<span>Affected: hermes-agent 2026.5.29.2</span>
+</div>
+<a class="link" href="https://radar.offseq.com/threat/cve-2026-14783-path-traversal-in-nousresearch-herm-3691ae5c50c92529" target="_blank">Details →</a>
+</div>
+
+<div class="card">
+<div class="cve-id"><span class="badge-medium-tag">Medium</span> CVE-2026-10222</div>
+<h3>Injection in CLI Configuration</h3>
+<div class="desc">Injection in <code>_sanitize_env_lines</code> (<code>hermes_cli/config.py</code>). Remotely exploitable via crafted environment config.</div>
+<div class="meta">
+<span>Affected: hermes-agent ≤ 2026.4.30</span>
+</div>
+<a class="link" href="https://advisories.gitlab.com/pypi/hermes-agent/CVE-2026-10222/" target="_blank">GitLab Advisory →</a>
+</div>
+
+<div class="card">
+<div class="cve-id"><span class="badge-medium-tag">Medium</span> CVE-2026-10224</div>
+<h3>Webhook Resource Exhaustion</h3>
+<div class="desc">Resource exhaustion in <code>_handle_webhook_request</code> (Feishu platform adapter). Unauthenticated remote attacker can consume server resources.</div>
+<div class="meta">
+<span>Affected: hermes-agent ≤ 2026.4.30</span>
+</div>
+<a class="link" href="https://github.com/advisories/GHSA-pmqc-57g8-c22c" target="_blank">GitHub Advisory →</a>
+</div>
+
+<div class="card">
+<div class="cve-id"><span class="badge-medium-tag">Medium</span> CVE-2026-7113</div>
+<h3>Missing Authentication in Webhooks Endpoint</h3>
+<div class="desc">Missing authentication in <code>gateway/platforms/webhook.py</code>. <code>_INSECURE_NO_AUTH</code> argument allows unauthenticated remote exploitation.</div>
+<div class="meta">
+<span>Affected: hermes-agent 0.8.0</span>
+</div>
+<a class="link" href="https://dbugs.ptsecurity.com/vulnerability/PT-2026-35395" target="_blank">Details →</a>
+</div>
+
+<div class="card">
+<div class="cve-id"><span class="badge-medium-tag">Medium</span> CVE-2026-7396</div>
+<h3>Path Traversal in WeChat Work Adapter</h3>
+<div class="desc">Path traversal in <code>gateway/platforms/wecom.py</code> (WeChat Work Platform Adapter). Remotely exploitable.</div>
+<div class="meta">
+<span>Affected: hermes-agent 0.8.0</span>
+</div>
+<a class="link" href="https://dbugs.ptsecurity.com/vulnerability/PT-2026-35964" target="_blank">Details →</a>
+</div>
+
+<div class="card">
+<div class="cve-id"><span class="badge-high-tag">Various</span> Trivy Scan Report</div>
+<h3>Production Docker Image — 24 Critical + 206 High</h3>
+<div class="desc">Trivy image scan on production Docker image v2026.5.16 found 24 critical and 206 high severity vulnerabilities from transitive dependencies.</div>
+<div class="meta">
+<span>Affected: hermes-agent v2026.5.16 Docker image</span>
+</div>
+<a class="link" href="https://github.com/NousResearch/hermes-agent/issues/51212" target="_blank">GitHub Issue →</a>
+</div>
+</div>
+
+<!-- AI TOOLS SECTION -->
+<div class="section">
+<h2>🟠 AI Tools & Frameworks</h2>
+
+<div class="card">
+<div class="cve-id"><span class="badge-critical-tag">Critical</span> CVE-2026-54309</div>
+<h3>n8n MCP-Browser Authentication Bypass</h3>
+<div class="desc">CVSS 10.0. Authentication bypass in <code>@n8n/mcp-browser</code> component when MCP endpoint runs in HTTP transport mode. Unauthenticated remote compromise.</div>
+<div class="meta">
+<span>Affected: @n8n/mcp-browser (HTTP transport)</span>
+</div>
+<a class="link" href="https://vectimus.com/threats/" target="_blank">Details →</a>
+</div>
+
+<div class="card">
+<div class="cve-id"><span class="badge-critical-tag">Critical</span> CVE-2026-55255</div>
+<h3>Langflow Authorization Bypass (IDOR)</h3>
+<div class="desc">CVSS 9.9. Authenticated attacker can execute any AI flow belonging to another user. Actively exploited. Added to CISA Known Exploited Vulnerabilities catalog. Federal deadline: July 11, 2026.</div>
+<div class="meta">
+<span>Affected: Langflow < 1.9.2</span>
+</div>
+<a class="link" href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-langflow-auth-bypass-flaw/" target="_blank">Bleeping Computer →</a>
+</div>
+</div>
+
+<!-- GENERAL SECTION -->
+<div class="section">
+<h2>🟢 General Critical & High-Profile Vulnerabilities</h2>
+
+<div class="card">
+<div class="cve-id"><span class="badge-critical-tag">Critical</span> CVE-2026-20896</div>
+<h3>Gitea Docker Authentication Bypass</h3>
+<div class="desc">CVSS 9.8. Gitea Docker image trusts <code>X-WEBAUTH-USER</code> header from any source when <code>REVERSE_PROXY_TRUSTED_PROXIES=*</code>. One HTTP header grants admin access. <strong>Actively exploited in the wild.</strong></div>
+<div class="meta">
+<span>Affected: Gitea Docker images (default config)</span>
+</div>
+<a class="link" href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html" target="_blank">The Hacker News →</a>
+</div>
+
+<div class="card">
+<div class="cve-id"><span class="badge-high-tag">High</span> CVE-2026-50656</div>
+<h3>Microsoft Defender "RoguePlanet" Privilege Escalation</h3>
+<div class="desc">CVSS 7.8. Privilege escalation to SYSTEM in Microsoft Malware Protection Engine (<code>mpengine.dll</code>). Low-complexity race condition. Patched via automatic engine update.</div>
+<div class="meta">
+<span>Affected: Windows 10/11, Defender MPEngine</span>
+</div>
+<a class="link" href="https://thehackernews.com/2026/07/microsoft-patches-rogueplanet-defender.html" target="_blank">The Hacker News →</a>
+</div>
+</div>
+
+<!-- SUMMARY -->
+<div class="section">
+<h2>📊 Severity Summary</h2>
+<div class="summary-grid">
+<div class="summary-card crit">
+<div class="num">4</div>
+<div class="label">Critical</div>
+</div>
+<div class="summary-card high">
+<div class="num">4</div>
+<div class="label">High</div>
+</div>
+<div class="summary-card med">
+<div class="num">5</div>
+<div class="label">Medium</div>
+</div>
+<div class="summary-card low">
+<div class="num">0</div>
+<div class="label">Low</div>
+</div>
+</div>
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech · July 11, 2026</div>
+</div>
+</body>
+</html>
