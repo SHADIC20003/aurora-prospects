@@ -1,6 +1,6 @@
 {
-  "version": 21,
-  "last_updated": "2026-07-11",
+  "version": 22,
+  "last_updated": "2026-07-12",
   "agencies": [
     {
       "name": "10FOLD",
@@ -31,6 +31,16 @@
       "name": "Accenture",
       "source_date": "2026-06-21",
       "source_url": "archive/2026-06-21.html"
+    },
+    {
+      "name": "Active Theory",
+      "source_date": "2026-07-12",
+      "source_url": "archive/2026-07-12.html"
+    },
+    {
+      "name": "Addictive Technology Solutions",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
     },
     {
       "name": "Agency Creative",
@@ -88,6 +98,11 @@
       "source_url": "archive/2026-06-28.html"
     },
     {
+      "name": "Ample",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
       "name": "Amsive",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
@@ -113,6 +128,16 @@
       "source_url": "archive/2026-07-06.html"
     },
     {
+      "name": "AREA 17",
+      "source_date": "2026-07-12",
+      "source_url": "archive/2026-07-12.html"
+    },
+    {
+      "name": "Astronaut",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
       "name": "Aufwind",
       "source_date": "2026-06-08",
       "source_url": "telegram-only"
@@ -121,6 +146,11 @@
       "name": "Avanade",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
+    },
+    {
+      "name": "B-Reel",
+      "source_date": "2026-07-12",
+      "source_url": "archive/2026-07-12.html"
     },
     {
       "name": "Bain & Company",
@@ -176,6 +206,16 @@
       "name": "Blue Compass",
       "source_date": "2026-06-20",
       "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "Blue Fountain Media",
+      "source_date": "2026-07-12",
+      "source_url": "archive/2026-07-12.html"
+    },
+    {
+      "name": "Blue State",
+      "source_date": "2026-07-12",
+      "source_url": "archive/2026-07-12.html"
     },
     {
       "name": "bohan",
@@ -508,14 +548,14 @@
       "source_url": "archive/2026-07-04.html"
     },
     {
-      "name": "Deepend",
-      "source_date": "2026-07-10",
-      "source_url": "archive/2026-07-10.html"
-    },
-    {
       "name": "Deep Fried Advertising",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
+    },
+    {
+      "name": "Deepend",
+      "source_date": "2026-07-10",
+      "source_url": "archive/2026-07-10.html"
     },
     {
       "name": "Deloitte Digital",
@@ -531,6 +571,11 @@
       "name": "DEPT",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "Descript",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
     },
     {
       "name": "Design Army",
@@ -603,6 +648,11 @@
       "source_url": "archive/2026-07-04.html"
     },
     {
+      "name": "dotdotdash",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
       "name": "Droga5",
       "source_date": "2026-06-30",
       "source_url": "archive/2026-06-30.html"
@@ -656,6 +706,16 @@
       "name": "Epsilon",
       "source_date": "2026-07-08",
       "source_url": "archive/2026-07-08.html"
+    },
+    {
+      "name": "Fantasy",
+      "source_date": "2026-07-12",
+      "source_url": "archive/2026-07-12.html"
+    },
+    {
+      "name": "Fathom",
+      "source_date": "2026-07-12",
+      "source_url": "archive/2026-07-12.html"
     },
     {
       "name": "FATJOE",
@@ -781,6 +841,11 @@
       "name": "Happy Cog",
       "source_date": "2026-07-01",
       "source_url": "archive/2026-07-01.html"
+    },
+    {
+      "name": "Happy Medium",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
     },
     {
       "name": "Hawke Media",
@@ -953,6 +1018,11 @@
       "source_url": "archive/2026-07-10.html"
     },
     {
+      "name": "Kickdrum",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
       "name": "KlientBoost",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
@@ -1066,6 +1136,11 @@
       "name": "Made By Many",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
+    },
+    {
+      "name": "Madwell",
+      "source_date": "2026-07-12",
+      "source_url": "archive/2026-07-12.html"
     },
     {
       "name": "Mailmodo",
@@ -1303,6 +1378,16 @@
       "source_url": "archive/2026-06-23.html"
     },
     {
+      "name": "Outreach",
+      "source_date": "2026-07-12",
+      "source_url": "archive/2026-07-12.html"
+    },
+    {
+      "name": "Ovative Group",
+      "source_date": "2026-07-12",
+      "source_url": "archive/2026-07-12.html"
+    },
+    {
       "name": "Overit Media",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -1366,6 +1451,11 @@
       "name": "Plane",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Playground",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
     },
     {
       "name": "PMG",
@@ -1521,6 +1611,11 @@
       "name": "Robot Creative",
       "source_date": "2026-06-25",
       "source_url": "archive/2026-06-25.html"
+    },
+    {
+      "name": "Rock Paper Simple",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
     },
     {
       "name": "Rockerbox",
@@ -1703,6 +1798,11 @@
       "source_url": "archive/2026-07-06.html"
     },
     {
+      "name": "Swerve Agency",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
       "name": "Symphonic Digital",
       "source_date": "2026-07-06",
       "source_url": "archive/2026-07-06.html"
@@ -1751,6 +1851,11 @@
       "name": "The Variable",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "thoughtbot",
+      "source_date": "2026-07-12",
+      "source_url": "archive/2026-07-12.html"
     },
     {
       "name": "Thoughtworks",
@@ -1948,6 +2053,11 @@
       "source_url": "archive/2026-07-06.html"
     },
     {
+      "name": "Whitecap Consulting",
+      "source_date": "2026-07-11",
+      "source_url": "archive/2026-07-11.html"
+    },
+    {
       "name": "Wieden+Kennedy",
       "source_date": "2026-06-30",
       "source_url": "archive/2026-06-30.html"
@@ -2003,69 +2113,14 @@
       "source_url": "archive/2026-06-20.html"
     },
     {
-      "name": "ZURB",
-      "source_date": "2026-07-08",
-      "source_url": "archive/2026-07-08.html"
-    },
-    {
-      "name": "Addictive Technology Solutions",
-      "source_date": "2026-07-11",
-      "source_url": "archive/2026-07-11.html"
-    },
-    {
-      "name": "Ample",
-      "source_date": "2026-07-11",
-      "source_url": "archive/2026-07-11.html"
-    },
-    {
-      "name": "Astronaut",
-      "source_date": "2026-07-11",
-      "source_url": "archive/2026-07-11.html"
-    },
-    {
-      "name": "Descript",
-      "source_date": "2026-07-11",
-      "source_url": "archive/2026-07-11.html"
-    },
-    {
-      "name": "dotdotdash",
-      "source_date": "2026-07-11",
-      "source_url": "archive/2026-07-11.html"
-    },
-    {
-      "name": "Happy Medium",
-      "source_date": "2026-07-11",
-      "source_url": "archive/2026-07-11.html"
-    },
-    {
-      "name": "Kickdrum",
-      "source_date": "2026-07-11",
-      "source_url": "archive/2026-07-11.html"
-    },
-    {
-      "name": "Playground",
-      "source_date": "2026-07-11",
-      "source_url": "archive/2026-07-11.html"
-    },
-    {
-      "name": "Rock Paper Simple",
-      "source_date": "2026-07-11",
-      "source_url": "archive/2026-07-11.html"
-    },
-    {
-      "name": "Swerve Agency",
-      "source_date": "2026-07-11",
-      "source_url": "archive/2026-07-11.html"
-    },
-    {
-      "name": "Whitecap Consulting",
-      "source_date": "2026-07-11",
-      "source_url": "archive/2026-07-11.html"
-    },
-    {
       "name": "Zencastr",
       "source_date": "2026-07-11",
       "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "ZURB",
+      "source_date": "2026-07-08",
+      "source_url": "archive/2026-07-08.html"
     }
   ]
 }
