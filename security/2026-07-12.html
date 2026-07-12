@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 12, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;font-size:14px;line-height:1.6}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:28px 0 16px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:22px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:13px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:24px}
+.section h2{font-size:17px;font-weight:700;color:#f1f1f1;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section h2.priority{color:#E8B840}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px;transition:border-color 0.2s}
+.card:hover{border-color:rgba(232,184,64,0.3)}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.card-desc{font-size:13px;color:#bbb;margin-bottom:4px;line-height:1.5}
+.card-meta{font-size:12px;color:#777}
+.card-meta a{color:#E8B840;text-decoration:none}
+.card-meta a:hover{text-decoration:underline}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.badge-critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{background:rgba(255,255,255,0.06);color:#888}
+.badge-mitigated{background:rgba(59,130,246,0.15);color:#60a5fa}
+.exploit-badge{display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;background:rgba(239,68,68,0.15);color:#ef4444;margin-left:4px}
+.note{font-size:12px;color:#666;margin-top:8px;padding:8px 12px;background:rgba(255,255,255,0.02);border-radius:6px;border-left:2px solid rgba(232,184,64,0.3)}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 12, 2026 — <a href="index.html">← Archive</a></div>
+</div>
+
+<!-- ============ HERMES AGENT ============ -->
+<div class="section">
+<h2 class="priority">🚨 Hermes Agent — HIGH PRIORITY</h2>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-15311 — XSS in Matrix Adapter</span>
+<span class="badge badge-low">LOW</span>
+</div>
+<div class="card-desc">Cross-site scripting in <code>MatrixAdapter._markdown_to_html</code> (<code>gateway/platforms/matrix.py</code>). Unsanitized Markdown-to-HTML conversion allows remote script injection. Public exploit available.</div>
+<div class="card-meta">Affects: hermes-agent ≤ 2026.5.29.2 &nbsp;|&nbsp; Published: July 9, 2026 &nbsp;|&nbsp; <a href="https://cvefeed.io/vuln/detail/CVE-2026-15311">Details</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-10224 — DoS via Feishu Webhook</span>
+<span class="badge badge-medium">MEDIUM</span>
+</div>
+<div class="card-desc">Resource consumption vulnerability in <code>_handle_webhook_request</code> (<code>gateway/platforms/feishu.py</code>). Unauthenticated remote attackers can exhaust server resources via crafted webhook requests. Public exploit.</div>
+<div class="card-meta">Affects: hermes-agent ≤ 2026.4.30 &nbsp;|&nbsp; Published: June 1, 2026 &nbsp;|&nbsp; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-10224">NVD</a> · <a href="https://github.com/advisories/GHSA-pmqc-57g8-c22c">GHSA</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-7396 — Path Traversal in WeChat Work Adapter</span>
+<span class="badge badge-medium">MEDIUM</span>
+</div>
+<div class="card-desc">Path traversal in <code>gateway/platforms/wecom.py</code> allowing unauthorized file access through the WeChat Work platform adapter.</div>
+<div class="card-meta">Published: May 2026 &nbsp;|&nbsp; <a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504">Source</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-48710 — Starlette "BadHost" (Dependency — Mitigated)</span>
+<span class="badge badge-mitigated">MITIGATED</span>
+</div>
+<div class="card-desc">Host-header parsing issue allowing path-based auth bypass in Starlette < 1.0.1. Hermes Agent pins <code>starlette==1.0.1</code> with explicit CVE reference. No action required.</div>
+<div class="card-meta"><a href="https://github.com/NousResearch/hermes-agent/issues/35067">GitHub Issue #35067</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-32597 — PyJWT Header Validation Bypass (Dependency — Mitigated)</span>
+<span class="badge badge-mitigated">MITIGATED</span>
+</div>
+<div class="card-desc">Fails to validate critical header parameters in JWS tokens (CVSS 7.5). Pinned in hermes-agent <code>pyproject.toml</code>. Patched in PyJWT 2.12.0.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32597">NVD</a></div>
+</div>
+</div>
+
+<!-- ============ AI TOOLS & FRAMEWORKS ============ -->
+<div class="section">
+<h2>🤖 AI Tools &amp; Frameworks</h2>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-34070 — LangChain Path Traversal</span>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-desc">Path traversal in langchain-core document loading pipeline. LLM-generated tool calls with crafted file paths can traverse directories during RAG retrieval (CVSS 7.5).</div>
+<div class="card-meta"><a href="https://particula.tech/blog/langchain-langgraph-security-cves-audit">Details</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-26019 — LangChain SSRF</span>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-desc">SSRF in RecursiveUrlLoader component. Patched in LangChain 1.1.14.</div>
+<div class="card-meta"><a href="https://particula.tech/blog/langchain-langgraph-security-cves-audit">Details</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CrewAI — Multiple Critical Vulnerabilities</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">ACTIVE</span>
+</div>
+<div class="card-desc">Four CVEs including RCE via Code Interpreter Tool (CVE-2026-2275), SSRF, arbitrary file read, and sandbox escape (CVE-2026-2287). Docker dependency failure defaults to insecure sandbox allowing full host compromise.</div>
+<div class="card-meta">Published: March 30, 2026 &nbsp;|&nbsp; <a href="https://www.kb.cert.org/vuls/id/221883">CERT/CC</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-54309 — n8n MCP Browser Auth Bypass</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Complete authentication bypass in @n8n/mcp-browser HTTP transport mode (CVSS 10.0). Any network-reachable client can establish MCP sessions and invoke browser-control tools without credentials.</div>
+<div class="card-meta">Affects: @n8n/mcp-browser < 2.25.7 / 2.26.2 &nbsp;|&nbsp; Published: June 10, 2026 &nbsp;|&nbsp; <a href="https://github.com/advisories/GHSA-qrx8-25qr-5r7v">GHSA</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-30950 — AutoGPT Session Hijacking</span>
+<span class="badge badge-high">HIGH</span>
+</div>
+<div class="card-desc">Session hijacking allowing attackers to take over active AutoGPT sessions. Public PoC available.</div>
+<div class="card-meta"><a href="https://github.com/ZeroPathAI/autogpt-CVE-2026-30950-poc">PoC</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>AI Agent Security Tools — Attack Vector Risk</span>
+<span class="badge badge-medium">MEDIUM</span>
+</div>
+<div class="card-desc">Researchers warn that extensive access required by AI agent–powered vulnerability discovery tools (OpenAI, Anthropic) could transform them into attack vectors. Reported July 11, 2026.</div>
+<div class="card-meta"><a href="https://www.infosecurity-magazine.com/news/anthropic-openai-report-exploit/">Infosecurity Magazine</a></div>
+</div>
+</div>
+
+<!-- ============ GENERAL CRITICAL ============ -->
+<div class="section">
+<h2>⚡ General Critical Vulnerabilities (Last 7 Days)</h2>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-20896 — Gitea Docker Auth Bypass</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">ACTIVE EXPLOITATION</span>
+</div>
+<div class="card-desc">Default Docker config hard-codes <code>REVERSE_PROXY_TRUSTED_PROXIES = *</code>, allowing any IP to inject arbitrary user identity via HTTP headers. Complete unauthenticated admin access. CVSS 9.8. Active exploitation confirmed by Sysdig.</div>
+<div class="card-meta">Affects: Gitea Docker images ≤ 1.26.2 &nbsp;|&nbsp; Fixed: 1.26.3 &nbsp;|&nbsp; <a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-auth-bypass-in-gitea-docker-image/">BleepingComputer</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-50746 — Ubiquiti UniFi OS Command Injection</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Maximum-severity command injection in UniFi Connect Application. Part of a batch of 7 critical UniFi OS patches covering Connect, Talk, Access, Protect, and UniFi OS across routers, gateways, NAS, and surveillance systems.</div>
+<div class="card-meta">Affects: UniFi Connect Application ≤ 3.4.16 &nbsp;|&nbsp; Fixed: 3.4.20+ &nbsp;|&nbsp; Published: July 8, 2026 &nbsp;|&nbsp; <a href="https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/">BleepingComputer</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-48558 — SimpleHelp Auth Bypass</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">ACTIVE EXPLOITATION</span>
+</div>
+<div class="card-desc">OIDC authentication bypass allowing forged logins. Exploited to deploy Djinn Stealer targeting cloud, AI, code, and wallet credentials. Over 14,000 exposed servers.</div>
+<div class="card-meta">Affects: SimpleHelp ≤ 5.5.15 &nbsp;|&nbsp; <a href="https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-35616 — Fortinet FortiClient EMS Pre-Auth RCE</span>
+<span class="badge badge-high">HIGH</span>
+<span class="exploit-badge">ACTIVE EXPLOITATION</span>
+</div>
+<div class="card-desc">Pre-authentication API access bypass enabling unauthenticated RCE (CVSS 9.1). Active exploitation with Ekz infostealer disguised as Fortinet patches.</div>
+<div class="card-meta">Affects: FortiClient EMS 7.4.5, 7.4.6 &nbsp;|&nbsp; <a href="https://arcticwolf.com/resources/blog/forticlient-ems-exploited-via-cve-2026-35616">Arctic Wolf</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CISA KEV Additions (Week of July 7–10)</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">CISA KEV</span>
+</div>
+<div class="card-desc">
+- CVE-2026-56290 (CVSS 10.0) — Joomlack Page Builder: unauthenticated RCE via arbitrary file upload<br>
+- CVE-2026-56291 — Balbooa Forms (com_baforms): active exploitation<br>
+- Adobe ColdFusion &amp; Langflow CVEs under active attack<br>
+Federal patch deadline: July 10, 2026
+</div>
+<div class="card-meta"><a href="https://www.probablypwned.com/article/cisa-kev-joomla-coldfusion-langflow-4-cves-active-exploitation">ProbablyPwned</a></div>
+</div>
+</div>
+
+<div class="note">⚠️ Hermes Agent users: ensure you are running the latest version (past 2026.5.29.2) to mitigate CVE-2026-15311. Dependency CVEs for Starlette and PyJWT are pinned in pyproject.toml — verify your lockfile.</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech Security Watch</div>
+
+</div>
+</body>
+</html>
