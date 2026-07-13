@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 13, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;font-size:14px;line-height:1.6}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:28px 0 16px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:22px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:13px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:24px}
+.section h2{font-size:17px;font-weight:700;color:#f1f1f1;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section h2.priority{color:#E8B840}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px;transition:border-color 0.2s}
+.card:hover{border-color:rgba(232,184,64,0.3)}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.card-desc{font-size:13px;color:#bbb;margin-bottom:4px;line-height:1.5}
+.card-meta{font-size:12px;color:#777}
+.card-meta a{color:#E8B840;text-decoration:none}
+.card-meta a:hover{text-decoration:underline}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.badge-critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{background:rgba(255,255,255,0.06);color:#888}
+.badge-mitigated{background:rgba(59,130,246,0.15);color:#60a5fa}
+.exploit-badge{display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;background:rgba(239,68,68,0.15);color:#ef4444;margin-left:4px}
+.note{font-size:12px;color:#666;margin-top:8px;padding:8px 12px;background:rgba(255,255,255,0.02);border-radius:6px;border-left:2px solid rgba(232,184,64,0.3)}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+.tag{display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;background:rgba(59,130,246,0.12);color:#60a5fa;margin-left:4px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 13, 2026 — <a href="index.html">← Archive</a></div>
+</div>
+
+<!-- ============ HERMES AGENT ============ -->
+<div class="section">
+<h2 class="priority">🚨 Hermes Agent — HIGH PRIORITY</h2>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-14617 — Case Sensitivity Bypass in Stream Consumer</span>
+<span class="badge badge-low">LOW</span>
+<span class="tag">NEW</span>
+</div>
+<div class="card-desc">Improper case sensitivity handling in <code>GatewayStreamConsumer._filter_and_accumulate</code> (<code>gateway/stream_consumer.py</code>). Authenticated remote attackers can leak limited reasoning content. High attack complexity limits exploitability. CVSS 4.0: 1.3.</div>
+<div class="card-meta">Affects: hermes-agent 2026.4.0–2026.4.30 &nbsp;|&nbsp; Published: July 3, 2026 &nbsp;|&nbsp; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14617">NVD</a> · <a href="https://cvefeed.io/vuln/detail/CVE-2026-14617">Details</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-15311 — XSS in Matrix Adapter</span>
+<span class="badge badge-low">LOW</span>
+</div>
+<div class="card-desc">Cross-site scripting in <code>MatrixAdapter._markdown_to_html</code>. Unsanitized Markdown-to-HTML conversion allows remote script injection. Public exploit available.</div>
+<div class="card-meta">Affects: hermes-agent ≤ 2026.5.29.2 &nbsp;|&nbsp; <a href="https://cvefeed.io/vuln/detail/CVE-2026-15311">Details</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-10224 — DoS via Feishu Webhook</span>
+<span class="badge badge-medium">MEDIUM</span>
+</div>
+<div class="card-desc">Resource consumption vulnerability in Feishu webhook handler (<code>gateway/platforms/feishu.py</code>). Unauthenticated remote attackers can exhaust server resources via crafted webhook requests.</div>
+<div class="card-meta">Affects: hermes-agent ≤ 2026.4.30 &nbsp;|&nbsp; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-10224">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-7396 — Path Traversal in WeChat Work Adapter</span>
+<span class="badge badge-medium">MEDIUM</span>
+</div>
+<div class="card-desc">Path traversal in <code>gateway/platforms/wecom.py</code> allowing unauthorized file access through the WeChat Work platform adapter.</div>
+<div class="card-meta"><a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-hermes-agent-cves-20260504">Source</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-48710 — Starlette "BadHost" (Dependency — Mitigated)</span>
+<span class="badge badge-mitigated">MITIGATED</span>
+</div>
+<div class="card-desc">Host-header parsing issue allowing path-based auth bypass. Pinned at starlette==1.0.1.</div>
+<div class="card-meta"><a href="https://github.com/NousResearch/hermes-agent/issues/35067">GitHub Issue #35067</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-32597 — PyJWT Header Validation Bypass (Dependency — Mitigated)</span>
+<span class="badge badge-mitigated">MITIGATED</span>
+</div>
+<div class="card-desc">Fails to validate critical header parameters in JWS tokens (CVSS 7.5). Pinned in hermes-agent pyproject.toml.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32597">NVD</a></div>
+</div>
+</div>
+
+<!-- ============ AI TOOLS & FRAMEWORKS ============ -->
+<div class="section">
+<h2>🤖 AI Tools &amp; Frameworks — HIGH PRIORITY</h2>
+
+<!-- NEW THIS WEEK -->
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-56271 — Flowise Weak JWT Secrets</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">NEW</span>
+</div>
+<div class="card-desc">Flowise < 3.1.0 uses weak hardcoded default JWT secrets (<code>JWT_AUTH_TOKEN_SECRET</code>, <code>JWT_REFRESH_TOKEN_SECRET</code>). When environment variables are not set, falls back to publicly known defaults, allowing attackers to forge valid JWTs and impersonate any user including administrators — full authentication bypass. CVSS 9.8.</div>
+<div class="card-meta">Published: July 12, 2026 &nbsp;|&nbsp; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56271">NVD</a> · <a href="https://cvefeed.io/vuln/detail/CVE-2026-56271">Details</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-57827 — RSFiles Joomla Extension Unauthenticated RCE</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">NEW</span>
+</div>
+<div class="card-desc">Unauthenticated arbitrary file upload in RSFiles (rsjoomla.com) Joomla extension allowing attackers to upload executable PHP files leading to full remote code execution. CVSS 10.0.</div>
+<div class="card-meta">Published: July 11, 2026 &nbsp;|&nbsp; <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-57827">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-48939 — iCagenda Joomla RCE — CISA KEV</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">ACTIVE EXPLOITATION</span>
+</div>
+<div class="card-desc">Pre-authentication arbitrary file upload in iCagenda events calendar extension for Joomla → PHP code execution → full RCE. CVSS 10.0. Added to CISA KEV July 10, 2026. Public PoC available.</div>
+<div class="card-meta"><a href="https://www.cisa.gov/news-events/alerts/2026/07/10/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA Alert</a> · <a href="https://github.com/shinthink/CVE-2026-48939">PoC</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-56291 — Balbooa Forms RCE — CISA KEV</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">ACTIVE EXPLOITATION</span>
+</div>
+<div class="card-desc">Unauthenticated arbitrary file upload in Balbooa Forms (com_baforms) for Joomla allowing executable file uploads → full RCE. Added to CISA KEV July 10, 2026 alongside iCagenda.</div>
+<div class="card-meta"><a href="https://www.cisa.gov/news-events/alerts/2026/07/10/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA Alert</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-33017 — Langflow Unauthenticated RCE</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">ACTIVE EXPLOITATION</span>
+</div>
+<div class="card-desc">Langflow's <code>build_public_tmp</code> endpoint passes attacker-controlled flow data to <code>exec()</code> with zero sandboxing. Cannot be fixed by adding auth. Used alongside CVE-2026-55255 in observed campaigns.</div>
+<div class="card-meta"><a href="https://www.sentinelone.com/vulnerability-database/cve-2026-33017/">SentinelOne</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-5027 — Langflow Path Traversal RCE</span>
+<span class="badge badge-high">HIGH</span>
+<span class="exploit-badge">ACTIVE EXPLOITATION</span>
+</div>
+<div class="card-desc">Path traversal in Langflow file upload API (<code>/api/v2/files</code>) allowing arbitrary file write. In default configuration, leads to unauthenticated RCE as root (CVSS 8.8). ~7,000 exposed instances. Patched in Langflow 1.10.0.</div>
+<div class="card-meta"><a href="https://orca.security/resources/blog/cve-2026-5027-langflow-path-traversal-rce/">Orca Security</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-55255 — Langflow Authorization Bypass (IDOR) — CISA KEV</span>
+<span class="badge badge-high">HIGH</span>
+<span class="exploit-badge">ACTIVE EXPLOITATION</span>
+</div>
+<div class="card-desc">Insecure Direct Object Reference (IDOR) allowing authorization bypass through user-controlled key. Used to steal LLM and AWS keys from AI agent applications. Added to CISA KEV July 7, 2026.</div>
+<div class="card-meta"><a href="https://thehackernews.com/2026/07/cisa-adds-4-actively-exploited-adobe.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-54309 — n8n MCP Browser Auth Bypass</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Complete authentication bypass in @n8n/mcp-browser HTTP transport mode (CVSS 10.0). Any network-reachable client can establish MCP sessions and invoke browser-control tools without credentials.</div>
+<div class="card-meta">Affects: @n8n/mcp-browser < 2.25.7 / 2.26.2 &nbsp;|&nbsp; <a href="https://github.com/advisories/GHSA-qrx8-25qr-5r7v">GHSA</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CrewAI — Multiple Critical Vulnerabilities</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">RCE via Code Interpreter Tool (CVE-2026-2275), SSRF, arbitrary file read, and sandbox escape (CVE-2026-2287) when Docker is unavailable — defaults to insecure sandbox allowing full host compromise.</div>
+<div class="card-meta"><a href="https://www.kb.cert.org/vuls/id/221883">CERT/CC</a></div>
+</div>
+</div>
+
+<!-- ============ GENERAL CRITICAL ============ -->
+<div class="section">
+<h2>⚡ General Critical Vulnerabilities</h2>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-20896 — Gitea Docker Auth Bypass</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">ACTIVE EXPLOITATION</span>
+</div>
+<div class="card-desc">Default Docker config hard-codes <code>REVERSE_PROXY_TRUSTED_PROXIES = *</code>, allowing any IP to inject arbitrary user identity via HTTP headers for complete unauthenticated admin access (CVSS 9.8). Active exploitation confirmed by Sysdig for 13+ days; threat actors actively probing.</div>
+<div class="card-meta">Affects: Gitea Docker ≤ 1.26.2 &nbsp;|&nbsp; Fixed: 1.26.3 &nbsp;|&nbsp; <a href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-48558 — SimpleHelp Auth Bypass</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">ACTIVE EXPLOITATION</span>
+</div>
+<div class="card-desc">OIDC authentication bypass allowing forged logins. Exploited to deploy Djinn Stealer targeting cloud, AI, code, and wallet credentials. Over 14,000 exposed servers.</div>
+<div class="card-meta">Affects: SimpleHelp ≤ 5.5.15 &nbsp;|&nbsp; <a href="https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-35616 — Fortinet FortiClient EMS Pre-Auth RCE</span>
+<span class="badge badge-high">HIGH</span>
+<span class="exploit-badge">ACTIVE EXPLOITATION</span>
+</div>
+<div class="card-desc">Pre-authentication API access bypass enabling unauthenticated RCE (CVSS 9.1). Active exploitation with Ekz infostealer disguised as Fortinet patches.</div>
+<div class="card-meta">Affects: FortiClient EMS 7.4.5, 7.4.6 &nbsp;|&nbsp; <a href="https://arcticwolf.com/resources/blog/forticlient-ems-exploited-via-cve-2026-35616">Arctic Wolf</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-56290 — Joomlack Page Builder RCE — CISA KEV</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">CISA KEV</span>
+</div>
+<div class="card-desc">Unauthenticated RCE via arbitrary file upload in Joomlack Page Builder (CVSS 9.8). Added to CISA KEV July 7, 2026. Federal patch deadline passed July 10.</div>
+<div class="card-meta"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-35273 — Oracle PeopleSoft Missing Authentication</span>
+<span class="badge badge-critical">CRITICAL</span>
+<span class="exploit-badge">CISA KEV</span>
+</div>
+<div class="card-desc">Missing authentication in Oracle PeopleSoft Enterprise PeopleTools Updates Environment Management. Added to CISA KEV June 12 with known ransomware campaign use.</div>
+<div class="card-meta"><a href="https://www.oracle.com/security-alerts/alert-cve-2026-35273.html">Oracle Alert</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span>CVE-2026-50746 — Ubiquiti UniFi OS Command Injection</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Maximum-severity command injection in UniFi Connect Application. Part of 7 critical UniFi OS patches covering Connect, Talk, Access, Protect, and UniFi OS across routers, gateways, NAS, and surveillance systems.</div>
+<div class="card-meta">Affects: UniFi Connect Application ≤ 3.4.16 &nbsp;|&nbsp; Fixed: 3.4.20+ &nbsp;|&nbsp; <a href="https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/">BleepingComputer</a></div>
+</div>
+
+<!-- CISA KEV Table -->
+<div class="card">
+<div class="card-title">
+<span>CISA KEV Additions (Last 7 Days)</span>
+<span class="badge badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">
+<strong>July 10, 2026:</strong> CVE-2026-48939 (iCagenda · CVSS 10.0), CVE-2026-56291 (Balbooa Forms · RCE)<br>
+<strong>July 7, 2026:</strong> CVE-2026-56290 (Joomlack Page Builder · CVSS 9.8), CVE-2026-55255 (Langflow IDOR)
+</div>
+<div class="card-meta"><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV Catalog</a></div>
+</div>
+
+<div class="note">
+⚠️ <strong>Industry Context (July 12–13):</strong> CISO briefings report the current cybersecurity cycle is dominated by attacks on AI agent infrastructure rather than generic vulnerabilities. Langflow CVEs (CVE-2026-33017, CVE-2026-5027, CVE-2026-55255) remain the most actively exploited AI infrastructure flaws. If you run Langflow, Flowise, or n8n in any capacity, prioritize patching immediately.<br><br>
+Debian 13.6 released July 11 (routine point release). Microsoft Office 2019 for Mac enters reduced functionality mode as of July 13 due to certificate expiration.
+</div>
+
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech Security Watch</div>
+
+</div>
+</body>
+</html>
