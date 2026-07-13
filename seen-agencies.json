@@ -1,6 +1,6 @@
 {
-  "version": 22,
-  "last_updated": "2026-07-12",
+  "version": 23,
+  "last_updated": "2026-07-13",
   "agencies": [
     {
       "name": "10FOLD",
@@ -68,6 +68,11 @@
       "source_url": "archive/2026-07-10.html"
     },
     {
+      "name": "AIM Consulting",
+      "source_date": "2026-07-13",
+      "source_url": "archive/2026-07-13.html"
+    },
+    {
       "name": "Airtable",
       "source_date": "2026-06-22",
       "source_url": "archive/2026-06-22.html"
@@ -86,6 +91,11 @@
       "name": "AlixPartners",
       "source_date": "2026-07-03",
       "source_url": "archive/2026-07-03.html"
+    },
+    {
+      "name": "Alloy",
+      "source_date": "2026-07-13",
+      "source_url": "archive/2026-07-13.html"
     },
     {
       "name": "Alvarez & Marsal",
@@ -216,6 +226,11 @@
       "name": "Blue State",
       "source_date": "2026-07-12",
       "source_url": "archive/2026-07-12.html"
+    },
+    {
+      "name": "Bluecadet",
+      "source_date": "2026-07-13",
+      "source_url": "archive/2026-07-13.html"
     },
     {
       "name": "bohan",
@@ -416,6 +431,11 @@
       "name": "Clipboard Health",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Clique Studios",
+      "source_date": "2026-07-13",
+      "source_url": "archive/2026-07-13.html"
     },
     {
       "name": "Close",
@@ -793,6 +813,11 @@
       "source_url": "archive/2026-05-31.html"
     },
     {
+      "name": "GALE",
+      "source_date": "2026-07-13",
+      "source_url": "archive/2026-07-13.html"
+    },
+    {
       "name": "Geek Digital",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -831,6 +856,11 @@
       "name": "Greenough Communications",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Gretel",
+      "source_date": "2026-07-13",
+      "source_url": "archive/2026-07-13.html"
     },
     {
       "name": "GS&F",
@@ -1026,6 +1056,11 @@
       "name": "KlientBoost",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "Korn Ferry",
+      "source_date": "2026-07-13",
+      "source_url": "archive/2026-07-13.html"
     },
     {
       "name": "Koto",
@@ -1231,6 +1266,11 @@
       "name": "Missive Digital",
       "source_date": "2026-07-06",
       "source_url": "archive/2026-07-06.html"
+    },
+    {
+      "name": "Mod Op",
+      "source_date": "2026-07-13",
+      "source_url": "archive/2026-07-13.html"
     },
     {
       "name": "Modgility",
@@ -1628,6 +1668,11 @@
       "source_url": "archive/2026-07-06.html"
     },
     {
+      "name": "Row Zero",
+      "source_date": "2026-07-13",
+      "source_url": "archive/2026-07-13.html"
+    },
+    {
       "name": "RSM US",
       "source_date": "2026-06-21",
       "source_url": "archive/2026-06-21.html"
@@ -1651,6 +1696,11 @@
       "name": "Satori",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Savage Creative",
+      "source_date": "2026-07-13",
+      "source_url": "archive/2026-07-13.html"
     },
     {
       "name": "Screaming Frog",
@@ -2003,6 +2053,11 @@
       "source_url": "archive/2026-05-31.html"
     },
     {
+      "name": "Watson Creative",
+      "source_date": "2026-07-13",
+      "source_url": "archive/2026-07-13.html"
+    },
+    {
       "name": "Webential",
       "source_date": "2026-07-06",
       "source_url": "archive/2026-07-06.html"
@@ -2116,6 +2171,11 @@
       "name": "Zencastr",
       "source_date": "2026-07-11",
       "source_url": "archive/2026-07-11.html"
+    },
+    {
+      "name": "ZeroedIn",
+      "source_date": "2026-07-13",
+      "source_url": "archive/2026-07-13.html"
     },
     {
       "name": "ZURB",
