@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 14, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;font-size:14px;line-height:1.6}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:24px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:28px}
+.section h2{font-size:18px;font-weight:600;color:#f1f1f1;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.04)}
+.section h2 .badge{font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;margin-left:8px;vertical-align:middle}
+.badge-critical{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.06);color:#888}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px;transition:border-color 0.2s}
+.card-critical{border-color:rgba(232,184,64,0.25)}
+.card-high{border-color:rgba(232,184,64,0.15)}
+.card-medium{border-color:rgba(245,158,11,0.15)}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1;margin-bottom:4px}
+.card-title .cve-id{font-family:monospace;color:#E8B840}
+.card-desc{font-size:13px;color:#bbb;margin-bottom:6px;line-height:1.5}
+.card-meta{font-size:12px;color:#777;display:flex;flex-wrap:wrap;gap:6px}
+.card-meta a{color:#E8B840;text-decoration:none}
+.card-meta a:hover{text-decoration:underline}
+.severity-tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;margin-right:6px}
+.severity-critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.severity-high{background:rgba(232,184,64,0.15);color:#E8B840}
+.severity-medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.severity-low{background:rgba(255,255,255,0.06);color:#888}
+.alert-box{background:rgba(232,184,64,0.06);border:1px solid rgba(232,184,64,0.25);border-radius:10px;padding:14px 16px;margin-bottom:16px}
+.alert-box .alert-title{font-size:15px;font-weight:600;color:#E8B840;margin-bottom:4px}
+.alert-box .alert-desc{font-size:13px;color:#bbb;line-height:1.5}
+.alert-box .alert-meta{font-size:12px;color:#777;margin-top:4px}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 14, 2026 — <a href="../index.html">← Dashboard</a> · <a href="index.html">Archive</a></div>
+</div>
+
+<!-- HERMES AGENT SECTION -->
+<div class="section">
+<h2>🛡️ Hermes Agent <span class="badge badge-critical">5 CVE</span></h2>
+
+<div class="alert-box">
+<div class="alert-title">⚠️ Multiple Hermes Agent CVEs — Update Recommended</div>
+<div class="alert-desc">Two critical CVEs disclosed July 4 (CVE-2026-14625, CVE-2026-14626). Earlier CVEs (RCE, XSS, auth bypass) remain unpatched in many deployments. Update to latest version immediately.</div>
+<div class="alert-meta">Sources: NVD, GitHub Security Advisories, BitNinja, SentinelOne</div>
+</div>
+
+<div class="card card-critical">
+<div class="card-title"><span class="severity-tag severity-critical">CRITICAL</span> <span class="cve-id">CVE-2026-14625</span></div>
+<div class="card-desc">Remote Code Execution via <code>shell.exec</code> in <code>tui_gateway/server.py</code>. Allows remote exploitation, bypassing protection mechanisms. Affects hermes-agent ≤ 0.15.2.</div>
+<div class="card-meta"><a href="https://bitninja.com/blog/critical-cve-alert-cve-2026-14625-vulnerability/">BitNinja</a></div>
+</div>
+
+<div class="card card-critical">
+<div class="card-title"><span class="severity-tag severity-critical">CRITICAL</span> <span class="cve-id">CVE-2026-14626</span></div>
+<div class="card-desc">Denial of Service via <code>AIAgent.run_conversation</code> in <code>run_agent.py</code>. Remote DoS via <code>todos</code> argument. Exploit publicly available. Affects hermes-agent ≤ 2026.4.30.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14626">NVD</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title"><span class="severity-tag severity-high">HIGH</span> <span class="cve-id">CVE-2026-9367</span></div>
+<div class="card-desc">OS Command Injection in <code>detect_dangerous_command</code> / <code>tools/approval.py</code>. Bypasses dangerous command detection for terminal_tool component.</div>
+<div class="card-meta"><a href="https://www.sentinelone.com/vulnerability-database/cve-2026-9367/">SentinelOne</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title"><span class="severity-tag severity-high">HIGH</span> <span class="cve-id">CVE-2026-15311</span></div>
+<div class="card-desc">Cross-Site Scripting in <code>MatrixAdapter._markdown_to_html</code> (Matrix Adapter). Stored XSS via markdown rendering. Affects hermes-agent ≤ 2026.5.29.2.</div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-15311">NVD</a></div>
+</div>
+
+<div class="card card-medium">
+<div class="card-title"><span class="severity-tag severity-medium">MEDIUM</span> <span class="cve-id">CVE-2026-11461</span></div>
+<div class="card-desc">Authorization Bypass via <code>resolve_session_by_title</code> in <code>hermes_state.py</code> (resume endpoint). Affects hermes-agent ≤ 0.12.0.</div>
+<div class="card-meta"><a href="https://radar.offseq.com/threat/cve-2026-11461-authorization-bypass-in-nousresearc-dc683b8b">OffSeq</a></div>
+</div>
+
+<div class="card card-medium">
+<div class="card-title"><span class="severity-tag severity-medium">MEDIUM</span> <span class="cve-id">CVE-2026-9368</span></div>
+<div class="card-desc">Improper Privilege Management. Sandbox bypass in execute_code function. Affects hermes-agent &lt; 0.11.0.</div>
+<div class="card-meta"><a href="https://www.kodemsecurity.com/cve-archive/cve-2026-9368">Kodem</a></div>
+</div>
+
+<div class="card card-low">
+<div class="card-title"><span class="severity-tag severity-low">LOW</span> <span class="cve-id">CVE-2026-10222</span></div>
+<div class="card-desc">Low-severity security vulnerability. Affects hermes-agent &lt; 0.18.0.</div>
+<div class="card-meta"><a href="https://www.kodemsecurity.com/cve-archive/cve-2026-10222">Kodem</a></div>
+</div>
+</div>
+
+<!-- AI TOOLS SECTION -->
+<div class="section">
+<h2>🤖 AI Tools &amp; Frameworks</h2>
+
+<div class="card card-critical">
+<div class="card-title"><span class="severity-tag severity-critical">CRITICAL</span> <span class="cve-id">CVE-2026-33017</span> — Langflow</div>
+<div class="card-desc">Unauthenticated Remote Code Execution (CVSS 9.3). Exploited in the wild within 20 hours of disclosure.</div>
+<div class="card-meta"><a href="https://theweatherreport.ai/posts/ai-cves-weekly-03-27-2026/">The Weather Report</a></div>
+</div>
+
+<div class="card card-critical">
+<div class="card-title"><span class="severity-tag severity-critical">CRITICAL</span> <span class="cve-id">CVE-2026-25592 / CVE-2026-26030</span> — Semantic Kernel</div>
+<div class="card-desc">Remote Code Execution via prompt injection in Microsoft Semantic Kernel. Two critical vulnerabilities discovered by Microsoft Security researchers.</div>
+<div class="card-meta"><a href="https://threatnoir.com/article/when-prompts-become-shells-rce-vulnerabilities-in-ai-agent-frameworks-1f0439">ThreatNoir</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title"><span class="severity-tag severity-high">HIGH</span> <span class="cve-id">CVE-2025-68664+</span> — LangChain/LangGraph</div>
+<div class="card-desc">Three vulnerabilities enabling file, secret, and database exfiltration across LLM applications. Affects millions of deployments.</div>
+<div class="card-meta"><a href="https://thehackernews.com/2026/03/langchain-langgraph-flaws-expose-files.html">The Hacker News</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title"><span class="severity-tag severity-high">HIGH</span> GPT-5.6 Sol Jailbreaks</div>
+<div class="card-desc">UK government agency identified jailbreak vulnerabilities in OpenAI's GPT-5.6 Sol, similar to flaws that led to export controls on Anthropic's Fable 5.</div>
+<div class="card-meta"><a href="https://fortune.com/2026/07/10/openai-gpt-5-6-sol-jailbreaks-cyber-attacks-similar-to-security-flaw-that-led-u-s-government-to-force-anthropic-to-disable-fable-5/">Fortune</a></div>
+</div>
+</div>
+
+<!-- GENERAL SECTION -->
+<div class="section">
+<h2>🚨 General Critical Vulnerabilities</h2>
+
+<div class="alert-box">
+<div class="alert-title">🔴 Microsoft Patch Tuesday — July 14, 2026: 127 CVEs</div>
+<div class="alert-desc">Record Patch Tuesday release. Headline: CVE-2025-47981 — wormable CVSS 9.8 RCE in Windows SPNEGO/NEGOEX affecting all Windows versions since Server 2008. Apply immediately.</div>
+<div class="alert-meta"><a href="https://byteiota.com/patch-tuesday-july-2026-cve-tracking/">byteiota</a> · <a href="https://socprime.com/blog/latest-threats/cve-2025-47981-windows-vulnerability/">SOC Prime</a></div>
+</div>
+
+<div class="card card-critical">
+<div class="card-title"><span class="severity-tag severity-critical">CRITICAL</span> <span class="cve-id">CVE-2025-47981</span> — Windows SPNEGO NEGOEX RCE</div>
+<div class="card-desc">Wormable heap-based buffer overflow. CVSS 9.8. Unauthenticated remote code execution with SYSTEM-level privileges. No user interaction required. Affects all Windows versions since Server 2008.</div>
+<div class="card-meta"><a href="https://byteiota.com/patch-tuesday-july-2026-cve-tracking/">byteiota</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title"><span class="severity-tag severity-high">HIGH</span> <span class="cve-id">CVE-2026-50656</span> — "RoguePlanet" Defender EoP</div>
+<div class="card-desc">Microsoft Defender/Malware Protection Engine privilege escalation (CVSS 7.8). Local user to SYSTEM. Emergency patch released July 9.</div>
+<div class="card-meta"><a href="https://kudelskisecurity.com/research/rogueplanet-zero-day-ms-defender-privilege-escalation">Kudelski Security</a> · <a href="https://socradar.io/blog/rogueplanet-zero-day-fixed-in-microsoft-defender/">SocRadar</a></div>
+</div>
+
+<div class="card card-critical">
+<div class="card-title"><span class="severity-tag severity-critical">CRITICAL</span> <span class="cve-id">CVE-2026-48939</span> — iCagenda Joomla RCE</div>
+<div class="card-desc">CVSS 10.0. Arbitrary file upload via file attachment feature in iCagenda extension. Unauthenticated PHP upload leading to full RCE. Added to CISA KEV. <strong>Exploited in the wild.</strong></div>
+<div class="card-meta"><a href="https://thehackernews.com/2026/07/icagenda-and-balbooa-forms-joomla-flaws.html">The Hacker News</a> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48939">NVD</a></div>
+</div>
+
+<div class="card card-critical">
+<div class="card-title"><span class="severity-tag severity-critical">CRITICAL</span> <span class="cve-id">CVE-2026-56291</span> — Balbooa Forms Joomla RCE</div>
+<div class="card-desc">Unauthenticated arbitrary file upload leading to full RCE. Exploited since July 8. CISA KEV. <strong>Exploited in the wild.</strong></div>
+<div class="card-meta"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56291">NVD</a> · <a href="https://github.com/advisories/GHSA-28f5-j5p5-xmmw">GitHub Advisory</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title"><span class="severity-tag severity-high">HIGH</span> Zimbra Classic Web Client Stored XSS</div>
+<div class="card-desc">Critical stored XSS vulnerability in Zimbra Collaboration Classic Web Client (no CVE yet). Specially crafted emails execute malicious scripts in user's session. Patch available in Zimbra 10.1.19.</div>
+<div class="card-meta"><a href="https://thehackernews.com/2026/07/critical-zimbra-flaw-could-let-crafted_0483473395.html">The Hacker News</a></div>
+</div>
+
+<div class="card card-high">
+<div class="card-title"><span class="severity-tag severity-high">HIGH</span> U-Boot Firmware — 6 New Vulnerabilities</div>
+<div class="card-desc">Six flaws (BRLY-2026-038 to 043) in U-Boot's FIT image signature verification. Two enable arbitrary code execution during boot. 50+ releases affected. Routers, cameras, server BMCs impacted.</div>
+<div class="card-meta"><a href="https://www.binarly.io/blog/unfit-to-boot-breaking-u-boots-fit-signature-verification">Binarly</a> · <a href="https://thehackernews.com/2026/07/six-new-u-boot-flaws-could-let.html">The Hacker News</a></div>
+</div>
+
+<div class="card card-medium">
+<div class="card-title"><span class="severity-tag severity-medium">MEDIUM</span> Australia ACSC — Global CMS Exploitation</div>
+<div class="card-desc">Large-scale global campaign targeting vulnerable CMS platforms (WordPress, Joomla, Craft CMS). Webshell deployment, SMBs impacted. Australian businesses already affected.</div>
+<div class="card-meta"><a href="https://www.bleepingcomputer.com/news/security/australia-warns-of-global-campaign-targeting-vulnerable-cms-platforms/">BleepingComputer</a></div>
+</div>
+
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech Security Watch · Sources: NVD, GitHub Security Advisories, The Hacker News, BleepingComputer, CISA KEV</div>
+</div>
+</body>
+</html>
