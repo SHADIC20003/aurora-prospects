@@ -1,6 +1,6 @@
 {
-  "version": 23,
-  "last_updated": "2026-07-13",
+  "version": 24,
+  "last_updated": "2026-07-14",
   "agencies": [
     {
       "name": "10FOLD",
@@ -173,7 +173,7 @@
       "source_url": "archive/2026-06-25.html"
     },
     {
-      "name": "Basic Agency (BASIC/DEPT\u00ae)",
+      "name": "Basic Agency (BASIC/DEPT®)",
       "source_date": "2026-07-09",
       "source_url": "archive/2026-07-09.html"
     },
@@ -193,6 +193,11 @@
       "source_url": "archive/2026-06-29.html"
     },
     {
+      "name": "Better Stack",
+      "source_date": "2026-07-14",
+      "source_url": "archive/2026-07-14.html"
+    },
+    {
       "name": "Big Human",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
@@ -201,6 +206,11 @@
       "name": "BIGEYE Agency",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "Bits In Glass",
+      "source_date": "2026-07-14",
+      "source_url": "archive/2026-07-14.html"
     },
     {
       "name": "Blend Interactive",
@@ -733,6 +743,11 @@
       "source_url": "archive/2026-07-12.html"
     },
     {
+      "name": "Fasturtle",
+      "source_date": "2026-07-14",
+      "source_url": "archive/2026-07-14.html"
+    },
+    {
       "name": "Fathom",
       "source_date": "2026-07-12",
       "source_url": "archive/2026-07-12.html"
@@ -791,6 +806,11 @@
       "name": "frog",
       "source_date": "2026-06-22",
       "source_url": "archive/2026-06-22.html"
+    },
+    {
+      "name": "Fruition",
+      "source_date": "2026-07-14",
+      "source_url": "archive/2026-07-14.html"
     },
     {
       "name": "FSC Interactive",
@@ -1063,6 +1083,11 @@
       "source_url": "archive/2026-07-13.html"
     },
     {
+      "name": "KOTA",
+      "source_date": "2026-07-14",
+      "source_url": "archive/2026-07-14.html"
+    },
+    {
       "name": "Koto",
       "source_date": "2026-07-09",
       "source_url": "archive/2026-07-09.html"
@@ -1283,6 +1308,11 @@
       "source_url": "archive/2026-06-20.html"
     },
     {
+      "name": "monopo",
+      "source_date": "2026-07-14",
+      "source_url": "archive/2026-07-14.html"
+    },
+    {
       "name": "Mother",
       "source_date": "2026-06-30",
       "source_url": "archive/2026-06-30.html"
@@ -1326,6 +1356,11 @@
       "name": "Neil Patel Digital",
       "source_date": "2026-06-22",
       "source_url": "archive/2026-06-22.html"
+    },
+    {
+      "name": "New Engen",
+      "source_date": "2026-07-14",
+      "source_url": "archive/2026-07-14.html"
     },
     {
       "name": "New Media Campaigns",
@@ -1413,6 +1448,11 @@
       "source_url": "archive/2026-07-07.html"
     },
     {
+      "name": "Orchid Black",
+      "source_date": "2026-07-14",
+      "source_url": "archive/2026-07-14.html"
+    },
+    {
       "name": "OuterBox",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
@@ -1441,6 +1481,11 @@
       "name": "Page One Power",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Parachute Design Group",
+      "source_date": "2026-07-14",
+      "source_url": "archive/2026-07-14.html"
     },
     {
       "name": "Pearlfisher",
@@ -1963,6 +2008,11 @@
       "source_url": "archive/2026-07-01.html"
     },
     {
+      "name": "Unseen Studio",
+      "source_date": "2026-07-14",
+      "source_url": "archive/2026-07-14.html"
+    },
+    {
       "name": "UpBuild",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -2021,6 +2071,11 @@
       "name": "Viral Nation",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
+    },
+    {
+      "name": "Vital Design",
+      "source_date": "2026-07-14",
+      "source_url": "archive/2026-07-14.html"
     },
     {
       "name": "VML",
@@ -2126,6 +2181,11 @@
       "name": "Work & Co",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "WorkOS",
+      "source_date": "2026-07-14",
+      "source_url": "archive/2026-07-14.html"
     },
     {
       "name": "Wpromote",
