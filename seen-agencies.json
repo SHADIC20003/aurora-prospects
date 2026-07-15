@@ -1,6 +1,6 @@
 {
-  "version": 24,
-  "last_updated": "2026-07-14",
+  "version": 25,
+  "last_updated": "2026-07-15",
   "agencies": [
     {
       "name": "10FOLD",
@@ -163,6 +163,11 @@
       "source_url": "archive/2026-07-12.html"
     },
     {
+      "name": "B12",
+      "source_date": "2026-07-15",
+      "source_url": "archive/2026-07-15.html"
+    },
+    {
       "name": "Bain & Company",
       "source_date": "2026-06-20",
       "source_url": "archive/2026-06-20.html"
@@ -173,7 +178,7 @@
       "source_url": "archive/2026-06-25.html"
     },
     {
-      "name": "Basic Agency (BASIC/DEPT®)",
+      "name": "Basic Agency (BASIC/DEPT\u00ae)",
       "source_date": "2026-07-09",
       "source_url": "archive/2026-07-09.html"
     },
@@ -191,6 +196,11 @@
       "name": "BearingPoint",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
+    },
+    {
+      "name": "Belkins",
+      "source_date": "2026-07-15",
+      "source_url": "archive/2026-07-15.html"
     },
     {
       "name": "Better Stack",
@@ -281,6 +291,11 @@
       "name": "Brafton",
       "source_date": "2026-07-10",
       "source_url": "archive/2026-07-10.html"
+    },
+    {
+      "name": "BrandExtract",
+      "source_date": "2026-07-15",
+      "source_url": "archive/2026-07-15.html"
     },
     {
       "name": "BrandFire",
@@ -918,6 +933,11 @@
       "source_url": "archive/2026-05-30.html"
     },
     {
+      "name": "Higglo Digital",
+      "source_date": "2026-07-15",
+      "source_url": "archive/2026-07-15.html"
+    },
+    {
       "name": "Highwire",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
@@ -1006,6 +1026,11 @@
       "name": "Insider",
       "source_date": "2026-07-04",
       "source_url": "archive/2026-07-04.html"
+    },
+    {
+      "name": "Insight Global",
+      "source_date": "2026-07-15",
+      "source_url": "archive/2026-07-15.html"
     },
     {
       "name": "Instrument",
@@ -1293,6 +1318,11 @@
       "source_url": "archive/2026-07-06.html"
     },
     {
+      "name": "Moburst",
+      "source_date": "2026-07-15",
+      "source_url": "archive/2026-07-15.html"
+    },
+    {
       "name": "Mod Op",
       "source_date": "2026-07-13",
       "source_url": "archive/2026-07-13.html"
@@ -1321,6 +1351,11 @@
       "name": "Mother Design",
       "source_date": "2026-07-07",
       "source_url": "archive/2026-07-07.html"
+    },
+    {
+      "name": "Moves The Needle",
+      "source_date": "2026-07-15",
+      "source_url": "archive/2026-07-15.html"
     },
     {
       "name": "Moving Brands",
@@ -1426,6 +1461,11 @@
       "name": "OnCuba Agency",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "One Little Web",
+      "source_date": "2026-07-15",
+      "source_url": "archive/2026-07-15.html"
     },
     {
       "name": "OneIMS",
@@ -1633,6 +1673,11 @@
       "source_url": "archive/2026-05-29.html"
     },
     {
+      "name": "Ramotion",
+      "source_date": "2026-07-15",
+      "source_url": "archive/2026-07-15.html"
+    },
+    {
       "name": "Ramp",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
@@ -1806,6 +1851,11 @@
       "name": "SimpleFocus",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
+    },
+    {
+      "name": "SimpleTiger",
+      "source_date": "2026-07-15",
+      "source_url": "archive/2026-07-15.html"
     },
     {
       "name": "Single Grain",
@@ -2038,6 +2088,11 @@
       "source_url": "archive/2026-07-01.html"
     },
     {
+      "name": "VAEZR Studio",
+      "source_date": "2026-07-15",
+      "source_url": "archive/2026-07-15.html"
+    },
+    {
       "name": "Valtech",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
@@ -2171,6 +2226,11 @@
       "name": "Wieden+Kennedy",
       "source_date": "2026-06-30",
       "source_url": "archive/2026-06-30.html"
+    },
+    {
+      "name": "Windmill Digital",
+      "source_date": "2026-07-15",
+      "source_url": "archive/2026-07-15.html"
     },
     {
       "name": "Wolff Olins",
