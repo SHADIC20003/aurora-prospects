@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 15, 2026 · Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;font-size:14px;line-height:1.6}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:24px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:28px}
+.section h2{font-size:18px;font-weight:600;color:#f1f1f1;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section h3{font-size:15px;font-weight:600;color:#e0e0e0;margin:16px 0 8px}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:4px}
+.card-title{font-size:14px;font-weight:600;color:#f1f1f1}
+.card-desc{font-size:13px;color:#aaa;margin-top:2px;line-height:1.5}
+.card-meta{font-size:12px;color:#666;margin-top:4px;display:flex;flex-wrap:wrap;gap:6px}
+.card-meta a{color:#E8B840;text-decoration:none}
+.card-meta a:hover{text-decoration:underline}
+.badge-critical{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840;white-space:nowrap}
+.badge-high{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840;white-space:nowrap}
+.badge-medium{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b;white-space:nowrap}
+.badge-low{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.06);color:#888;white-space:nowrap}
+.badge-fixed{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(34,197,94,0.15);color:#22c55e;white-space:nowrap}
+.badge-verify{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(234,179,8,0.15);color:#eab308;white-space:nowrap}
+.badge-exploited{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(239,68,68,0.15);color:#ef4444;white-space:nowrap}
+.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+.summary-item{text-align:center;padding:12px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px}
+.summary-item .num{font-size:20px;font-weight:700;margin-bottom:2px}
+.summary-item .lbl{font-size:11px;color:#888}
+.summary-item.critical .num{color:#E8B840}
+.summary-item.high .num{color:#E8B840}
+.summary-item.medium .num{color:#f59e0b}
+.summary-item.low .num{color:#888}
+.version-note{background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.15);border-radius:8px;padding:10px 14px;font-size:13px;color:#93c5fd;margin:12px 0}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Report — July 15, 2026</h1>
+<div class="sub">Daily vulnerability &amp; CVE monitoring — <a href="../index.html">← Dashboard</a> · <a href="index.html">Archive</a></div>
+<div class="version-note">Running Hermes Agent <strong>v0.17.0</strong> — most disclosed CVEs affect earlier versions. Verify highlighted entries.</div>
+</div>
+
+<!-- Summary -->
+<div class="section">
+<h2>📊 Summary</h2>
+<div class="summary-grid">
+<div class="summary-item critical"><div class="num">10</div><div class="lbl">Critical</div></div>
+<div class="summary-item high"><div class="num">5</div><div class="lbl">High</div></div>
+<div class="summary-item medium"><div class="num">9</div><div class="lbl">Medium</div></div>
+<div class="summary-item low"><div class="num">1</div><div class="lbl">Low</div></div>
+</div>
+</div>
+
+<!-- HERMES AGENT -->
+<div class="section">
+<h2>🔴 Hermes Agent — HIGH PRIORITY</h2>
+
+<h3>High</h3>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-7112 — Authentication Bypass (API Server)</span>
+<span class="badge-high">HIGH · CVSS 8.1</span>
+</div>
+<div class="card-desc">Improper authentication in _check_auth function of gateway/platforms/api_server.py. Allows unauthorized access via API_SERVER_KEY handler.</div>
+<div class="card-meta">Affected: v0.8.0 · <span class="badge-fixed">Fixed in v0.17.0</span> · Source: <a href="https://github.com/advisories/GHSA-r7hr-pvjh-r4p3">GHSA-r7hr-pvjh-r4p3</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-53869 — DNS Rebinding (WebSocket)</span>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">DNS rebinding vulnerability in WebSocket endpoints (/api/pty, /api/ws, /api/pub, /api/events). FastAPI HTTP middleware does not execute for WebSocket upgrades, enabling Host/Origin validation bypass. Potential RCE.</div>
+<div class="card-meta">Affected: &lt; v0.16.0 · <span class="badge-fixed">Fixed in v0.17.0</span> · Source: <a href="https://github.com/advisories/GHSA-4pqm-j46f-795x">GHSA-4pqm-j46f-795x</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-10223 — Injection in memory_tool.py</span>
+<span class="badge-high">HIGH · CVSS 7.3</span>
+</div>
+<div class="card-desc">Injection vulnerability in _scan_memory_content function of tools/memory_tool.py. Remote exploitation possible via crafted memory content.</div>
+<div class="card-meta">Affected: ≤ 2026.4.30 · <span class="badge-verify">Verify on v0.17.0</span> · Source: <a href="https://github.com/advisories/GHSA-33qv-c5qm-799v">GHSA-33qv-c5qm-799v</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-9366 — RCE in prompt_builder.py</span>
+<span class="badge-high">HIGH · CVSS 7.3</span>
+</div>
+<div class="card-desc">Remote code execution in _scan_context_content function of agent/prompt_builder.py. Exploit made public.</div>
+<div class="card-meta">Affected: 2026.4.23 · <span class="badge-verify">Verify on v0.17.0</span> · Source: <a href="https://www.sentinelone.com/vulnerability-database/cve-2026-9366/">SentinelOne</a></div>
+</div>
+
+<h3>Medium</h3>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-11461 — Resume Endpoint Vulnerability</span>
+<span class="badge-medium">MEDIUM</span>
+</div>
+<div class="card-desc">Vulnerability in resolve_session_by_title function of hermes_state.py, affecting the resume endpoint.</div>
+<div class="card-meta">Affected: ≤ v0.12.0 · <span class="badge-fixed">Fixed in v0.17.0</span> · Source: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11461">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-14626 — DoS via HTTP API</span>
+<span class="badge-medium">MEDIUM</span>
+</div>
+<div class="card-desc">Denial of service via AIAgent.run_conversation function in run_agent.py. Manipulation of the todos argument causes DoS. Remote exploit available.</div>
+<div class="card-meta">Affected: ≤ 2026.4.30 · <span class="badge-verify">Verify on v0.17.0</span> · Source: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14626">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-14627 — Discord Auth Bypass</span>
+<span class="badge-medium">MEDIUM · CVSS 5.6</span>
+</div>
+<div class="card-desc">Improper authentication in DiscordAdapter._is_allowed_user function of gateway/platforms/discord.py. Allows unauthorized Discord access leading to arbitrary tool execution.</div>
+<div class="card-meta">Affected: ≤ v0.15.2 · <span class="badge-fixed">Fixed in v0.17.0</span> · Source: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14627">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-9353 — Skills Guard Injection</span>
+<span class="badge-medium">MEDIUM</span>
+</div>
+<div class="card-desc">Injection in skills_guard.py via THREAT_PATTERNS argument manipulation in Skills Guard Multi-Word Prompt Handler.</div>
+<div class="card-meta">Affected: ≤ 2026.4.23 · <span class="badge-verify">Verify on v0.17.0</span> · Source: <a href="https://github.com/advisories/GHSA-238w-f66p-w349">GHSA-238w-f66p-w349</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-7113 — Webhook Vulnerability</span>
+<span class="badge-medium">MEDIUM · CVSS 5.6</span>
+</div>
+<div class="card-desc">Missing validation in gateway/platforms/webhook.py — Webhooks Endpoint.</div>
+<div class="card-meta">Affected: v0.8.0 · <span class="badge-fixed">Fixed in v0.17.0</span> · Source: <a href="https://github.com/advisories/GHSA-mq9g-m88j-mmvx">GHSA-mq9g-m88j-mmvx</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-7396 — WeChat Work Path Traversal</span>
+<span class="badge-medium">MEDIUM · CVSS 4.0</span>
+</div>
+<div class="card-desc">Path traversal in WeChat Work (WeCom) platform adapter at gateway/platforms/wecom.py.</div>
+<div class="card-meta"><span class="badge-verify">Verify on v0.17.0</span> · Source: Cloud Security Alliance</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-7397 — Symlink File Tools</span>
+<span class="badge-medium">MEDIUM · CVSS 4.8</span>
+</div>
+<div class="card-desc">Symlink following vulnerability in file tools module allowing arbitrary file access.</div>
+<div class="card-meta"><span class="badge-verify">Verify on v0.17.0</span> · Source: Cloud Security Alliance</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-6829 — Hermes WebUI Path Traversal</span>
+<span class="badge-medium">MEDIUM · CVSS 6.3</span>
+</div>
+<div class="card-desc">Path traversal in hermes-webui (separate project). Allows workspace directory escape for authenticated attackers.</div>
+<div class="card-meta">Affected: hermes-webui &lt; v0.50.34 · <span class="badge-verify">Separate project</span> · Source: <a href="https://github.com/advisories/GHSA-rppv-5944-crmm">GHSA-rppv-5944-crmm</a></div>
+</div>
+
+<h3>Low</h3>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-14617 — Tag Filter Case Sensitivity</span>
+<span class="badge-low">LOW · CVSS 3.1</span>
+</div>
+<div class="card-desc">Case sensitivity bypass in GatewayStreamConsumer._filter_and_accumulate of gateway/stream_consumer.py — streaming reasoning tag filter.</div>
+<div class="card-meta">Affected: ≤ 2026.4.30 · <span class="badge-verify">Verify on v0.17.0</span> · Source: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14617">NVD</a></div>
+</div>
+</div>
+
+<!-- AI TOOLS & FRAMEWORKS -->
+<div class="section">
+<h2>🟠 AI Tools &amp; Frameworks</h2>
+
+<h3>Critical</h3>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-33017 — Langflow RCE</span>
+<span class="badge-critical">CRITICAL · CVSS 9.8</span>
+</div>
+<div class="card-desc">Critical RCE in Langflow. Exploited 20 hours after disclosure — no public PoC required.</div>
+<div class="card-meta">Source: The AI Trust Letter</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-50548 / CVE-2026-50549 — Cursor IDE Prompt Injection</span>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Zero-click command execution via hidden prompt injection instructions in Cursor IDE. Patched in Cursor 3.0.</div>
+<div class="card-meta">Source: <a href="https://thehackernews.com/2026/07/critical-cursor-flaws-could-let-prompt.html">The Hacker News</a></div>
+</div>
+
+<h3>High</h3>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-2256 — MS-Agent Command Injection</span>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">Critical command injection in ModelScope's MS-Agent framework. Attackers hijack AI agents through prompt injection.</div>
+<div class="card-meta">Source: State of Surveillance</div>
+</div>
+
+<h3>Supply Chain</h3>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">LiteLLM PyPI Backdoor</span>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">Compromised PyPI package served as language-model gateway for CrewAI, DSPy, Microsoft GraphRAG. ~47K downloads in 3 hours before removal (March 2026).</div>
+<div class="card-meta">Source: Help Net Security</div>
+</div>
+</div>
+
+<!-- GENERAL CRITICAL -->
+<div class="section">
+<h2>🔴 General Critical Vulns — Last 24 Hours</h2>
+
+<h3>Microsoft Patch Tuesday — July 14, 2026</h3>
+<p style="font-size:13px;color:#aaa;margin-bottom:10px">Record-breaking update: 570–622 vulnerabilities patched including 57–61 Critical, 3 zero-days (2 exploited in wild).</p>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-56164 — SharePoint Server EoP</span>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Missing authentication for critical function in Microsoft SharePoint Server. Allows unauthenticated elevation of privilege over network. <span class="badge-exploited">Exploited in the wild</span></div>
+<div class="card-meta">Source: <a href="https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-56155 — AD FS EoP</span>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Active Directory Federation Services elevation of privilege. <span class="badge-exploited">Exploited in the wild</span></div>
+<div class="card-meta">Source: <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/">Bleeping Computer</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-55040 — SharePoint JWT Auth Bypass</span>
+<span class="badge-critical">CRITICAL · CVSS 9.1</span>
+</div>
+<div class="card-desc">JWT token authentication bypass in SharePoint (Rapid7 / Pwn2Own Berlin). Allows unauthenticated attacker to impersonate any SharePoint user. Chained with RCE (patched August 2026) for unauthenticated RCE.</div>
+<div class="card-meta">Source: <a href="https://www.rapid7.com/blog/post/ve-cve-2026-55040-microsoft-sharepoint-jwt-token-authentication-bypass-fixed/">Rapid7</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-54128 — Windows DHCP Client RCE</span>
+<span class="badge-critical">CRITICAL · CVSS 8.4</span>
+</div>
+<div class="card-desc">Use-after-free RCE in Windows DHCP Client.</div>
+<div class="card-meta">Source: <a href="https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/">CrowdStrike</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-57092 — Windows VMSwitch EoP</span>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Windows VMSwitch elevation of privilege vulnerability.</div>
+<div class="card-meta">Source: Zero Day Initiative</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-55033 — Microsoft Word RCE</span>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Remote code execution in Microsoft Word.</div>
+<div class="card-meta">Source: Zero Day Initiative</div>
+</div>
+
+<h3>Other Critical (July 14-15)</h3>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-60121 — VITEC Flamingo OS Command Injection</span>
+<span class="badge-critical">CRITICAL · CVSS 9.8</span>
+</div>
+<div class="card-desc">Unauthenticated OS command injection via ping.php in VITEC Flamingo 4.12.2.</div>
+<div class="card-meta">Source: NVD</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-61498 — VITEC Flamingo OS Command Injection</span>
+<span class="badge-critical">CRITICAL · CVSS 9.8</span>
+</div>
+<div class="card-desc">Unauthenticated OS command injection via admin/ajax/gen_graphs.php in VITEC Flamingo 4.12.2.</div>
+<div class="card-meta">Source: NVD</div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-14934 — Google Cloud Cross-Tenant Takeover</span>
+<span class="badge-critical">CRITICAL · CVSS 9.4</span>
+</div>
+<div class="card-desc">Missing Authorization in repository creation in Google Cloud BigQuery, Dataform, and Colab Enterprise. Allows cross-tenant repository takeover. Patched May 10, 2026.</div>
+<div class="card-meta">Source: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14934">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-22093 — EVbee Service</span>
+<span class="badge-critical">CRITICAL · CVSS 9.5</span>
+</div>
+<div class="card-desc">Critical vulnerability in EVbee Service.</div>
+<div class="card-meta">Source: CVE Brief</div>
+</div>
+
+<h3>Previously Reported (Still Active)</h3>
+
+<div class="card">
+<div class="card-header">
+<span class="card-title">CVE-2026-50656 — RoguePlanet (Windows Defender)</span>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">Windows Defender Malware Protection Engine elevation of privilege. Grants SYSTEM-level access. <span class="badge-fixed">Emergency patch issued July 9 — apply if not yet deployed</span></div>
+<div class="card-meta">Source: <a href="https://securityaffairs.com/195016/security/microsoft-fixed-defender-flaw-rogueplanet-cve-2026-50656.html">Security Affairs</a></div>
+</div>
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech</div>
+</div>
+</body>
+</html>
