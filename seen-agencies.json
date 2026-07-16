@@ -1,6 +1,6 @@
 {
-  "version": 25,
-  "last_updated": "2026-07-15",
+  "version": 26,
+  "last_updated": "2026-07-16",
   "agencies": [
     {
       "name": "10FOLD",
@@ -11,6 +11,11 @@
       "name": "10X White Label Marketing",
       "source_date": "2026-07-06",
       "source_url": "archive/2026-07-06.html"
+    },
+    {
+      "name": "500 Designs",
+      "source_date": "2026-07-16",
+      "source_url": "archive/2026-07-16.html"
     },
     {
       "name": "72andSunny",
@@ -36,6 +41,11 @@
       "name": "Active Theory",
       "source_date": "2026-07-12",
       "source_url": "archive/2026-07-12.html"
+    },
+    {
+      "name": "ADDED Digital",
+      "source_date": "2026-07-16",
+      "source_url": "archive/2026-07-16.html"
     },
     {
       "name": "Addictive Technology Solutions",
@@ -388,6 +398,11 @@
       "source_url": "archive/2026-06-24.html"
     },
     {
+      "name": "Ceibo Digital",
+      "source_date": "2026-07-16",
+      "source_url": "archive/2026-07-16.html"
+    },
+    {
       "name": "Centric Consulting",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
@@ -531,6 +546,11 @@
       "name": "Copy.ai",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
+    },
+    {
+      "name": "Coraly.ai",
+      "source_date": "2026-07-16",
+      "source_url": "archive/2026-07-16.html"
     },
     {
       "name": "Crafted",
@@ -853,6 +873,11 @@
       "source_url": "archive/2026-07-13.html"
     },
     {
+      "name": "Gate One",
+      "source_date": "2026-07-16",
+      "source_url": "archive/2026-07-16.html"
+    },
+    {
       "name": "Geek Digital",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
@@ -926,6 +951,11 @@
       "name": "Hennessey Digital",
       "source_date": "2026-07-07",
       "source_url": "archive/2026-07-07.html"
+    },
+    {
+      "name": "Heyhack",
+      "source_date": "2026-07-16",
+      "source_url": "archive/2026-07-16.html"
     },
     {
       "name": "Hiebing",
@@ -1103,6 +1133,11 @@
       "source_url": "archive/2026-06-26.html"
     },
     {
+      "name": "KNR Agency",
+      "source_date": "2026-07-16",
+      "source_url": "archive/2026-07-16.html"
+    },
+    {
       "name": "Korn Ferry",
       "source_date": "2026-07-13",
       "source_url": "archive/2026-07-13.html"
@@ -1131,6 +1166,11 @@
       "name": "Kuno Creative",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
+    },
+    {
+      "name": "Kvalifik",
+      "source_date": "2026-07-16",
+      "source_url": "archive/2026-07-16.html"
     },
     {
       "name": "Ladder",
@@ -1231,6 +1271,11 @@
       "name": "Mailmodo",
       "source_date": "2026-07-04",
       "source_url": "archive/2026-07-04.html"
+    },
+    {
+      "name": "Major Tom",
+      "source_date": "2026-07-16",
+      "source_url": "archive/2026-07-16.html"
     },
     {
       "name": "MARION",
@@ -1403,6 +1448,11 @@
       "source_url": "archive/2026-06-24.html"
     },
     {
+      "name": "Next Chapter",
+      "source_date": "2026-07-16",
+      "source_url": "archive/2026-07-16.html"
+    },
+    {
       "name": "North Highland",
       "source_date": "2026-06-19",
       "source_url": "archive/2026-06-19.html"
@@ -1491,6 +1541,11 @@
       "name": "Orchid Black",
       "source_date": "2026-07-14",
       "source_url": "archive/2026-07-14.html"
+    },
+    {
+      "name": "Outcrowd",
+      "source_date": "2026-07-16",
+      "source_url": "archive/2026-07-16.html"
     },
     {
       "name": "OuterBox",
@@ -2026,6 +2081,11 @@
       "name": "Titan Growth",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "TMBR",
+      "source_date": "2026-07-16",
+      "source_url": "archive/2026-07-16.html"
     },
     {
       "name": "TopRank Marketing",
