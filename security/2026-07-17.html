@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 17, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;font-size:14px}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:24px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:28px}
+.section h2{font-size:18px;font-weight:600;color:#f1f1f1;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section h2.priority{color:#E8B840}
+.section h2.high-priority{color:#E8B840}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+.card:hover{border-color:rgba(232,184,64,0.3)}
+.card-title{font-size:16px;font-weight:600;color:#f1f1f1;margin-bottom:6px}
+.card-title a{color:#f1f1f1;text-decoration:none}
+.card-title a:hover{color:#E8B840}
+.card-meta{font-size:13px;color:#999;line-height:1.6;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.card-desc{font-size:13px;color:#bbb;line-height:1.5;margin-top:4px}
+.card-desc a{color:#E8B840;text-decoration:none}
+.card-desc a:hover{text-decoration:underline}
+.badge-critical{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.06);color:#888}
+.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.summary-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px;text-align:center}
+.summary-card .num{font-size:28px;font-weight:700;margin-bottom:2px}
+.summary-card .num.critical{color:#E8B840}
+.summary-card .num.high{color:#E8B840}
+.summary-card .num.medium{color:#f59e0b}
+.summary-card .num.low{color:#888}
+.summary-card .label{font-size:12px;color:#888}
+.actions{margin-top:16px;background:rgba(232,184,64,0.06);border:1px solid rgba(232,184,64,0.2);border-radius:10px;padding:14px 16px}
+.actions h3{font-size:15px;font-weight:600;color:#E8B840;margin-bottom:8px}
+.actions ul{list-style:none;padding:0}
+.actions li{font-size:13px;color:#ddd;padding:4px 0;padding-left:16px;position:relative}
+.actions li::before{content:"›";position:absolute;left:0;color:#E8B840}
+.actions li a{color:#E8B840;text-decoration:none}
+.actions li a:hover{text-decoration:underline}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 17, 2026 · <a href="../index.html">← Dashboard</a> · <a href="index.html">Archive</a></div>
+</div>
+
+<!-- SUMMARY -->
+<div class="section">
+<h2>Summary</h2>
+<div class="summary-grid">
+<div class="summary-card"><div class="num critical">9</div><div class="label">Critical</div></div>
+<div class="summary-card"><div class="num high">6</div><div class="label">High</div></div>
+<div class="summary-card"><div class="num medium">9</div><div class="label">Medium</div></div>
+<div class="summary-card"><div class="num low">0</div><div class="label">Low</div></div>
+</div>
+</div>
+
+<!-- ACTIONS -->
+<div class="section">
+<div class="actions">
+<h3>⚠️ Action Items — Today</h3>
+<ul>
+<li>CISA KEV deadline: <strong>CVE-2026-56164 (SharePoint zero-day)</strong> must be patched by <strong>today, July 17</strong></li>
+<li>SonicWall SMA1000: <strong>CVE-2026-15409 (CVSS 10.0)</strong> actively exploited — patch immediately if using SMA1000</li>
+<li>Hermes Agent v0.18.2 is current and patched — no action needed</li>
+<li>Microsoft Patch Tuesday: Prioritize SharePoint (CVE-2026-50522/58644/55040) and Exchange Online</li>
+</ul>
+</div>
+</div>
+
+<!-- SECTION 1: HERMES AGENT -->
+<div class="section">
+<h2 class="priority">🔴 HIGH PRIORITY: Hermes Agent (NousResearch)</h2>
+<p style="font-size:13px;color:#999;margin-bottom:12px">Current version: <strong>v0.18.2 (2026.7.7.2)</strong> — patched against all known CVEs. 8 CVEs identified.</p>
+
+<div class="card">
+<div class="card-title"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14625">CVE-2026-14625</a></div>
+<div class="card-meta"><span class="badge-high">HIGH</span> <span style="color:#888">· Protection mechanism failure in shell.exec (tui_gateway/server.py) · ≤0.15.2</span></div>
+<div class="card-desc">Protection mechanism failure via <code>shell.exec</code> in <code>tui_gateway/server.py</code>. Allows bypass of security controls. <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14625">NVD →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><a href="https://cvefeed.io/vuln/detail/CVE-2026-9366">CVE-2026-9366</a></div>
+<div class="card-meta"><span class="badge-medium">MEDIUM</span> <span style="color:#888">· Injection in prompt_builder.py _scan_context_content · 2026.4.23</span></div>
+<div class="card-desc">Injection vulnerability in <code>prompt_builder.py</code> `_scan_context_content` function. Remote exploitation possible. <a href="https://cvefeed.io/vuln/detail/CVE-2026-9366">VulDB →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11461">CVE-2026-11461</a></div>
+<div class="card-meta"><span class="badge-medium">MEDIUM</span> <span style="color:#888">· Authorization bypass (CVSS 5.3) · 0.1–0.12.0</span></div>
+<div class="card-desc">Authorization bypass via <code>resolve_session_by_title</code> in <code>hermes_state.py</code> resume endpoint. <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11461">NVD →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14626">CVE-2026-14626</a></div>
+<div class="card-meta"><span class="badge-medium">MEDIUM</span> <span style="color:#888">· Denial of Service · ≤2026.4.30</span></div>
+<div class="card-desc">DoS via <code>AIAgent.run_conversation</code> <code>todos</code> argument manipulation. <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14626">NVD →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14627">CVE-2026-14627</a></div>
+<div class="card-meta"><span class="badge-medium">MEDIUM</span> <span style="color:#888">· Improper authentication (CVSS 5.6) · ≤0.15.2</span></div>
+<div class="card-desc">Improper authentication in <code>DiscordAdapter._is_allowed_user</code> (<code>gateway/platforms/discord.py</code>). <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14627">NVD →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14628">CVE-2026-14628</a></div>
+<div class="card-meta"><span class="badge-medium">MEDIUM</span> <span style="color:#888">· Path traversal in Live Webhook Endpoint</span></div>
+<div class="card-desc">Path traversal via <code>extract_media</code> in <code>gateway/platforms/base.py</code>. <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14628">NVD →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><a href="https://app.opencve.io/cve/CVE-2026-15311">CVE-2026-15311</a></div>
+<div class="card-meta"><span class="badge-medium">MEDIUM</span> <span style="color:#888">· Cross-Site Scripting · ≤2026.5.29.2</span></div>
+<div class="card-desc">XSS in <code>MatrixAdapter._markdown_to_html</code> (<code>gateway/platforms/matrix.py</code>). <a href="https://app.opencve.io/cve/CVE-2026-15311">OpenCVE →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><a href="https://www.cisa.gov/news-events/bulletins/sb26-187">CVE-2026-10104</a></div>
+<div class="card-meta"><span class="badge-medium">MEDIUM</span> <span style="color:#888">· Unspecified security flaw · ≤0.15.2</span></div>
+<div class="card-desc">Unspecified security flaw in hermes-agent. Listed in CISA vulnerability bulletin. <a href="https://www.cisa.gov/news-events/bulletins/sb26-187">CISA →</a></div>
+</div>
+</div>
+
+<!-- SECTION 2: AI TOOLS & FRAMEWORKS -->
+<div class="section">
+<h2 class="high-priority">🔴 HIGH PRIORITY: AI Tools & Frameworks</h2>
+
+<div class="card">
+<div class="card-title"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-22708">CVE-2026-22708</a></div>
+<div class="card-meta"><span class="badge-critical">CRITICAL</span> <span style="color:#888">· CVSS 9.8 · Cursor IDE</span></div>
+<div class="card-desc">Shell built-in bypass via prompt injection. Allows attacker to poison shell environment and execute arbitrary payloads through allowlisted commands. <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-22708">NVD →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-25592 / CVE-2026-26030</div>
+<div class="card-meta"><span class="badge-critical">CRITICAL</span> <span style="color:#888">· Microsoft Semantic Kernel</span></div>
+<div class="card-desc">Two critical RCE vulnerabilities in Semantic Kernel framework. Allows unauthorized code execution via crafted prompts. <a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/">Microsoft Security Blog →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-26268 / CVE-2026-21523</div>
+<div class="card-meta"><span class="badge-high">HIGH</span> <span style="color:#888">· AI Coding Assistants</span></div>
+<div class="card-desc">Git hook escape (CVE-2026-26268) and TOCTOU race condition (CVE-2026-21523) in AI coding assistant execution environments. <a href="https://www.vectra.ai/topics/prompt-injection">Vectra →</a></div>
+</div>
+</div>
+
+<!-- SECTION 3: GENERAL CRITICAL -->
+<div class="section">
+<h2>🔴 General Critical Vulnerabilities</h2>
+
+<h3 style="font-size:15px;font-weight:600;color:#E8B840;margin:12px 0 8px">SonicWall SMA1000 — Active Exploitation (CISA KEV)</h3>
+
+<div class="card">
+<div class="card-title"><a href="https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0008">CVE-2026-15409</a></div>
+<div class="card-meta"><span class="badge-critical">CRITICAL</span> <span style="color:#888">· CVSS 10.0 · SonicWall SMA1000</span></div>
+<div class="card-desc">Server-Side Request Forgery in SMA1000 Appliance Management Console. <strong>Actively exploited in the wild.</strong> CISA KEV added. <a href="https://www.tenable.com/blog/cve-2026-15409-cve-2026-15410-sonicwall-sma-1000-zero-day-vulnerabilities-exploited-in-the">Tenable →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><a href="https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0008">CVE-2026-15410</a></div>
+<div class="card-meta"><span class="badge-high">HIGH</span> <span style="color:#888">· CVSS 7.2 · SonicWall SMA1000</span></div>
+<div class="card-desc">Post-authentication Code Injection in SMA1000 AMC. Likely chained with CVE-2026-15409. <strong>Actively exploited.</strong> <a href="https://www.tenable.com/blog/cve-2026-15409-cve-2026-15410-sonicwall-sma-1000-zero-day-vulnerabilities-exploited-in-the">Tenable →</a></div>
+</div>
+
+<h3 style="font-size:15px;font-weight:600;color:#E8B840;margin:12px 0 8px">Microsoft July 2026 Patch Tuesday — Record 570+ CVEs</h3>
+
+<div class="card">
+<div class="card-title">CVE-2026-50522 / CVE-2026-58644</div>
+<div class="card-meta"><span class="badge-critical">CRITICAL</span> <span style="color:#888">· CVSS 9.8 · SharePoint Server</span></div>
+<div class="card-desc">Matched pair of RCE vulnerabilities via deserialization of untrusted data. Remotely exploitable without authentication or user interaction. <a href="https://www.zerodayinitiative.com/blog/2026/7/14/the-july-2026-security-update-review">ZDI →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><a href="https://www.rapid7.com/blog/post/ve-cve-2026-55040-microsoft-sharepoint-jwt-token-authentication-bypass-fixed/">CVE-2026-55040</a></div>
+<div class="card-meta"><span class="badge-critical">CRITICAL</span> <span style="color:#888">· CVSS 9.1 · SharePoint Server</span></div>
+<div class="card-desc">JWT Token Authentication Bypass — allows remote unauthenticated attacker to impersonate any SharePoint user, including administrators. <a href="https://www.rapid7.com/blog/post/ve-cve-2026-55040-microsoft-sharepoint-jwt-token-authentication-bypass-fixed/">Rapid7 →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-54998</div>
+<div class="card-meta"><span class="badge-critical">CRITICAL</span> <span style="color:#888">· CVSS 8.8 · Exchange Online</span></div>
+<div class="card-desc">Elevation of Privilege in Microsoft Exchange Online. <a href="https://www.thezdi.com/blog/2026/7/14/the-july-2026-security-update-review">ZDI →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-54128</div>
+<div class="card-meta"><span class="badge-critical">CRITICAL</span> <span style="color:#888">· CVSS 8.4 · Windows DHCP Client</span></div>
+<div class="card-desc">Use-after-free (CWE-416) in Windows DHCP Client allowing Remote Code Execution. <a href="https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/">CrowdStrike →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-56155</div>
+<div class="card-meta"><span class="badge-high">HIGH</span> <span style="color:#888">· Microsoft zero-day (exploited in wild)</span></div>
+<div class="card-desc">Zero-day vulnerability exploited in attacks. CISA KEV added. Patch by July 28. <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/">Bleeping Computer →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><a href="https://windowsnews.ai/article/excel-rce-flaw-cve-2026-55041-patched-install-kb5002886-now-to-prevent-code-execution.438701">CVE-2026-55041</a></div>
+<div class="card-meta"><span class="badge-high">HIGH</span> <span style="color:#888">· Microsoft Excel</span></div>
+<div class="card-desc">Heap-based buffer overflow in Microsoft Excel. RCE when user opens a malicious file. <a href="https://windowsnews.ai/article/excel-rce-flaw-cve-2026-55041-patched-install-kb5002886-now-to-prevent-code-execution.438701">Details →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56164">CVE-2026-56164</a></div>
+<div class="card-meta"><span class="badge-medium">MEDIUM</span> <span style="color:#888">· CVSS 5.3 · SharePoint Server</span></div>
+<div class="card-desc"><strong>⚠️ ACTIVELY EXPLOITED ZERO-DAY.</strong> Missing authentication for critical function. CISA KEV — <strong>patch due TODAY July 17.</strong> <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56164">NVD →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-50661</div>
+<div class="card-meta"><span class="badge-medium">MEDIUM</span> <span style="color:#888">· CVSS 6.1 · Windows BitLocker</span></div>
+<div class="card-desc">Security Feature Bypass in Windows BitLocker. Publicly disclosed prior to patch availability. <a href="https://www.tenable.com/blog/microsofts-july-2026-patch-tuesday-addresses-569-cves-cve-2026-56155-cve-2026-56164">Tenable →</a></div>
+</div>
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech Security Watch</div>
+
+</div>
+</body>
+</html>
