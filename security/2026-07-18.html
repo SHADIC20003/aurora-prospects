@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 18, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 16px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:22px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:24px}
+.section h2{font-size:17px;font-weight:700;color:#f1f1f1;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px;transition:border-color 0.2s}
+.card:hover{border-color:rgba(232,184,64,0.3)}
+.card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1;line-height:1.4}
+.card-desc{font-size:14px;color:#bbb;line-height:1.5;margin-bottom:6px}
+.card-meta{font-size:13px;color:#999;line-height:1.6}
+.card-meta a{color:#E8B840;text-decoration:none}
+.card-meta a:hover{text-decoration:underline}
+.badge-critical{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840;white-space:nowrap;flex-shrink:0}
+.badge-high{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840;white-space:nowrap;flex-shrink:0}
+.badge-medium{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b;white-space:nowrap;flex-shrink:0}
+.badge-low{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;background:rgba(255,255,255,0.06);color:#888;white-space:nowrap;flex-shrink:0}
+.badge-patched{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(34,197,94,0.15);color:#22c55e;margin-left:4px}
+.summary-grid{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.summary-card{flex:1;min-width:80px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:12px;text-align:center}
+.summary-card .num{font-size:24px;font-weight:700;margin-bottom:2px}
+.summary-card .label{font-size:12px;color:#999}
+.summary-card.critical .num{color:#E8B840}
+.summary-card.high .num{color:#E8B840}
+.summary-card.medium .num{color:#f59e0b}
+.summary-card.low .num{color:#888}
+.note{font-size:13px;color:#888;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;margin-top:12px;line-height:1.5}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 18, 2026 · <a href="../index.html">← Dashboard</a> · <a href="index.html">Archive</a></div>
+</div>
+
+<div class="summary-grid">
+<div class="summary-card critical"><div class="num">6</div><div class="label">Critical</div></div>
+<div class="summary-card high"><div class="num">5</div><div class="label">High</div></div>
+<div class="summary-card medium"><div class="num">3</div><div class="label">Medium</div></div>
+<div class="summary-card low"><div class="num">0</div><div class="label">Low</div></div>
+</div>
+
+<!-- ==================== HERMES AGENT ==================== -->
+<div class="section">
+<h2>🔴 Hermes Agent (NousResearch)</h2>
+<div class="note">No new Hermes Agent CVEs disclosed in the last 24 hours. Current version: v0.17.0 (v2026.6.19). Latest upstream: v0.18.2. Upgrade recommended.</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-14783 — Path Traversal in skill_view</div>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">Path traversal vulnerability in Hermes-agent 2026.5.29.2 via skill_view function in tools/skills_tool.py. Remote exploitation possible.</div>
+<div class="card-meta">Affected: hermes-agent 2026.5.29.2 · <span class="badge-patched">PATCHED</span> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14783">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-14628 — extract_media Vulnerability</div>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">Vulnerability in extract_media function of gateway component, Hermes-agent ≤ 2026.5.16.</div>
+<div class="card-meta">Affected: ≤ 2026.5.16 · <span class="badge-patched">PATCHED</span> · <a href="https://www.cve.org/CVERecord?id=CVE-2026-14628">CVE</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-53869 — DNS Rebinding in WebSocket</div>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">DNS rebinding vulnerability in WebSocket endpoints allowing remote bypass of Host and Origin validation.</div>
+<div class="card-meta">Affected: < 0.16.0 · <span class="badge-patched">PATCHED</span> · <a href="https://github.com/advisories/GHSA-4pqm-j46f-795x">GHSA</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-48710 — BadHost (Starlette)</div>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Starlette host-header auth bypass affecting all versions < 1.0.1. Impacts Hermes via Starlette/FastAPI stack. Allows auth bypass via Host header injection.</div>
+<div class="card-meta">Affected: Starlette < 1.0.1 · <span class="badge-patched">PATCHED</span> (v1.0.1 installed) · <a href="https://github.com/advisories/GHSA-4pqm-j46f-795x">GHSA</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-9366 — Remote Code Execution</div>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">RCE vulnerability in NousResearch hermes-agent. Full details embargoed.</div>
+<div class="card-meta">Affected: various · <span class="badge-patched">PATCHED</span> · <a href="https://www.sentinelone.com/vulnerability-database/cve-2026-9366/">SentinelOne</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-14626 — Denial of Service</div>
+<span class="badge-medium">MEDIUM</span>
+</div>
+<div class="card-desc">DoS via manipulation of the todos argument in Hermes-agent ≤ 2026.4.30.</div>
+<div class="card-meta">Affected: ≤ 2026.4.30 · <span class="badge-patched">PATCHED</span> · <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14626">NVD</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-14617 — Case Sensitivity in Streaming Filter</div>
+<span class="badge-medium">MEDIUM</span>
+</div>
+<div class="card-desc">Improper case sensitivity in GatewayStreamConsumer._filter_and_accumulate, Hermes-agent ≤ 2026.4.30.</div>
+<div class="card-meta">Affected: ≤ 2026.4.30 · <span class="badge-patched">PATCHED</span> · <a href="https://github.com/advisories/GHSA-pxqg-8rwp-q2x2">GHSA</a></div>
+</div>
+</div>
+
+<!-- ==================== AI TOOLS ==================== -->
+<div class="section">
+<h2>🤖 AI Tools & Frameworks</h2>
+<div class="note">No new AI framework CVEs disclosed in the last 24 hours.</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">LangChain: CVE-2026-34070 — Path Traversal</div>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">Path traversal in langchain-core's prompt loading pipeline (CVSS 7.5). Fixed in later versions.</div>
+<div class="card-meta">Affected: langchain-core · <a href="https://particula.tech/blog/langchain-langgraph-security-cves-audit">Source</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">Cursor: CVE-2026-22708 — Shell Built-in Bypass</div>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Shell built-in command bypass in Cursor AI coding assistant. CVSS 9.8.</div>
+<div class="card-meta">Affected: Cursor · <a href="https://www.vectra.ai/topics/prompt-injection">Source</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">OWASP GenAI Security v2.01 — Prompt Injection</div>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">Prompt injection remains the #1 LLM threat in 2026 with 340% YoY increase. OWASP reframes agentic AI risk around disclosed vulnerabilities.</div>
+<div class="card-meta"><a href="https://www.helpnetsecurity.com/2026/06/11/owasp-prompt-injection-ai-security-failures/">Source</a></div>
+</div>
+</div>
+
+<!-- ==================== GENERAL CRITICAL ==================== -->
+<div class="section">
+<h2>⚠️ General Critical Vulnerabilities</h2>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-55040 — SharePoint Server Auth Bypass</div>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">JWT token authentication bypass in Microsoft SharePoint Server. CVSS 9.1. Chains with still-embargoed bug for unauthenticated RCE. Complete patch expected August 2026.</div>
+<div class="card-meta">Affected: SharePoint Server · <a href="https://www.rapid7.com/blog/post/ve-cve-2026-55040-microsoft-sharepoint-jwt-token-authentication-bypass-fixed/">Rapid7</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-55944 — Dynamics NAV/365 BC RCE</div>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Unauthenticated deserialization RCE in Microsoft Dynamics NAV 2018 and Dynamics 365 Business Central. CVSS 9.8. Exploitation More Likely.</div>
+<div class="card-meta">Affected: Dynamics NAV/365 BC · <a href="https://www.tenable.com/blog/microsofts-july-2026-patch-tuesday-addresses-569-cves-cve-2026-56155-cve-2026-56164">Tenable</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-50522 / CVE-2026-58644 — SharePoint RCEs</div>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Two critical RCE vulnerabilities in Microsoft SharePoint Server, both CVSS 9.8. CVE-2026-58644 updated to indicate active exploitation.</div>
+<div class="card-meta">Affected: SharePoint Server · <a href="https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-july-2026/">CrowdStrike</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-54128 — Windows DHCP Client RCE</div>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Remote code execution in Windows DHCP Client. Requires victim to connect to a malicious DHCP server (public WiFi attack vector).</div>
+<div class="card-meta">Affected: Windows DHCP Client · <a href="https://isc.sans.edu/diary/33154">SANS</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-55008 — Microsoft Exchange Spoofing</div>
+<span class="badge-critical">CRITICAL</span>
+</div>
+<div class="card-desc">Cross-site scripting based spoofing vulnerability in Microsoft Exchange Server. CVSS 9.6.</div>
+<div class="card-meta">Affected: Exchange Server · <a href="https://www.thezdi.com/blog/2026/7/14/the-july-2026-security-update-review">ZDI</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-56164 — SharePoint EoP (Actively Exploited)</div>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">Missing authentication for critical function in SharePoint Server. Actively exploited in the wild. CISA KEV. CVSS 5.3.</div>
+<div class="card-meta">Affected: SharePoint Server · <span class="badge-patched">PATCHED</span> (Patch Tuesday) · <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/">BleepingComputer</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-56155 — AD FS EoP (Actively Exploited)</div>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">Active Directory Federation Services elevation of privilege. Confirmed exploited in the wild.</div>
+<div class="card-meta">Affected: AD FS · <span class="badge-patched">PATCHED</span> (Patch Tuesday) · <a href="https://www.ivanti.com/blog/july-2026-patch-tuesday">Ivanti</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-50661 — Windows BitLocker Bypass</div>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">Windows BitLocker security feature bypass. Publicly disclosed before patch availability. Requires physical access. CVSS 6.1.</div>
+<div class="card-meta">Affected: Windows BitLocker · <span class="badge-patched">PATCHED</span> (Patch Tuesday) · <a href="https://www.ivanti.com/blog/july-2026-patch-tuesday">Ivanti</a></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<div class="card-title">CVE-2026-46817 — Oracle EBS Payments RCE (CISA KEV)</div>
+<span class="badge-high">HIGH</span>
+</div>
+<div class="card-desc">Unauthenticated RCE in Oracle E-Business Suite Payments File Transmission component. Added to CISA KEV on July 15. Active exploitation confirmed.</div>
+<div class="card-meta">Affected: Oracle EBS · <span class="badge-patched">PATCHED</span> (Oracle CPU) · <a href="https://thecybersecguru.com/news/oracle-ebs-cve-2026-46817-active-exploitation/">Source</a></div>
+</div>
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech</div>
+</div>
+</body>
+</html>
