@@ -1,6 +1,6 @@
 {
-  "version": 26,
-  "last_updated": "2026-07-16",
+  "version": 27,
+  "last_updated": "2026-07-18",
   "agencies": [
     {
       "name": "10FOLD",
@@ -113,6 +113,11 @@
       "source_url": "archive/2026-07-02.html"
     },
     {
+      "name": "Ammunition",
+      "source_date": "2026-07-18",
+      "source_url": "archive/2026-07-18.html"
+    },
+    {
       "name": "AMP Agency",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
@@ -188,7 +193,7 @@
       "source_url": "archive/2026-06-25.html"
     },
     {
-      "name": "Basic Agency (BASIC/DEPT\u00ae)",
+      "name": "Basic Agency (BASIC/DEPT®)",
       "source_date": "2026-07-09",
       "source_url": "archive/2026-07-09.html"
     },
@@ -276,6 +281,11 @@
       "name": "Bop Design",
       "source_date": "2026-06-23",
       "source_url": "archive/2026-06-23.html"
+    },
+    {
+      "name": "BORN Group",
+      "source_date": "2026-07-18",
+      "source_url": "archive/2026-07-18.html"
     },
     {
       "name": "Boston Consulting Group",
@@ -648,6 +658,11 @@
       "source_url": "archive/2026-07-07.html"
     },
     {
+      "name": "Designit",
+      "source_date": "2026-07-18",
+      "source_url": "archive/2026-07-18.html"
+    },
+    {
       "name": "Designli",
       "source_date": "2026-06-29",
       "source_url": "archive/2026-06-29.html"
@@ -863,6 +878,11 @@
       "source_url": "archive/2026-06-25.html"
     },
     {
+      "name": "Funnel Boost Media",
+      "source_date": "2026-07-18",
+      "source_url": "archive/2026-07-18.html"
+    },
+    {
       "name": "Futurety",
       "source_date": "2026-05-31",
       "source_url": "archive/2026-05-31.html"
@@ -886,6 +906,11 @@
       "name": "Globital",
       "source_date": "2026-07-06",
       "source_url": "archive/2026-07-06.html"
+    },
+    {
+      "name": "Goji Labs",
+      "source_date": "2026-07-18",
+      "source_url": "archive/2026-07-18.html"
     },
     {
       "name": "Gong",
@@ -941,6 +966,11 @@
       "name": "Hawke Media",
       "source_date": "2026-06-26",
       "source_url": "archive/2026-06-26.html"
+    },
+    {
+      "name": "HawkSEM",
+      "source_date": "2026-07-18",
+      "source_url": "archive/2026-07-18.html"
     },
     {
       "name": "Haymaker",
@@ -1438,6 +1468,16 @@
       "source_url": "archive/2026-06-22.html"
     },
     {
+      "name": "Nerdery",
+      "source_date": "2026-07-18",
+      "source_url": "archive/2026-07-18.html"
+    },
+    {
+      "name": "Netpeak",
+      "source_date": "2026-07-18",
+      "source_url": "archive/2026-07-18.html"
+    },
+    {
       "name": "New Engen",
       "source_date": "2026-07-14",
       "source_url": "archive/2026-07-14.html"
@@ -1451,6 +1491,11 @@
       "name": "Next Chapter",
       "source_date": "2026-07-16",
       "source_url": "archive/2026-07-16.html"
+    },
+    {
+      "name": "NoGood",
+      "source_date": "2026-07-18",
+      "source_url": "archive/2026-07-18.html"
     },
     {
       "name": "North Highland",
@@ -1606,6 +1651,11 @@
       "name": "People.ai",
       "source_date": "2026-06-19",
       "source_url": "archive/2026-06-19.html"
+    },
+    {
+      "name": "Perficient",
+      "source_date": "2026-07-18",
+      "source_url": "archive/2026-07-18.html"
     },
     {
       "name": "Phenomenon Studio",
@@ -2141,6 +2191,16 @@
       "name": "Upstatement",
       "source_date": "2026-07-04",
       "source_url": "archive/2026-07-04.html"
+    },
+    {
+      "name": "Userlane",
+      "source_date": "2026-07-18",
+      "source_url": "archive/2026-07-18.html"
+    },
+    {
+      "name": "Userlist",
+      "source_date": "2026-07-18",
+      "source_url": "archive/2026-07-18.html"
     },
     {
       "name": "Ustwo",
