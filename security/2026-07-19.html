@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 19, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:14px;padding:16px;min-height:100vh;line-height:1.6}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:24px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:28px}
+.section h2{font-size:18px;font-weight:600;color:#f1f1f1;margin-bottom:14px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section h3{font-size:15px;font-weight:600;color:#ddd;margin:16px 0 10px}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px;transition:border-color 0.2s}
+.card:hover{border-color:rgba(232,184,64,0.3)}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1;margin-bottom:4px}
+.card-desc{font-size:13px;color:#bbb;margin-bottom:6px;line-height:1.5}
+.card-meta{font-size:12px;color:#888;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.badge-critical{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840;margin-right:4px}
+.badge-high{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(232,184,64,0.15);color:#E8B840;margin-right:4px}
+.badge-medium{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(245,158,11,0.15);color:#f59e0b;margin-right:4px}
+.badge-low{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,0.06);color:#888;margin-right:4px}
+.tag{display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:3px;background:rgba(255,255,255,0.04);color:#999;margin-right:4px;text-transform:uppercase}
+.tag-fixed{background:rgba(59,130,246,0.12);color:#60a5fa}
+.tag-exploit{background:rgba(239,68,68,0.12);color:#ef4444}
+.tag-kev{background:rgba(232,184,64,0.12);color:#E8B840}
+.note{font-size:13px;color:#888;padding:10px 14px;background:rgba(255,255,255,0.02);border-radius:8px;margin:12px 0}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 19, 2026 — <a href="index.html">← Archive</a></div>
+</div>
+
+<div class="section">
+<h2>1. Hermes Agent — High Priority</h2>
+<p class="note">Hermes Agent is not installed in this environment. CVEs listed for awareness.</p>
+
+<div class="card">
+<div class="card-title">CVE-2026-9367 — OS Command Injection (RCE)</div>
+<div class="card-desc">Command injection in <code>detect_dangerous_command</code> of <code>tools/approval.py</code> (terminal_tool component). Remote code execution via crafted input. Exploit public.</div>
+<div class="card-meta">
+<span class="badge-high">HIGH</span>
+<span class="tag">up to commit 5157f5427f</span>
+<span class="tag tag-exploit">EXPLOIT PUBLIC</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-9366 — Injection Vulnerability (CWE-74)</div>
+<div class="card-desc">Injection vulnerability in hermes-agent 2026.4.23. Allows code injection through crafted inputs.</div>
+<div class="card-meta">
+<span class="badge-high">HIGH</span>
+<span class="tag">2026.4.23</span>
+<span class="tag tag-exploit">EXPLOIT PUBLIC</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-53869 — DNS Rebinding in WebSocket Endpoints</div>
+<div class="card-desc">DNS rebinding vulnerability allows remote attackers to bypass Host and Origin validation on WebSocket endpoints. CVSS 8.2.</div>
+<div class="card-meta">
+<span class="badge-high">HIGH</span>
+<span class="tag">&lt; 0.16.0</span>
+<span class="tag tag-fixed">FIXED IN 0.16.0</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">GHSA-85cr-q769-68x2 — Path Traversal in Webhook Endpoint</div>
+<div class="card-desc">Path traversal in <code>extract_media</code> of <code>gateway/platforms/base.py</code> (Live Webhook Endpoint). Remote exploitation possible.</div>
+<div class="card-meta">
+<span class="badge-high">HIGH</span>
+<span class="tag">≤ 2026.5.16</span>
+<span class="tag tag-fixed">FIXED</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-11461 — Authorization Bypass</div>
+<div class="card-desc">Authorization bypass via <code>resolve_session_by_title</code> in <code>hermes_state.py</code> (resume endpoint). Remote exploit, no auth needed. CVSS 6.3.</div>
+<div class="card-meta">
+<span class="badge-medium">MEDIUM</span>
+<span class="tag">≤ 0.12.0</span>
+<span class="tag">NO FIX CONFIRMED</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-14626 — Denial of Service via HTTP API</div>
+<div class="card-desc">DoS via <code>AIAgent.run_conversation</code> — manipulation of <code>todos</code> argument causes resource exhaustion. Remote exploitation.</div>
+<div class="card-meta">
+<span class="badge-medium">MEDIUM</span>
+<span class="tag">≤ 2026.4.30</span>
+<span class="tag tag-exploit">EXPLOIT PUBLIC</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">GHSA-pxqg-8rwp-q2x2 — Improper Case Sensitivity Handling</div>
+<div class="card-desc">Improper handling of case sensitivity in <code>GatewayStreamConsumer._filter_and_accumulate</code> (streaming reasoning tag filter). Remote exploitation.</div>
+<div class="card-meta">
+<span class="badge-medium">MEDIUM</span>
+<span class="tag">≤ 2026.4.30</span>
+<span class="tag tag-fixed">FIXED</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-7396 — Path Traversal in WeChat Work Adapter</div>
+<div class="card-desc">Path traversal in <code>gateway/platforms/wecom.py</code>. CVSS 4.0.</div>
+<div class="card-meta">
+<span class="badge-medium">MEDIUM</span>
+<span class="tag">2026.4.x</span>
+<span class="tag tag-fixed">FIXED</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-7397 — Symlink Following in File Tools Module</div>
+<div class="card-desc">Symlink following vulnerability in file tools module. CVSS 4.8.</div>
+<div class="card-meta">
+<span class="badge-medium">MEDIUM</span>
+<span class="tag">2026.4.x</span>
+<span class="tag tag-fixed">FIXED</span>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2>2. AI Tools & Frameworks — High Priority</h2>
+
+<div class="card">
+<div class="card-title">CVE-2026-5027 — Langflow Path Traversal → RCE</div>
+<div class="card-desc">Path traversal in Langflow file upload endpoint — unauthenticated file write leading to remote code execution. Actively exploited in the wild. CVSS 8.8.</div>
+<div class="card-meta">
+<span class="badge-critical">CRITICAL</span>
+<span class="tag">Langflow &lt; 1.1.x</span>
+<span class="tag tag-exploit">ACTIVE EXPLOITATION</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-63030 / CVE-2026-60137 — WordPress "wp2shell" RCE</div>
+<div class="card-desc">Chain: SQL injection in REST API batch routing → unauthenticated remote code execution. Affects millions of WordPress sites. Patched in forced updates 6.9.5/7.0.2.</div>
+<div class="card-meta">
+<span class="badge-critical">CRITICAL</span>
+<span class="tag">WP 6.8.0–6.8.5, 6.9.0–6.9.4</span>
+<span class="tag tag-fixed">FORCE-PATCHED</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-47282 — GitHub Copilot / VS Code Info Disclosure</div>
+<div class="card-desc">Information disclosure vulnerability in GitHub Copilot and Visual Studio Code. Part of July 2026 Patch Tuesday.</div>
+<div class="card-meta">
+<span class="badge-high">HIGH</span>
+<span class="tag">Copilot / VS Code</span>
+<span class="tag tag-fixed">FIXED</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-22708 — Cursor IDE Prompt Injection</div>
+<div class="card-desc">Prompt injection via poisoned execution environment allows allowlist bypass for commands like <code>git branch</code>.</div>
+<div class="card-meta">
+<span class="badge-high">HIGH</span>
+<span class="tag">Cursor &lt; 0.45.x</span>
+<span class="tag tag-fixed">FIXED</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-25592 / CVE-2026-26030 — Microsoft Semantic Kernel RCE</div>
+<div class="card-desc">Two RCE vulnerabilities in Microsoft's Semantic Kernel AI agent framework. Part of the "prompts become shells" class of AI framework attacks.</div>
+<div class="card-meta">
+<span class="badge-high">HIGH</span>
+<span class="tag">Semantic Kernel &lt; 1.18</span>
+<span class="tag tag-fixed">FIXED</span>
+</div>
+</div>
+
+<p class="note"><strong>Context:</strong> OWASP continues to rank prompt injection as LLM01:2025 — the single most critical vulnerability class for LLM applications. Microsoft's Security Blog tied Semantic Kernel CVEs to the broader "prompts become shells" pattern in AI agent frameworks.</p>
+</div>
+
+<div class="section">
+<h2>3. General Critical Vulnerabilities</h2>
+
+<div class="card">
+<div class="card-title">CVE-2026-58644 — SharePoint Server Unauthenticated RCE</div>
+<div class="card-desc">Deserialization of untrusted data leading to unauthenticated remote code execution in on-prem Microsoft SharePoint Server. CVSS 9.8. Added to CISA KEV on July 16. <strong>Actively exploited.</strong></div>
+<div class="card-meta">
+<span class="badge-critical">CRITICAL</span>
+<span class="tag tag-kev">CISA KEV</span>
+<span class="tag tag-exploit">ACTIVE EXPLOITATION</span>
+<span class="tag">Patch Tuesday July 2026</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-56164 — SharePoint Server EoP Zero-Day</div>
+<div class="card-desc">Elevation of privilege vulnerability in on-prem Microsoft SharePoint Server. <strong>Actively exploited zero-day.</strong></div>
+<div class="card-meta">
+<span class="badge-critical">CRITICAL</span>
+<span class="tag tag-exploit">ACTIVE EXPLOITATION</span>
+<span class="tag">Patch Tuesday July 2026</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-56155 — AD FS Elevation of Privilege</div>
+<div class="card-desc">Insufficiently granular access control in Active Directory Federation Services allows EoP. <strong>Actively exploited zero-day.</strong> CVSS 7.8.</div>
+<div class="card-meta">
+<span class="badge-high">HIGH</span>
+<span class="tag tag-exploit">ACTIVE EXPLOITATION</span>
+<span class="tag">Patch Tuesday July 2026</span>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">CVE-2026-50661 — Windows BitLocker Security Feature Bypass</div>
+<div class="card-desc">Security feature bypass vulnerability in Windows BitLocker. Publicly disclosed, no active exploitation confirmed.</div>
+<div class="card-meta">
+<span class="badge-medium">MEDIUM</span>
+<span class="tag">Patch Tuesday July 2026</span>
+</div>
+</div>
+
+<p class="note"><strong>Key Context:</strong> Microsoft's July 2026 Patch Tuesday was the largest on record — 622 CVEs fixed, including 3 zero-days (2 actively exploited). CISA added CVE-2026-58644 (SharePoint RCE, CVSS 9.8) to KEV catalog within 24 hours of patch shipping. SharePoint servers with internet exposure are the highest priority remediation target.</p>
+</div>
+
+<div class="section">
+<h2>Operating Context</h2>
+<p class="note">Hermes Agent version: Not installed in this environment.<br>Current stable release: v0.18.1 (v2026.7.7) — patch release hardening ~660 PRs since v0.18.0.</p>
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech Security Watch</div>
+
+</div>
+</body>
+</html>
