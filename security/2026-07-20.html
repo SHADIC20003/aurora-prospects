@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 20, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;font-size:14px}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:22px;font-weight:700;color:#f1f1f1;margin-bottom:6px}
+.header .sub{font-size:13px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.intro{font-size:13px;color:#999;margin-top:10px;line-height:1.5}
+.section{margin-top:28px}
+.section h2{font-size:17px;font-weight:700;color:#f1f1f1;margin-bottom:14px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:12px}
+.card h3{font-size:15px;font-weight:600;color:#f1f1f1;margin-bottom:6px;line-height:1.4}
+.card .meta{font-size:12px;color:#999;margin-bottom:8px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.card .desc{font-size:13px;color:#ccc;line-height:1.6;margin-bottom:8px}
+.card .source{font-size:12px;color:#666}
+.card .source a{color:#E8B840;text-decoration:none}
+.card .source a:hover{text-decoration:underline}
+.card .status{font-size:12px;color:#888;margin-top:6px;padding-top:6px;border-top:1px solid rgba(255,255,255,0.04)}
+.severity{display:inline-block;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;text-transform:uppercase;letter-spacing:0.5px}
+.severity-critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.severity-high{background:rgba(232,184,64,0.15);color:#E8B840}
+.severity-medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.severity-low{background:rgba(255,255,255,0.06);color:#888}
+.priority-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 7px;border-radius:3px;background:rgba(232,184,64,0.1);color:#E8B840;text-transform:uppercase;letter-spacing:0.3px}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+@media(min-width:480px){.header h1{font-size:24px}.card{padding:16px 18px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub"><a href="../index.html">← Dashboard</a> · <a href="index.html">Archive</a></div>
+<div class="intro">July 20, 2026 — Coverage: Hermes Agent, AI frameworks, general critical CVEs</div>
+</div>
+
+<!-- ============ HERMES AGENT ============ -->
+<div class="section">
+<h2>1. Hermes Agent <span class="priority-tag" style="margin-left:8px">Absolute Priority</span></h2>
+<p style="font-size:12px;color:#888;margin-bottom:12px;line-height:1.5">Running: v0.17.0 &mdash; Latest: v0.18.2 (2026.7.7.2)</p>
+
+<div class="card">
+<h3>CVE-2026-48710 — Starlette "BadHost" Auth Bypass</h3>
+<div class="meta">
+<span class="severity severity-critical">Critical</span>
+<span>CVSS 9.8</span>
+<span>Starlette &ge;0.8.3 &lt;1.0.1</span>
+</div>
+<div class="desc">Host-header parsing desynchronization lets path-based auth middleware see a different path than the ASGI router dispatches. Pinned in Hermes v0.16.0. <strong>Patched in v0.17.0.</strong></div>
+<div class="source">Source: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48710">NVD</a> · <a href="https://badhost.org/">badhost.org</a></div>
+</div>
+
+<div class="card">
+<h3>CVE-2026-22171 — Feishu Media Download Path Traversal</h3>
+<div class="meta">
+<span class="severity severity-high">High</span>
+<span>CVSS 8.2</span>
+<span>OpenClaw &lt; 2026.2.19</span>
+</div>
+<div class="desc">Path traversal in Feishu media download flow — untrusted media keys interpolated into temp file paths. Not applicable to v0.17.0.</div>
+<div class="source">Source: <a href="https://www.thehackerwire.com/vulnerability/CVE-2026-22171/">TheHackerWire</a></div>
+</div>
+
+<div class="card">
+<h3>CVE-2026-11461 — Resume Endpoint Authorization Bypass</h3>
+<div class="meta">
+<span class="severity severity-medium">Medium</span>
+<span>CVSS 6.3</span>
+<span>Hermes-Agent &le; 0.12.0</span>
+</div>
+<div class="desc">Authorization bypass via <code>resolve_session_by_title</code> in resume endpoint. Remote Title argument manipulation. Patched after 0.12.0.</div>
+<div class="source">Source: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11461">NVD</a></div>
+</div>
+
+<div class="card">
+<h3>CVE-2026-7396 — WeChat Work Adapter Path Traversal</h3>
+<div class="meta">
+<span class="severity severity-medium">Medium</span>
+<span>CVSS 4.0</span>
+<span>Hermes-Agent v0.8.0</span>
+</div>
+<div class="desc">Path traversal in <code>gateway/platforms/wecom.py</code> allowing unauthenticated remote file traversal. Patched.</div>
+<div class="source">Source: <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7396">NVD</a></div>
+</div>
+</div>
+
+<!-- ============ AI TOOLS & FRAMEWORKS ============ -->
+<div class="section">
+<h2>2. AI Tools &amp; Frameworks <span class="priority-tag" style="margin-left:8px">High Priority</span></h2>
+
+<div class="card">
+<h3>Claude Code / OpenAI Codex — "Friendly Fire" RCE PoC</h3>
+<div class="meta">
+<span class="severity severity-high">High</span>
+<span>Jul 8–10, 2026</span>
+</div>
+<div class="desc">AI Now Institute demonstrated RCE in Claude Code and Codex CLI via README-planted payloads when autonomous command approval is enabled. Affects users running untrusted project files.</div>
+<div class="source">Source: <a href="https://thehackernews.com/2026/07/friendly-fire-ai-agents-built-to-catch.html">The Hacker News</a></div>
+<div class="status">Mitigation: Disable autonomous command execution.</div>
+</div>
+
+<div class="card">
+<h3>CVE-2026-2275 et al. — CrewAI Sandbox Escape / RCE</h3>
+<div class="meta">
+<span class="severity severity-critical">Critical</span>
+<span>CVE-2026-2275 + 3 High (2285, 2286, 2287)</span>
+</div>
+<div class="desc">Code Interpreter tool falls back to unsandboxed Python when Docker is unavailable. SSRF, local file read, and RCE vectors.</div>
+<div class="source">Source: <a href="https://www.kb.cert.org/vuls/id/221883">CERT/CC</a></div>
+</div>
+
+<div class="card">
+<h3>CVE-2025-68664 — LangChain Unsafe Deserialization RCE</h3>
+<div class="meta">
+<span class="severity severity-critical">Critical</span>
+<span>CVSS 9.0</span>
+<span>langchain-core &lt; 0.3.81 / 1.2.5</span>
+</div>
+<div class="desc">Serialization injection in <code>dumps()</code> / <code>dumpd()</code> enabling remote code execution through crafted Python objects.</div>
+<div class="source">Source: <a href="https://thehackernews.com/2026/03/langchain-langgraph-flaws-expose-files.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<h3>CVE-2025-59536 — Claude Code RCE via Project Files</h3>
+<div class="meta">
+<span class="severity severity-critical">Critical</span>
+<span>Check Point Research, Feb 2026</span>
+</div>
+<div class="desc">RCE and API token exfiltration through malicious project configurations (.claude files).</div>
+<div class="source">Source: <a href="https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/">Check Point</a></div>
+</div>
+
+<div class="card">
+<h3>CVE-2026-8769 — Vercel AI SDK Resource Consumption</h3>
+<div class="meta">
+<span class="severity severity-medium">Medium</span>
+<span>vercel-ai &le; 3.0.97</span>
+</div>
+<div class="desc">Resource consumption via <code>createJsonResponseHandler</code> in provider-utils.</div>
+<div class="source">Source: <a href="https://app.opencve.io/cve/CVE-2026-8769">OpenCVE</a></div>
+</div>
+</div>
+
+<!-- ============ GENERAL CRITICAL ============ -->
+<div class="section">
+<h2>3. General Critical Vulnerabilities</h2>
+
+<div class="card">
+<h3>CVE-2026-58644 — Microsoft SharePoint RCE Zero-Day</h3>
+<div class="meta">
+<span class="severity severity-critical">Critical</span>
+<span>CVSS 9.8</span>
+<span>CISA KEV — Active Exploitation</span>
+</div>
+<div class="desc">Deserialization of untrusted data allows unauthenticated remote code execution. Added to CISA Known Exploited Vulnerabilities catalog.</div>
+<div class="source">Source: <a href="https://thehackernews.com/2026/07/cisa-adds-exploited-sharepoint-rce-zero.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<h3>CVE-2026-15409 / CVE-2026-15410 — SonicWall SMA 1000 Zero-Days</h3>
+<div class="meta">
+<span class="severity severity-critical">Critical</span>
+<span>Actively Exploited</span>
+</div>
+<div class="desc">SSRF via WebSocket tunnel allowing unauthenticated access to localhost services. Second flaw enables admin command execution. Patched July 14.</div>
+<div class="source">Source: <a href="https://www.rapid7.com/blog/post/etr-rapid7-mdr-team-discovers-new-sonicwall-sma1000-zero-days-being-actively-exploited/">Rapid7</a></div>
+</div>
+
+<div class="card">
+<h3>CVE-2026-44747 — SAP NetWeaver ABAP (CVSS 9.9)</h3>
+<div class="meta">
+<span class="severity severity-critical">Critical</span>
+<span>CVSS 9.9</span>
+<span>July 2026 Patch Day</span>
+</div>
+<div class="desc">Missing authorization check in SAP NetWeaver ABAP allowing data exposure/modification. Highest severity in SAP's July batch.</div>
+<div class="source">Source: <a href="https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<h3>CVE-2026-44761 — SAP Commerce Cloud Default Credentials</h3>
+<div class="meta">
+<span class="severity severity-critical">Critical</span>
+<span>CVSS 9.1</span>
+</div>
+<div class="desc">Sample OAuth 2.0 client shipped with publicly documented default credentials in Commerce Cloud.</div>
+<div class="source">Source: <a href="https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html">The Hacker News</a></div>
+</div>
+
+<div class="card">
+<h3>CVE-2026-27690 — SAP Approuter HTTP Request Smuggling</h3>
+<div class="meta">
+<span class="severity severity-critical">Critical</span>
+<span>CVSS 9.1</span>
+</div>
+<div class="desc">HTTP Request Smuggling in SAP Approuter Node.js middleware layer (SAP BTP).</div>
+<div class="source">Source: <a href="https://www.bleepingcomputer.com/news/security/sap-warns-of-critical-flaws-in-netweaver-and-commerce-cloud/">Bleeping Computer</a></div>
+</div>
+
+<div class="card">
+<h3>CVE-2026-42359 — Apache Airflow XCom PATCH RCE</h3>
+<div class="meta">
+<span class="severity severity-critical">Critical</span>
+<span>Fix Bypass of CVE-2026-33858</span>
+</div>
+<div class="desc">Deserialization RCE in XCom PATCH endpoint. Previous fix only covered POST variant.</div>
+<div class="source">Source: <a href="https://sec.co/vulnerabilities/cve-2026-42359">SEC.co</a></div>
+</div>
+
+<div class="card">
+<h3>CVE-2026-55040 — Microsoft SharePoint Weak Authentication</h3>
+<div class="meta">
+<span class="severity severity-critical">Critical</span>
+<span>CVSS 9.1</span>
+</div>
+<div class="desc">Weak authentication allowing privilege escalation over network in SharePoint Server.</div>
+<div class="source">Source: <a href="https://www.thezdi.com/blog/2026/7/14/the-july-2026-security-update-review">Zero Day Initiative</a></div>
+</div>
+</div>
+
+<div class="footer">Generated by Netamuru &middot; Aurora Tech &middot; 2026-07-20</div>
+
+</div>
+</body>
+</html>
