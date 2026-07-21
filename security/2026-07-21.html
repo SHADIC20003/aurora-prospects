@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 21, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh}
+.container{max-width:720px;margin:0 auto;padding:0 0 48px}
+.header{padding:32px 0 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:24px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:14px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:28px}
+.section h2{font-size:18px;font-weight:700;color:#f1f1f1;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.priority-flag{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;margin-left:8px;vertical-align:middle}
+.priority-high{background:rgba(232,184,64,0.2);color:#E8B840;border:1px solid rgba(232,184,64,0.3)}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:16px;margin-bottom:12px}
+.card-title{font-size:16px;font-weight:600;color:#f1f1f1;margin-bottom:2px;display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap}
+.card-title a{color:#f1f1f1;text-decoration:none}
+.card-title a:hover{color:#E8B840}
+.card-meta{font-size:13px;color:#999;margin-bottom:6px;line-height:1.6}
+.card-desc{font-size:14px;line-height:1.6;color:#ccc}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;margin-right:4px;vertical-align:middle}
+.badge-critical{background:rgba(232,184,64,0.15);color:#E8B840;border:1px solid rgba(232,184,64,0.2)}
+.badge-high{background:rgba(232,184,64,0.12);color:#E8B840;border:1px solid rgba(232,184,64,0.15)}
+.badge-medium{background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.2)}
+.badge-low{background:rgba(136,136,136,0.15);color:#888;border:1px solid rgba(136,136,136,0.2)}
+.action-box{background:rgba(232,184,64,0.06);border:1px solid rgba(232,184,64,0.15);border-radius:8px;padding:12px 16px;margin-top:8px}
+.action-box strong{color:#E8B840;font-size:13px}
+.action-box p{font-size:13px;color:#ccc;margin-top:4px;line-height:1.5}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+.note{font-size:13px;color:#888;font-style:italic;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 21, 2026 — <a href="../security/index.html">← Archive</a></div>
+</div>
+
+<!-- ============ HERMES AGENT ============ -->
+<div class="section">
+<h2>🔴 Hermes Agent <span class="priority-flag priority-high">HIGHEST PRIORITY</span></h2>
+
+<div class="card">
+<div class="card-title">
+<span class="badge badge-medium">MEDIUM</span>
+<a href="https://nvd.nist.gov/vuln/detail/CVE-2026-14627">CVE-2026-14627</a>
+</div>
+<div class="card-meta">Discord Platform Integration · hermes-agent ≤ 0.15.2</div>
+<div class="card-desc">Improper authentication in <code>DiscordAdapter._is_allowed_user</code> allows attackers to bypass Discord authorization checks, enabling unauthorized tool execution, memory extraction, and potential infrastructure compromise.</div>
+<div class="action-box"><strong>→ MITIGATION:</strong> <p>Update hermes-agent to ≥ 0.15.3. Verify Discord integration authorization settings.</p></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span class="badge badge-high">HIGH</span>
+<a href="https://nvd.nist.gov/vuln/detail/CVE-2026-10223">CVE-2026-10223</a>
+</div>
+<div class="card-meta">Memory Tool · hermes-agent ≤ 2026.4.30</div>
+<div class="card-desc">Remote code execution via injection in <code>_scan_memory_content</code> in <code>tools/memory_tool.py</code>. Crafted memory content can achieve arbitrary code execution within the agent process.</div>
+<div class="action-box"><strong>→ MITIGATION:</strong> <p>Update to a version after 2026.4.30.</p></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span class="badge badge-medium">MEDIUM</span>
+<a href="https://nvd.nist.gov/vuln/detail/CVE-2026-10548">CVE-2026-10548</a>
+</div>
+<div class="card-meta">Credential Pool · hermes-agent ≤ 2026.4.23</div>
+<div class="card-desc">Improper authentication in <code>_sync_anthropic_entry_from_credentials_file</code> allows manipulation of stored API credentials during credential pool synchronization.</div>
+<div class="action-box"><strong>→ MITIGATION:</strong> <p>Update to a version after 2026.4.23. Review credential pool integrity.</p></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span class="badge badge-medium">MEDIUM</span>
+CVE-2026-34197
+</div>
+<div class="card-meta">Unspecified · hermes-agent ≤ 2026.4.30</div>
+<div class="card-desc">Vulnerability listed in CISA Vulnerability Summary SB26-159. Full details pending.</div>
+<div class="action-box"><strong>→ MITIGATION:</strong> <p>Update hermes-agent to latest version.</p></div>
+</div>
+</div>
+
+<!-- ============ AI TOOLS & FRAMEWORKS ============ -->
+<div class="section">
+<h2>🟠 AI Tools &amp; Frameworks</h2>
+
+<div class="card">
+<div class="card-title">
+<span class="badge badge-critical">CRITICAL</span>
+<a href="https://www.apolocybersecurity.com/en/blog-posts/duneslide-cursor-vulnerabilities-cve-2026-50548-cve-2026-50549-prompt-injection-sandbox">CVE-2026-50548 / CVE-2026-50549</a>
+</div>
+<div class="card-meta">Cursor AI IDE · CVSS 9.8 · "DuneSlide"</div>
+<div class="card-desc"><strong>CVE-2026-50548:</strong> Abuses <code>run_terminal_cmd</code> parameter handling to escape sandbox.<br>
+<strong>CVE-2026-50549:</strong> Exploits symlink resolution flaw to escape project directory.<br>
+Zero-click prompt injection in an MCP response or web result achieves RCE on host OS.</div>
+<div class="action-box"><strong>→ STATUS:</strong> <p>Fixed in Cursor 3.0 (April 2, 2026). Ensure Cursor is updated to ≥ 3.0.</p></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span class="badge badge-high">HIGH</span>
+<a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2256">CVE-2026-2256</a>
+</div>
+<div class="card-meta">ModelScope MS-Agent · v1.6.0rc1 and earlier</div>
+<div class="card-desc">Command injection via crafted prompt-derived input. Hiding a payload in a document, email, or support ticket causes the agent to execute arbitrary OS commands. Multiple public PoCs available on GitHub.</div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span class="badge badge-critical">CRITICAL</span>
+<a href="https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/">CVE-2026-25592 / CVE-2026-26030</a>
+</div>
+<div class="card-meta">Microsoft Semantic Kernel</div>
+<div class="card-desc">RCE vulnerabilities via prompt injection in the Semantic Kernel framework. Patched by Microsoft. Disclosed May 7, 2026.</div>
+</div>
+</div>
+
+<!-- ============ GENERAL CRITICAL ============ -->
+<div class="section">
+<h2>🟡 General Critical Vulnerabilities</h2>
+
+<div class="card">
+<div class="card-title">
+<span class="badge badge-high">HIGH</span>
+<a href="https://thehackernews.com/2026/07/new-7-zip-vulnerability-could-let.html">CVE-2026-14266</a>
+</div>
+<div class="card-meta">7-Zip XZ Decompression · CVSS 7.0–8.8 · <strong>Published July 20, 2026</strong></div>
+<div class="card-desc">Heap-based buffer overflow in 7-Zip's XZ decoder. Opening a crafted XZ archive triggers arbitrary code execution on the victim machine. No public PoC or in-the-wild exploitation confirmed as of publication.</div>
+<div class="action-box"><strong>→ MITIGATION:</strong> <p>Update 7-Zip when patch is available. Exercise caution opening XZ archives from untrusted sources.</p></div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span class="badge badge-critical">CRITICAL</span>
+<a href="https://www.helpnetsecurity.com/2026/07/14/sonicwall-sma-attacks-via-cve-2026-15409-cve-2026-15410/">CVE-2026-15409 / CVE-2026-15410</a>
+</div>
+<div class="card-meta">SonicWall SMA 1000 · <strong>Actively Exploited</strong></div>
+<div class="card-desc">Two zero-days in SonicWall SMA 1000 series: authentication bypass (CVE-2026-15409) and authenticated code injection (CVE-2026-15410). Rapid7 MDR team discovered active exploitation. CISA BOD 26-04 required patching by July 17.</div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span class="badge badge-critical">CRITICAL</span>
+<a href="https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html">CVE-2026-44747</a>
+</div>
+<div class="card-meta">SAP NetWeaver AS ABAP · CVSS 9.9</div>
+<div class="card-desc">Memory corruption vulnerability allowing remote code execution and sensitive data exposure. Patched in SAP July 2026 Security Patch Day.</div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span class="badge badge-critical">CRITICAL</span>
+Microsoft July 2026 Patch Tuesday
+</div>
+<div class="card-meta">570+ flaws, 3 zero-days · Patches released July 14</div>
+<div class="card-desc">Record-breaking patch batch covering Windows, Office, SharePoint, Exchange, Edge, .NET. Key zero-days:<br>
+<strong>CVE-2026-56164:</strong> SharePoint Server EoP (actively exploited)<br>
+<strong>CVE-2026-50661:</strong> Windows BitLocker bypass (publicly disclosed)<br>
+<strong>CVE-2026-55040:</strong> SharePoint weak auth (CVSS 9.1)</div>
+</div>
+
+<div class="card">
+<div class="card-title">
+<span class="badge badge-critical">CRITICAL</span>
+<a href="https://thecybertrove.com/ivanti-epmm-zero-day-vulnerability-active-exploit/">CVE-2026-6973</a>
+</div>
+<div class="card-meta">Ivanti EPMM · Actively Exploited</div>
+<div class="card-desc">Zero-day vulnerability in Ivanti Endpoint Management Mobile actively exploited in the wild. Remote compromise of MDM infrastructure.</div>
+</div>
+
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech Security Watch</div>
+</div>
+</body>
+</html>
