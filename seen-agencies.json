@@ -1,6 +1,6 @@
 {
-  "version": 27,
-  "last_updated": "2026-07-18",
+  "version": 28,
+  "last_updated": "2026-07-21",
   "agencies": [
     {
       "name": "10FOLD",
@@ -158,6 +158,11 @@
       "source_url": "archive/2026-07-12.html"
     },
     {
+      "name": "ArtVersion",
+      "source_date": "2026-07-21",
+      "source_url": "archive/2026-07-21.html"
+    },
+    {
       "name": "Astronaut",
       "source_date": "2026-07-11",
       "source_url": "archive/2026-07-11.html"
@@ -166,6 +171,11 @@
       "name": "Aufwind",
       "source_date": "2026-06-08",
       "source_url": "telegram-only"
+    },
+    {
+      "name": "August Ash",
+      "source_date": "2026-07-21",
+      "source_url": "archive/2026-07-21.html"
     },
     {
       "name": "Avanade",
@@ -193,7 +203,7 @@
       "source_url": "archive/2026-06-25.html"
     },
     {
-      "name": "Basic Agency (BASIC/DEPT®)",
+      "name": "Basic Agency (BASIC/DEPT\u00ae)",
       "source_date": "2026-07-09",
       "source_url": "archive/2026-07-09.html"
     },
@@ -223,6 +233,11 @@
       "source_url": "archive/2026-07-14.html"
     },
     {
+      "name": "Bettermode",
+      "source_date": "2026-07-21",
+      "source_url": "archive/2026-07-21.html"
+    },
+    {
       "name": "Big Human",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
@@ -246,6 +261,11 @@
       "name": "Blend.",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
+    },
+    {
+      "name": "Blennd",
+      "source_date": "2026-07-21",
+      "source_url": "archive/2026-07-21.html"
     },
     {
       "name": "Blue Compass",
@@ -321,6 +341,11 @@
       "name": "BrandFire",
       "source_date": "2026-07-09",
       "source_url": "archive/2026-07-09.html"
+    },
+    {
+      "name": "Brandography",
+      "source_date": "2026-07-21",
+      "source_url": "archive/2026-07-21.html"
     },
     {
       "name": "Brandroot",
@@ -538,6 +563,11 @@
       "source_url": "archive/2026-05-29.html"
     },
     {
+      "name": "Comrade",
+      "source_date": "2026-07-21",
+      "source_url": "archive/2026-07-21.html"
+    },
+    {
       "name": "Conductor",
       "source_date": "2026-07-10",
       "source_url": "archive/2026-07-10.html"
@@ -616,6 +646,11 @@
       "name": "Daylight Design",
       "source_date": "2026-06-25",
       "source_url": "archive/2026-06-25.html"
+    },
+    {
+      "name": "DD.NYC",
+      "source_date": "2026-07-21",
+      "source_url": "archive/2026-07-21.html"
     },
     {
       "name": "Deel",
@@ -1498,6 +1533,11 @@
       "source_url": "archive/2026-07-18.html"
     },
     {
+      "name": "Noomo Agency",
+      "source_date": "2026-07-21",
+      "source_url": "archive/2026-07-21.html"
+    },
+    {
       "name": "North Highland",
       "source_date": "2026-06-19",
       "source_url": "archive/2026-06-19.html"
@@ -1656,6 +1696,11 @@
       "name": "Perficient",
       "source_date": "2026-07-18",
       "source_url": "archive/2026-07-18.html"
+    },
+    {
+      "name": "Perspective",
+      "source_date": "2026-07-21",
+      "source_url": "archive/2026-07-21.html"
     },
     {
       "name": "Phenomenon Studio",
@@ -1988,6 +2033,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Social Link",
+      "source_date": "2026-07-21",
+      "source_url": "archive/2026-07-21.html"
+    },
+    {
       "name": "Social Thrive",
       "source_date": "2026-05-28",
       "source_url": "obsidian/aurora_daily_prospects_2026-05-28.md"
@@ -2138,6 +2188,11 @@
       "source_url": "archive/2026-07-16.html"
     },
     {
+      "name": "Tombras",
+      "source_date": "2026-07-21",
+      "source_url": "archive/2026-07-21.html"
+    },
+    {
       "name": "TopRank Marketing",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
@@ -2201,6 +2256,11 @@
       "name": "Userlist",
       "source_date": "2026-07-18",
       "source_url": "archive/2026-07-18.html"
+    },
+    {
+      "name": "Usman Group",
+      "source_date": "2026-07-21",
+      "source_url": "archive/2026-07-21.html"
     },
     {
       "name": "Ustwo",

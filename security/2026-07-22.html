@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Report — July 22, 2026 | Aurora Tech</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;min-height:100vh;font-size:14px;line-height:1.6}
+.container{max-width:800px;margin:0 auto;padding:0 0 48px}
+.header{padding:28px 0 16px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.header h1{font-size:22px;font-weight:700;color:#f1f1f1;margin-bottom:4px}
+.header .sub{font-size:13px;color:#888;margin-bottom:2px}
+.header .sub a{color:#E8B840;text-decoration:none}
+.header .sub a:hover{text-decoration:underline}
+.section{margin-top:28px}
+.section h2{font-size:17px;font-weight:700;color:#f1f1f1;margin-bottom:14px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.section h2.priority{color:#E8B840}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:14px 16px;margin-bottom:10px}
+.card:hover{border-color:rgba(232,184,64,0.3)}
+.card-title{font-size:15px;font-weight:600;color:#f1f1f1;margin-bottom:6px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.card-desc{font-size:13px;color:#ccc;margin-bottom:6px;line-height:1.5}
+.card-meta{font-size:12px;color:#999;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 9px;border-radius:4px;white-space:nowrap}
+.badge-critical{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-high{background:rgba(232,184,64,0.15);color:#E8B840}
+.badge-medium{background:rgba(245,158,11,0.15);color:#f59e0b}
+.badge-low{background:rgba(255,255,255,0.06);color:#888}
+.badge-status{font-size:11px;padding:2px 8px;border-radius:4px;font-weight:500}
+.badge-ok{background:rgba(34,197,94,0.15);color:#22c55e}
+.badge-warn{background:rgba(234,179,8,0.15);color:#eab308}
+.badge-danger{background:rgba(239,68,68,0.15);color:#ef4444}
+.status-link{color:#E8B840;text-decoration:none;font-size:12px}
+.status-link:hover{text-decoration:underline}
+.footer{text-align:center;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.04);font-size:12px;color:#555}
+.none{color:#888;font-size:13px;font-style:italic;padding:8px 0}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>🛡️ Security Vulnerability Report</h1>
+<div class="sub">July 22, 2026 · <a href="index.html">← Archive</a></div>
+</div>
+
+<!-- HERMES AGENT -->
+<div class="section">
+<h2 class="priority">🔴 1. Hermes Agent (v0.17.0) — HIGH PRIORITY</h2>
+<p class="none">Current installed version 0.17.0 — all known CVEs addressed.</p>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-high">HIGH</span> CVE-2026-53869 — DNS Rebinding Bypass</div>
+<div class="card-desc">DNS rebinding vulnerability in WebSocket endpoints allows remote attackers to bypass Host and Origin validation. Affects Hermes Agent &lt; 0.16.0.</div>
+<div class="card-meta"><span class="badge badge-ok">✅ PATCHED in v0.17.0</span> <span>CVSS 7.5</span> <a class="status-link" href="https://github.com/advisories/GHSA-4pqm-j46f-795x" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-high">HIGH</span> CVE-2026-10548 — Improper Authentication</div>
+<div class="card-desc">Improper authentication in credential pool synchronization via <code>_sync_anthropic_entry_from_credentials_file</code> in <code>agent/credential_pool.py</code>. Affects Hermes Agent ≤ 2026.4.23.</div>
+<div class="card-meta"><span class="badge badge-ok">✅ PATCHED</span> <a class="status-link" href="https://cvefeed.io/vuln/detail/CVE-2026-10548" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-high">HIGH</span> CVE-2026-10221 — Context Injection</div>
+<div class="card-desc">Injection vulnerability in <code>_compress_context</code> function in <code>run_agent.py</code>. Affects Hermes Agent ≤ 0.12.0.</div>
+<div class="card-meta"><span class="badge badge-ok">✅ PATCHED</span> <a class="status-link" href="https://dbugs.ptsecurity.com/vulnerability/PT-2026-45253" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-medium">MEDIUM</span> CVE-2026-7396 — WeCom Adapter</div>
+<div class="card-desc">Vulnerability in WeChat Work (WeCom) platform adapter in <code>gateway/platforms/wecom.py</code>. Affects Hermes Agent 0.8.0.</div>
+<div class="card-meta"><span class="badge badge-ok">✅ PATCHED</span> <a class="status-link" href="https://bugs.launchpad.net/bugs/cve/2026-7396" target="_blank">Source →</a></div>
+</div>
+</div>
+
+<!-- AI TOOLS & FRAMEWORKS -->
+<div class="section">
+<h2>2. AI Tools &amp; Frameworks — HIGH PRIORITY</h2>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-high">HIGH</span> CVE-2026-42271 — LiteLLM Command Injection</div>
+<div class="card-desc">Command injection vulnerability in LiteLLM proxy MCP test endpoints. Allows authenticated users to execute arbitrary commands on the host. Added to CISA KEV catalog. Actively exploited in the wild.</div>
+<div class="card-meta"><span class="badge badge-danger">🔴 Exploited in Wild</span> <span>CVSS 8.7</span> <a class="status-link" href="https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-critical">CRITICAL</span> CVE-2026-42824 — Microsoft 365 Copilot "SearchLeak"</div>
+<div class="card-desc">Vulnerability chain enabling one-click data exfiltration from mailbox, OneDrive, and SharePoint via crafted URL. Server-side mitigation applied by Microsoft.</div>
+<div class="card-meta"><span class="badge badge-ok">✅ Server-side mitigated</span> <a class="status-link" href="https://www.bleepingcomputer.com/news/security/new-attack-turned-microsoft-365-copilot-into-1-click-data-theft-tool/" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-high">HIGH</span> Prompt Injection Surge 2026</div>
+<div class="card-desc">Prompt injection attacks surged 340% in 2026. 47 confirmed AI model exploits tracked across ChatGPT, Claude, Gemini, and Llama. Autonomous AI agents remain the primary attack surface.</div>
+<div class="card-meta"><span class="badge badge-warn">⚠️ Ongoing</span> <a class="status-link" href="https://axis-intelligence.com/research/ai-model-vulnerability-tracker/" target="_blank">Source →</a></div>
+</div>
+</div>
+
+<!-- GENERAL CRITICAL VULNS -->
+<div class="section">
+<h2>3. General Critical Vulnerabilities</h2>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-critical">CRITICAL</span> CVE-2026-60137 + CVE-2026-63030 — WordPress "WP2Shell"</div>
+<div class="card-desc">Unauthenticated RCE chain in WordPress Core: SQL injection in <code>WP_Query::author__not_in</code> (CVE-2026-60137) chained with REST API batch route confusion (CVE-2026-63030). Patched in WordPress 7.0.2 (July 17).</div>
+<div class="card-meta"><span class="badge badge-ok">✅ Patched in 7.0.2</span> <span>WordPress 6.8–7.0.1</span> <a class="status-link" href="https://www.wordfence.com/blog/2026/07/wp2shell-aftermath/" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-critical">CRITICAL</span> CVE-2026-10520 + CVE-2026-10523 — Ivanti Sentry</div>
+<div class="card-desc">OS Command Injection (CVSS 9.9) + Authentication Bypass (CVSS 9.9). Unauthenticated remote attacker can achieve root-level RCE and create arbitrary administrative accounts.</div>
+<div class="card-meta"><span class="badge badge-ok">✅ Patches available</span> <span>Ivanti Sentry &lt; R10.5.2, R10.6.2, R10.7.1</span> <a class="status-link" href="https://arcticwolf.com/resources/blog/ivanti-sentry-critical-vulnerabilities-cve-2026-10520-and-cve-2026-10523-require-urgent-patching/" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-critical">CRITICAL</span> CVE-2026-2699 + CVE-2026-2701 — Progress ShareFile</div>
+<div class="card-desc">Pre-authentication RCE chain in ShareFile Storage Zone Controller. Emergency shutdown ordered July 10, 2026. Patches released July 14.</div>
+<div class="card-meta"><span class="badge badge-ok">✅ Patches available</span> <span>ShareFile SZC 5.x &amp; 6.x</span> <a class="status-link" href="https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-critical">CRITICAL</span> CVE-2026-35273 — Oracle PeopleSoft (ShinyHunters)</div>
+<div class="card-desc">Unauthenticated RCE in PeopleSoft PeopleTools. Exploited by ShinyHunters across 100+ organizations. Patched in Oracle July 2026 CPU (1,455 total vulns).</div>
+<div class="card-meta"><span class="badge badge-ok">✅ Patched in July 2026 CPU</span> <span>PeopleSoft PeopleTools 8.61, 8.62</span> <a class="status-link" href="https://dev.to/newzlet_news/peoplesoft-zero-day-why-the-2-week-gap-is-the-real-risk-2pj7" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-high">HIGH</span> CVE-2026-50656 — Microsoft Defender "RoguePlanet"</div>
+<div class="card-desc">Privilege escalation in Microsoft Malware Protection Engine (mpengine.dll). Race condition grants SYSTEM-level access. Patched in July 2026.</div>
+<div class="card-meta"><span class="badge badge-ok">✅ Patched</span> <span>CVSS 7.8</span> <a class="status-link" href="https://thehackernews.com/2026/07/microsoft-patches-rogueplanet-defender.html" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-critical">CRITICAL</span> Atlassian July 2026 Security Bulletin</div>
+<div class="card-desc">83 high-severity and 18 critical-severity third-party vulnerabilities across Atlassian products (Confluence, Jira, Bitbucket, etc.).</div>
+<div class="card-meta"><span class="badge badge-ok">✅ Patches available</span> <a class="status-link" href="https://confluence.atlassian.com/security/security-bulletin-july-21-2026-1821999345.html" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-high">HIGH</span> Microsoft July 2026 Patch Tuesday</div>
+<div class="card-desc">Record 570 flaws patched including 3 zero-days (2 actively exploited, 1 publicly disclosed). Covers Windows, Office, Exchange, and more.</div>
+<div class="card-meta"><span class="badge badge-ok">✅ Patches released July 14</span> <a class="status-link" href="https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-medium">MEDIUM</span> CVE-2026-15682 — AnyDesk DoS</div>
+<div class="card-desc">Link following denial-of-service via Send Support Information feature. Local attacker requires low-privileged code execution.</div>
+<div class="card-meta"><span class="badge badge-warn">⚠️ No patch confirmed</span> <span>CVSS 5.5</span> <a class="status-link" href="https://nvd.nist.gov/vuln/detail/CVE-2026-15682" target="_blank">Source →</a></div>
+</div>
+
+<div class="card">
+<div class="card-title"><span class="badge badge-critical">CRITICAL</span> Oracle July 2026 Critical Patch Update</div>
+<div class="card-desc">Record 1,455 new vulnerabilities patched across Oracle's entire enterprise portfolio. Largest quarterly CPU in Oracle's history.</div>
+<div class="card-meta"><span class="badge badge-ok">✅ CPU released July 21</span> <a class="status-link" href="https://www.msn.com/en-us/news/technology/peoplesoft-exploit-behind-100-breaches-gets-patched-in-oracles-record-july-cpu/ar-AA28mU6X" target="_blank">Source →</a></div>
+</div>
+</div>
+
+<div class="footer">Generated by Netamuru · Aurora Tech</div>
+</div>
+</body>
+</html>
