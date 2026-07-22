@@ -1,6 +1,6 @@
 {
-  "version": 28,
-  "last_updated": "2026-07-21",
+  "version": 29,
+  "last_updated": "2026-07-22",
   "agencies": [
     {
       "name": "10FOLD",
@@ -2481,6 +2481,66 @@
       "name": "ZURB",
       "source_date": "2026-07-08",
       "source_url": "archive/2026-07-08.html"
+    },
+    {
+      "name": "Baringa",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
+      "name": "Convertiv",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
+      "name": "Covalense Global",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
+      "name": "D8 Studio",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
+      "name": "Daily.co",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
+      "name": "DesignMe",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
+      "name": "Flowspace",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
+      "name": "Hom3",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
+      "name": "iMedia Inc",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
+      "name": "Together Agency",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
+      "name": "Traction",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
+      "name": "Yoko Co",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
     }
   ]
 }
