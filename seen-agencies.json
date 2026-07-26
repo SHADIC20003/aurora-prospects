@@ -1,6 +1,6 @@
 {
-  "version": 29,
-  "last_updated": "2026-07-22",
+  "version": 30,
+  "last_updated": "2026-07-23",
   "agencies": [
     {
       "name": "10FOLD",
@@ -158,6 +158,11 @@
       "source_url": "archive/2026-07-12.html"
     },
     {
+      "name": "Artefact",
+      "source_date": "2026-07-23",
+      "source_url": "archive/2026-07-23.html"
+    },
+    {
       "name": "ArtVersion",
       "source_date": "2026-07-21",
       "source_url": "archive/2026-07-21.html"
@@ -196,6 +201,11 @@
       "name": "Bain & Company",
       "source_date": "2026-06-20",
       "source_url": "archive/2026-06-20.html"
+    },
+    {
+      "name": "Baringa",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
     },
     {
       "name": "Barkley",
@@ -276,6 +286,11 @@
       "name": "Blue Fountain Media",
       "source_date": "2026-07-12",
       "source_url": "archive/2026-07-12.html"
+    },
+    {
+      "name": "Blue Frontier",
+      "source_date": "2026-07-23",
+      "source_url": "archive/2026-07-23.html"
     },
     {
       "name": "Blue State",
@@ -583,6 +598,11 @@
       "source_url": "archive/2026-05-30.html"
     },
     {
+      "name": "Convertiv",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
       "name": "Copy.ai",
       "source_date": "2026-06-27",
       "source_url": "archive/2026-06-27.html"
@@ -591,6 +611,11 @@
       "name": "Coraly.ai",
       "source_date": "2026-07-16",
       "source_url": "archive/2026-07-16.html"
+    },
+    {
+      "name": "Covalense Global",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
     },
     {
       "name": "Crafted",
@@ -623,6 +648,11 @@
       "source_url": "archive/2026-05-30.html"
     },
     {
+      "name": "Croud",
+      "source_date": "2026-07-23",
+      "source_url": "archive/2026-07-23.html"
+    },
+    {
       "name": "CTP Boston",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
@@ -631,6 +661,16 @@
       "name": "Cultivate Digital Media",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "D8 Studio",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
+      "name": "Daily.co",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
     },
     {
       "name": "Dash Two",
@@ -703,6 +743,11 @@
       "source_url": "archive/2026-06-29.html"
     },
     {
+      "name": "DesignMe",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
       "name": "Deutsch",
       "source_date": "2026-07-03",
       "source_url": "archive/2026-07-03.html"
@@ -768,6 +813,11 @@
       "source_url": "archive/2026-07-11.html"
     },
     {
+      "name": "Drivetrain AI",
+      "source_date": "2026-07-23",
+      "source_url": "archive/2026-07-23.html"
+    },
+    {
       "name": "Droga5",
       "source_date": "2026-06-30",
       "source_url": "archive/2026-06-30.html"
@@ -801,6 +851,11 @@
       "name": "Elixir Interactive",
       "source_date": "2026-06-25",
       "source_url": "archive/2026-06-25.html"
+    },
+    {
+      "name": "Elmwood",
+      "source_date": "2026-07-23",
+      "source_url": "archive/2026-07-23.html"
     },
     {
       "name": "Emfluence",
@@ -866,6 +921,11 @@
       "name": "FleishmanHillard",
       "source_date": "2026-07-08",
       "source_url": "archive/2026-07-08.html"
+    },
+    {
+      "name": "Flowspace",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
     },
     {
       "name": "Foundation Inc",
@@ -1033,9 +1093,19 @@
       "source_url": "archive/2026-07-15.html"
     },
     {
+      "name": "Hightouch",
+      "source_date": "2026-07-23",
+      "source_url": "archive/2026-07-23.html"
+    },
+    {
       "name": "Highwire",
       "source_date": "2026-05-30",
       "source_url": "archive/2026-05-30.html"
+    },
+    {
+      "name": "Hom3",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
     },
     {
       "name": "Hotjar",
@@ -1096,6 +1166,11 @@
       "name": "iMark Infotech",
       "source_date": "2026-07-06",
       "source_url": "archive/2026-07-06.html"
+    },
+    {
+      "name": "iMedia Inc",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
     },
     {
       "name": "Impression Digital",
@@ -1171,6 +1246,11 @@
       "name": "JKR (Jones Knowles Ritchie)",
       "source_date": "2026-07-01",
       "source_url": "archive/2026-07-01.html"
+    },
+    {
+      "name": "Journey Further",
+      "source_date": "2026-07-23",
+      "source_url": "archive/2026-07-23.html"
     },
     {
       "name": "Jump Associates",
@@ -1668,6 +1748,11 @@
       "source_url": "archive/2026-07-14.html"
     },
     {
+      "name": "PayHOA",
+      "source_date": "2026-07-23",
+      "source_url": "archive/2026-07-23.html"
+    },
+    {
       "name": "Pearlfisher",
       "source_date": "2026-07-02",
       "source_url": "archive/2026-07-02.html"
@@ -1746,6 +1831,11 @@
       "name": "Point It Digital",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Pollen",
+      "source_date": "2026-07-23",
+      "source_url": "archive/2026-07-23.html"
     },
     {
       "name": "Portent Inc.",
@@ -1933,6 +2023,11 @@
       "source_url": "archive/2026-05-28.html"
     },
     {
+      "name": "Saffron Brand Consultants",
+      "source_date": "2026-07-23",
+      "source_url": "archive/2026-07-23.html"
+    },
+    {
       "name": "Satori",
       "source_date": "2026-05-29",
       "source_url": "archive/2026-05-29.html"
@@ -1976,6 +2071,11 @@
       "name": "Sherpa Agency",
       "source_date": "2026-05-28",
       "source_url": "archive/2026-05-28.html"
+    },
+    {
+      "name": "Sia",
+      "source_date": "2026-07-23",
+      "source_url": "archive/2026-07-23.html"
     },
     {
       "name": "Sid Lee",
@@ -2098,6 +2198,11 @@
       "source_url": "archive/2026-07-06.html"
     },
     {
+      "name": "Swarmia",
+      "source_date": "2026-07-23",
+      "source_url": "archive/2026-07-23.html"
+    },
+    {
       "name": "Swerve Agency",
       "source_date": "2026-07-11",
       "source_url": "archive/2026-07-11.html"
@@ -2188,6 +2293,11 @@
       "source_url": "archive/2026-07-16.html"
     },
     {
+      "name": "Together Agency",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
       "name": "Tombras",
       "source_date": "2026-07-21",
       "source_url": "archive/2026-07-21.html"
@@ -2196,6 +2306,11 @@
       "name": "TopRank Marketing",
       "source_date": "2026-06-28",
       "source_url": "archive/2026-06-28.html"
+    },
+    {
+      "name": "Traction",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
     },
     {
       "name": "Trellis",
@@ -2463,6 +2578,11 @@
       "source_url": "archive/2026-06-25.html"
     },
     {
+      "name": "Yoko Co",
+      "source_date": "2026-07-22",
+      "source_url": "archive/2026-07-22.html"
+    },
+    {
       "name": "Zapier",
       "source_date": "2026-06-20",
       "source_url": "archive/2026-06-20.html"
@@ -2481,66 +2601,6 @@
       "name": "ZURB",
       "source_date": "2026-07-08",
       "source_url": "archive/2026-07-08.html"
-    },
-    {
-      "name": "Baringa",
-      "source_date": "2026-07-22",
-      "source_url": "archive/2026-07-22.html"
-    },
-    {
-      "name": "Convertiv",
-      "source_date": "2026-07-22",
-      "source_url": "archive/2026-07-22.html"
-    },
-    {
-      "name": "Covalense Global",
-      "source_date": "2026-07-22",
-      "source_url": "archive/2026-07-22.html"
-    },
-    {
-      "name": "D8 Studio",
-      "source_date": "2026-07-22",
-      "source_url": "archive/2026-07-22.html"
-    },
-    {
-      "name": "Daily.co",
-      "source_date": "2026-07-22",
-      "source_url": "archive/2026-07-22.html"
-    },
-    {
-      "name": "DesignMe",
-      "source_date": "2026-07-22",
-      "source_url": "archive/2026-07-22.html"
-    },
-    {
-      "name": "Flowspace",
-      "source_date": "2026-07-22",
-      "source_url": "archive/2026-07-22.html"
-    },
-    {
-      "name": "Hom3",
-      "source_date": "2026-07-22",
-      "source_url": "archive/2026-07-22.html"
-    },
-    {
-      "name": "iMedia Inc",
-      "source_date": "2026-07-22",
-      "source_url": "archive/2026-07-22.html"
-    },
-    {
-      "name": "Together Agency",
-      "source_date": "2026-07-22",
-      "source_url": "archive/2026-07-22.html"
-    },
-    {
-      "name": "Traction",
-      "source_date": "2026-07-22",
-      "source_url": "archive/2026-07-22.html"
-    },
-    {
-      "name": "Yoko Co",
-      "source_date": "2026-07-22",
-      "source_url": "archive/2026-07-22.html"
     }
   ]
 }
